@@ -52,6 +52,8 @@ I will try to keep this `README` up to date every time the course is modified.
 ### Additional resources
 - P. Cvitanovic. [Chaos book](http://chaosbook.org/).
 
+---
+
 ## Basics of linear algebra and differential equations
 
 <p align="center">
