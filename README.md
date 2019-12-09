@@ -1,11 +1,11 @@
 <p align="left">
-  <img width="401" height="84" src="https://assets.ensam.eu/logo/fr/logo-trans-322x84.png">
+  <img width="200" height="42" src="https://assets.ensam.eu/logo/fr/logo-trans-322x84.png">
 </p>
 
 
 # Lecture notes and material
 
-This repository contains all of the lecture notes and material for the different courses I teach at [Arts et Métier Institute of Technology](https://artsetmetiers.fr/).
+This repository contains all of the lecture notes and material for the different courses I teach at [Arts et Métier Institute of Technology](https://artsetmetiers.fr/en).
 Note that, rather than downloading or forking this whole repository, you can access each course through this [webpage](https://loiseaujc.github.io/teaching/) (in construction).
 If you have any questions or if you spot any errors, typos or broken links, please feel free to contact me at loiseau.jc@gmail.com or via the [Issue](https://github.com/loiseaujc/Teaching/issues) page.
 
@@ -51,18 +51,30 @@ I will try to keep this `README` up to date every time the course is modified.
 
 ## Basics of linear algebra and differential equations
 
+<p align="center">
+  <img width="275" height="150" src="imgs/mathematics.jpg">
+</p>
+
 ### Course description
 
-...
+This course is part of the international master program [Factory of the future](https://artsetmetiers.fr/en/mecanique-energie-et-ingenierie) proposed by *Arts et Métiers Institute of Technology*.
+Note that students enrolling in this program may come from very different backgrounds.
+As such, the aim of this course is to teach them the basic tools from linear algebra (linear systems of equations, vector spaces, eigenvalues and eigenvectors) and differential equations (linear time-invariant first-order and second order ODEs) they may need for other courses in this program.
+One or two small numerical projects in `python` or `octave` are also proposed.
 
 ### Prerequisite
-- ...
+- Basic mathematics (e.g. derivative and integrals, complex numbers, etc).
 
 ### Lesson plan
-- ...
+
+The course is divided in 10ish 2-hour long lectures and a few exercises.
+The tentative lesson plan below may be subject to modifications as the course evolves pretty much every year when interacting with students.
+I will try to keep this `README` up to date every time the course is modified.
+
+- Lecture 1: ...
 
 ### Recommended reading
-- ...
+- J. Nathan Kutz. [Data-driven modeling & scientific computing: methods for complex systems and big data](https://www.amazon.com/Data-Driven-Modeling-Scientific-Computation-Methods/dp/0199660344).
 
 ## Fourier analysis and signal processing
 
