@@ -1,5 +1,8 @@
 # Lecture notes and material [![licensebuttons by-nc-sa](https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0)
 
+This repository contains all of the lecture notes and material for the different courses I teach at [Arts et Métier Institute of Technology](https://artsetmetiers.fr/).
+Note that, rather than downloading or forking this whole repository, you can access each course through this [webpage](https://loiseaujc.github.io/teaching/) (in construction).
+If you have any questions or if you spot any errors, please feel free to contact me at loiseau.jc@gmail.com or though the [Issue](https://github.com/loiseaujc/Teaching/issues) page.
 
 ## Table of contents
 - [Introduction to nonlinear physics, dynamical systems and chaos theory](#introduction-%to-nonlinear-physics,-dynamical-systems-and-chaos-theory) (Arts et Métiers - UPMC, Master 2)
@@ -11,6 +14,24 @@
 - [Introduction to scientific computing with python](#introduction-to-scientific-computing-with-python) (Arts et Métiers, FIP)
 
 ## Introduction to nonlinear physics, dynamical systems and chaos theory
+
+### Course description
+
+This is a 30-hour long course part of the master program [M2 Aérodynamique et Aéroacoustique](http://master.spi.sorbonne-universite.fr/fr/mecanique-des-fluides/m2-aerodynamique-et-aeroacoustique/liste_des_ue.html) proposed jointly by *Université Pierre et Marie Curie* and *Arts et Métiers Institute of Technology*.
+Its aim is to give students an overview of the typical behaviours dynamical systems can exhibit (i.e. fixed points, periodic orbits, quasi-periodic dynamics and temporal chaos) and how to study them (e.g. fixed point computation, linear stability, bifurcation and normal form theory, Takens embedding theorem, etc).
+Most of course consists in sessions of two-hour long lectures with a few exercises.
+A small numerical project in `python` or `julia` on realistic systems from fluid dynamics or classical mechanics is also proposed.
+
+### Prerequisite
+- ...
+
+### Lesson plan
+- ...
+
+### Recommended reading
+- Steven Strogatz. [*Nonlinear dynamics and chaos*](http://www.stevenstrogatz.com/books/nonlinear-dynamics-and-chaos-with-applications-to-physics-biology-chemistry-and-engineering) (English only).
+- James Gleick. [*Chaos: Making a new science*](https://www.amazon.com/Chaos-Making-Science-James-Gleick/dp/0143113453) (English) or [*La théorie du chaos: vers une nouvelle science*](https://www.amazon.com/th%C3%A9orie-chaos-Vers-nouvelle-science/dp/2081218046) (French).
+- Paul Manneville. [*Instabilities, chaos and turbulence*](https://www.worldscientific.com/worldscibooks/10.1142/p642) (English) or [*Instabilités, chaos et turbulence*](https://www.amazon.fr/Instabilit%C3%A9s-chaos-turbulence-Paul-Manneville/dp/2730209131) (French).
 
 ## Basics of linear algebra and differential equations
 
