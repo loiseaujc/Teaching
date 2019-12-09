@@ -4,18 +4,20 @@
 
 This repository contains all of the lecture notes and material for the different courses I teach at [Arts et Métier Institute of Technology](https://artsetmetiers.fr/).
 Note that, rather than downloading or forking this whole repository, you can access each course through this [webpage](https://loiseaujc.github.io/teaching/) (in construction).
-If you have any questions or if you spot any errors, typos or broken links, please feel free to contact me at loiseau.jc@gmail.com or though the [Issue](https://github.com/loiseaujc/Teaching/issues) page.
+If you have any questions or if you spot any errors, typos or broken links, please feel free to contact me at loiseau.jc@gmail.com or via the [Issue](https://github.com/loiseaujc/Teaching/issues) page.
 
 ## Table of contents
 - [Introduction to nonlinear physics, dynamical systems and chaos theory](#introduction-%to-nonlinear-physics,-dynamical-systems-and-chaos-theory) (Arts et Métiers - UPMC, Master 2)
-  - Lecture 1: What are dynamical systems and how do we study them?
-  - Lecture 2: First order and second order systems.
 - [Basics of linear algebra and differential equations](#basics-of-linear-algebra-and-differential-equations) (Arts et Métiers, Master 1)
 - [Fourier analysis and signal processing](#fourier-analysis-and-signal-processing) (Arts et Métiers, Master 1)
 - [Numerical methods in fluid dynamics](#numerical-methods-in-fluid-dynamics) (Arts et Métiers, Master 1)
 - [Introduction to scientific computing with python](#introduction-to-scientific-computing-with-python) (Arts et Métiers, FIP)
 
 ## Introduction to nonlinear physics, dynamical systems and chaos theory
+
+<p align="center">
+  <img width="300" height="150" src="imgs/lorenz_system.png">
+</p>
 
 ### Course description
 
