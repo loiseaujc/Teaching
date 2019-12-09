@@ -1,6 +1,9 @@
-![ENSAM logo](https://assets.ensam.eu/logo/fr/logo-trans-322x84.png)
+<p align="left">
+  <img width="401" height="84" src="https://assets.ensam.eu/logo/fr/logo-trans-322x84.png">
+</p>
 
-# Lecture notes and material [![licensebuttons by-nc-sa](https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0)
+
+# Lecture notes and material
 
 This repository contains all of the lecture notes and material for the different courses I teach at [Arts et Métier Institute of Technology](https://artsetmetiers.fr/).
 Note that, rather than downloading or forking this whole repository, you can access each course through this [webpage](https://loiseaujc.github.io/teaching/) (in construction).
@@ -106,8 +109,7 @@ I will try to keep this `README` up to date every time the course is modified.
 ### Recommended reading
 - ...
 
-## License
+## License [![licensebuttons by-nc-sa](https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0)
 
-[![licensebuttons by-nc-sa](https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0)
 This work is distributed under the [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
 See `LICENSE.markdown` for more details.
