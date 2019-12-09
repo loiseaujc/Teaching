@@ -2,12 +2,12 @@
 
 
 ## Table of contents
-- [Introduction to nonlinear physics, dynamical systems and chaos theory](#Introduction-%to-nonlinear-physics,-dynamical-systems-and-chaos-theory) (Arts et Métiers - UPMC, Master 2)
+- [Introduction to nonlinear physics, dynamical systems and chaos theory](#introduction-%to-nonlinear-physics,-dynamical-systems-and-chaos-theory) (Arts et Métiers - UPMC, Master 2)
   - Lecture 1: What is a dynamical system and how do we study them?
   - Lecture 2: First order and second order systems.
-- [Basics of linear algebra and differential equations](#Basics-of-linear-algebra-and-differential-equations) (Arts et Métiers, Master 1)
-- [Fourier analysis and signal processing](#Fourier-analysis-and-signal-processing) (Arts et Métiers, Master 1)
-- [Numerical methods in fluid dynamics](#Numerical-methods-in-fluid-dynamics) (Arts et Métiers, Master 1)
+- [Basics of linear algebra and differential equations](#basics-of-linear-algebra-and-differential-equations) (Arts et Métiers, Master 1)
+- [Fourier analysis and signal processing](#fourier-analysis-and-signal-processing) (Arts et Métiers, Master 1)
+- [Numerical methods in fluid dynamics](#numerical-methods-in-fluid-dynamics) (Arts et Métiers, Master 1)
 - [Introduction to scientific computing with python](#introduction-to-scientific-computing-with-python) (Arts et Métiers, FIP)
 
 ## Introduction to nonlinear physics, dynamical systems and chaos theory
