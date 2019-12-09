@@ -16,6 +16,8 @@ If you have any questions or if you spot any errors, typos or broken links, plea
 - [Numerical methods in fluid dynamics](#numerical-methods-in-fluid-dynamics) (Arts et Métiers, Master 1)
 - [Introduction to scientific computing with python](#introduction-to-scientific-computing-with-python) (Arts et Métiers, FIP)
 
+---
+
 ## Introduction to nonlinear physics, dynamical systems and chaos theory
 
 <p align="center">
@@ -82,6 +84,8 @@ I will try to keep this `README` up to date every time the course is modified.
 ### Recommended reading
 - J. Nathan Kutz. [Data-driven modeling & scientific computing: methods for complex systems and big data](https://www.amazon.com/Data-Driven-Modeling-Scientific-Computation-Methods/dp/0199660344).
 
+---
+
 ## Fourier analysis and signal processing
 
 <p align="center">
@@ -114,6 +118,8 @@ I will try to keep this `README` up to date every time the course is modified.
 - [SciPy lectures](https://scipy-lectures.org/)
 - [3Blue1Brown : But what is the Fourier transform?](https://www.youtube.com/watch?v=spUNpyF58BY)
 
+---
+
 ## Numerical methods in fluid dynamics
 
 ### Course description
@@ -141,6 +147,8 @@ This course consists in a series of tutorials.
 ### Additional resources
 - [SciPy lectures](https://scipy-lectures.org/)
 - [12 steps to Navier-Stokes](https://github.com/barbagroup/CFDPython) by L. Barba.
+
+---
 
 ## Introduction to scientific computing with python
 
@@ -171,6 +179,8 @@ We will make extensive use of `Jupyter notebooks` to implement a simple logistic
 
 ### Additional resources
 - [SciPy lectures](https://scipy-lectures.org/)
+
+---
 
 ## License [![licensebuttons by-nc-sa](https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0)
 
