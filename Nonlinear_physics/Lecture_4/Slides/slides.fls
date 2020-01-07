@@ -1,0 +1,724 @@
+PWD /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/slides.tex
+OUTPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/slides.log
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasercs.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasercs.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasedecode.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasedecode.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseoptions.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseoptions.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/xcolor/svgnam.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/xcolor/svgnam.def
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/xxcolor.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/xxcolor.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaserequires.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaserequires.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasecompatibility.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasecompatibility.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasefont.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasefont.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/filehook/filehook.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/filehook/filehook.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/filehook/filehook.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/translator/translator.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/translator/translator.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/translator/translator-language-mappings.tex
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/translator/translator-language-mappings.tex
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasemisc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasemisc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetwoscreens.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetwoscreens.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetitle.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetitle.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasesection.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasesection.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframe.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframe.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseverbatim.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseverbatim.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframesize.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframesize.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframecomponents.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframecomponents.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasecolor.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasecolor.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasenotes.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasenotes.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetoc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetoc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetemplates.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetemplates.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseauxtemplates.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseauxtemplates.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseboxes.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseboxes.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaselocalstructure.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaselocalstructure.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetheorems.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetheorems.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasethemes.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasethemes.sty
+INPUT /usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmss10.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/themes/theme/beamerthemedefault.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/themes/theme/beamerthemedefault.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/themes/font/beamerfontthemedefault.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/themes/font/beamerfontthemedefault.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/themes/color/beamercolorthemedefault.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/themes/color/beamercolorthemedefault.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/themes/inner/beamerinnerthemedefault.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/themes/inner/beamerinnerthemedefault.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/art/beamericonbook.pdf
+OUTPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/slides.pdf
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/art/beamericonbook.pdf
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/art/beamericonbook.20.pdf
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/art/beamericonbook.20.pdf
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/art/beamericonarticle.pdf
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/art/beamericonarticle.pdf
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/art/beamericonarticle.20.pdf
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/art/beamericonarticle.20.pdf
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/art/beamericononline.pdf
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/art/beamericononline.pdf
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/art/beamericononline.20.pdf
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/art/beamericononline.20.pdf
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/themes/outer/beamerouterthemedefault.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/themes/outer/beamerouterthemedefault.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/themes/font/beamerfontthemeprofessionalfonts.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/themes/font/beamerfontthemeprofessionalfonts.sty
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/beamerthemeflow.sty
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/beamerthemeflow.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+INPUT /usr/share/texmf/tex/latex/lm/lmodern.sty
+INPUT /usr/share/texmf/tex/latex/lm/lmodern.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/media9/media9.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/media9/media9.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/unicode-data/UnicodeData.txt
+INPUT /usr/share/texlive/texmf-dist/tex/generic/unicode-data/CaseFolding.txt
+INPUT /usr/share/texlive/texmf-dist/tex/generic/unicode-data/SpecialCasing.txt
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3experimental/l3str/l3regex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3experimental/l3str/l3regex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3experimental/l3str/l3tl-build.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3experimental/l3str/l3tl-build.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3experimental/l3str/l3tl-analysis.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3experimental/l3str/l3tl-analysis.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3experimental/l3str/l3flag.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3experimental/l3str/l3flag.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3experimental/l3str/l3str-convert.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3experimental/l3str/l3str-convert.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/atenddvi.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/atenddvi.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/zref-abspage.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/zref-abspage.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/zref-base.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/zref-base.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/zref-lastpage.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/zref-lastpage.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/media9/pdfbase.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/media9/pdfbase.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/ocgx2/ocgbase.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/ocgx2/ocgbase.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/units/nicefrac.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/units/nicefrac.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/multimedia/multimedia.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/multimedia/multimedia.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/was/upgreek.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/was/upgreek.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/slides.aux
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/slides.aux
+OUTPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/slides.aux
+INPUT /usr/share/texmf/tex/latex/lm/ot1lmss.fd
+INPUT /usr/share/texmf/tex/latex/lm/ot1lmss.fd
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmss10.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+INPUT /usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/slides.out
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/slides.out
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/slides.out
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/slides.out
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/slides.out
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/slides.out
+OUTPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/slides.out
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-basic-dictionary/translator-basic-dictionary-English.dict
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-basic-dictionary/translator-basic-dictionary-English.dict
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-bibliography-dictionary/translator-bibliography-dictionary-English.dict
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-bibliography-dictionary/translator-bibliography-dictionary-English.dict
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-environment-dictionary/translator-environment-dictionary-English.dict
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-environment-dictionary/translator-environment-dictionary-English.dict
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-months-dictionary/translator-months-dictionary-English.dict
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-months-dictionary/translator-months-dictionary-English.dict
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-numbers-dictionary/translator-numbers-dictionary-English.dict
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-numbers-dictionary/translator-numbers-dictionary-English.dict
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-theorem-dictionary/translator-theorem-dictionary-English.dict
+INPUT /usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-theorem-dictionary/translator-theorem-dictionary-English.dict
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/slides.nav
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/slides.nav
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmss8.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmss8.tfm
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/cover.png
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/cover.png
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/cover.png
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmss12.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmssbx10.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmss9.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmsso8.tfm
+INPUT /usr/share/texmf/tex/latex/lm/ot1lmtt.fd
+INPUT /usr/share/texmf/tex/latex/lm/ot1lmtt.fd
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmtti10.tfm
+INPUT /usr/share/texmf/tex/latex/lm/ot1lmr.fd
+INPUT /usr/share/texmf/tex/latex/lm/ot1lmr.fd
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmr7.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmr5.tfm
+INPUT /usr/share/texmf/tex/latex/lm/omllmm.fd
+INPUT /usr/share/texmf/tex/latex/lm/omllmm.fd
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmi7.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmi5.tfm
+INPUT /usr/share/texmf/tex/latex/lm/omslmsy.fd
+INPUT /usr/share/texmf/tex/latex/lm/omslmsy.fd
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmsy7.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmsy5.tfm
+INPUT /usr/share/texmf/tex/latex/lm/omxlmex.fd
+INPUT /usr/share/texmf/tex/latex/lm/omxlmex.fd
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmex10.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/stmaryrd/stmary7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/stmaryrd/stmary5.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm5.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx7.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx5.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmib7.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmib5.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmbsy7.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmbsy5.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmss8.tfm
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmr10.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmi10.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmsy10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/stmaryrd/stmary10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm10.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx10.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmib10.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmbsy10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmss12.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmssbx10.tfm
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmssbx10.tfm
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmr9.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmr6.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmi9.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmi6.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmsy9.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmsy6.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/stmaryrd/stmary9.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/stmaryrd/stmary6.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm7.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx9.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx6.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmib10.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmib7.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmbsy10.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmbsy7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy9.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmssbx10.tfm
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/saddle_node_phase_line.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/saddle_node_phase_line.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/saddle_node_phase_line.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/saddle_node_bifurcation_diagrams.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/saddle_node_bifurcation_diagrams.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/saddle_node_bifurcation_diagrams.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/transcritical_phase_line.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/transcritical_phase_line.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/transcritical_phase_line.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/transcritical_bifurcation_diagram.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/transcritical_bifurcation_diagram.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/transcritical_bifurcation_diagram.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/supercritical_pitchfork_phase_line.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/supercritical_pitchfork_phase_line.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/supercritical_pitchfork_phase_line.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/supercritical_pitchfork_bifurcation_diagram.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/supercritical_pitchfork_bifurcation_diagram.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/supercritical_pitchfork_bifurcation_diagram.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/subcritical_pitchfork_phase_line.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/subcritical_pitchfork_phase_line.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/subcritical_pitchfork_phase_line.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/subcritical_pitchfork_bifurcation_diagram.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/subcritical_pitchfork_bifurcation_diagram.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/subcritical_pitchfork_bifurcation_diagram.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/saddle_node_phase_plane.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/saddle_node_phase_plane.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/saddle_node_phase_plane.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/supercritical_hopf_bifurcation_phase_plane.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/supercritical_hopf_bifurcation_phase_plane.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/supercritical_hopf_bifurcation_phase_plane.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/subcritical_hopf_bifurcation_phase_plane.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/subcritical_hopf_bifurcation_phase_plane.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/subcritical_hopf_bifurcation_phase_plane.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/./imgs/out.mp4
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/figure_100.png
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/figure_100.png
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/figure_100.png
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmsso10.tfm
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/generalized_mean_field_model.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/generalized_mean_field_model.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/generalized_mean_field_model.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/generalized_mean_field_model_manifold.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/generalized_mean_field_model_manifold.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/generalized_mean_field_model_manifold.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/generalized_mean_field_model_2D.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/generalized_mean_field_model_2D.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/generalized_mean_field_model_2D.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/DynFluid_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/imgs/ENSAM_logo.pdf
+OUTPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/slides.nav
+OUTPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/slides.toc
+OUTPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/slides.snm
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/slides.aux
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/slides.out
+INPUT /home/jean-christophe/Documents/Cours/ENSAM/M2 UPMC/Nonlinear_Physics/Lecture_4/Slides/slides.out
+INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc
+INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc
+INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc
+INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc
+INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmex10.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi9.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmmib10.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmr10.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmr5.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmr6.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmr7.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmr8.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmr9.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmss10.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmss8.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmss9.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmsso8.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmtti10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb
