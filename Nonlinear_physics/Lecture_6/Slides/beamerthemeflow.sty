@@ -1,0 +1,407 @@
+\mode<presentation>
+
+% Linne` FLOW Centre beamer theme
+%
+% This theme uses TIKZ: compile twice with PDFLaTeX or LuaLaTeX.
+%
+% Jacopo  Canton   <jcanton@mech.kth.se>
+% Nicolo` Fabbiane  <nicolo@mech.kth.se>
+% (in alphabetical order)
+
+
+%------------------------------------------------------------------------------
+% Requirements
+%
+\RequirePackage{tikz}
+
+%------------------------------------------------------------------------------
+% Definitions
+%
+\def\insertlogot{} \def\logot#1{\gdef\insertlogot{#1}}                % Top logo
+\def\insertlogob{} \def\logob#1{\gdef\insertlogob{#1}}                % Bottom logo
+\def\insertlogoc{} \def\logoc{\@ifnextchar [{\@logoctwo}{\@logocone}} % Corner logo
+\def\insertheaderlogoc{}
+\def\@logoctwo[#1]#2{%
+  \gdef\insertlogoc{#2}\gdef\insertheaderlogoc{#1}%
+}%!TEX encoding = UTF-8 Unicode
+\def\@logocone#1{%
+  \gdef\insertlogoc{#1}\gdef\insertheaderlogoc{#1}%
+}%
+%
+% Cover image
+\def\insertcvrimg{}\def\cvrimg#1#2#3{%
+	\gdef\insertcvrimg{\node[anchor=center] (coverimage) at (page cs:#1,#2) {#3};}%
+}
+
+% logical statements
+\newif\ifkthofficial    \kthofficialfalse
+\newif\ifcrappywave     \crappywavetrue
+\newif\ifdateinfootline \dateinfootlinefalse
+\newif\ifcenteredlogos  \centeredlogosfalse
+\newif\ifcleanslides    \cleanslidesfalse
+
+% options
+\DeclareOptionBeamer{kth}{\kthofficialtrue}
+\DeclareOptionBeamer{clean}{\cleanslidestrue}
+\DeclareOptionBeamer{nicewave}{\crappywavefalse}
+\ProcessOptionsBeamer
+
+%------------------------------------------------------------------------------
+% Colors
+%
+\definecolor{beamer@blendedblue}{RGB}{25.0,84.0,166.0} % == KTH blue
+
+\definecolor{beamer@kthblue}{RGB}{25.0,84.0,166.0}
+\definecolor{beamer@kthdarkgray}{RGB}{101.0,101.0,108.0}
+\definecolor{beamer@kthmiddlegray}{RGB}{189.0,188.0,188.0}
+\definecolor{beamer@kthlightgray}{RGB}{227.0,229.0,227.0}
+
+\definecolor{beamer@blue1}{RGB}{0.0,98.0,174.0}
+\definecolor{beamer@blue2}{RGB}{46.0,123.0,192.0}
+\definecolor{beamer@blue3}{RGB}{112.0,153.0,208.0}
+\definecolor{beamer@blue4}{RGB}{164.0,185.0,225.0}
+\definecolor{beamer@blue5}{RGB}{210.0,219.0,241.0}
+
+\definecolor{beamer@ensamred}{RGB}{142.0, 36.0, 98.0}
+\definecolor{beamer@ensamorange}{RGB}{255.0, 153.0, 0.0}
+
+\setbeamercolor{structure}{fg=beamer@ensamorange}
+
+%\setbeamercolor{palette primary}  {fg=black, bg=NavyBlue!35}
+%\setbeamercolor{palette secondary}{fg=white, bg=NavyBlue!60}
+%\setbeamercolor{palette tertiary} {fg=white, bg=NavyBlue!75}
+%\setbeamercolor{title}            {fg=black, bg=NavyBlue!40!Cerulean!40}
+\setbeamercolor{frametitle}       {fg=black, bg=white}
+%\setbeamercolor{block title}      {fg=beamer@ensamred, bg=white}
+%\setbeamercolor{block body}       {fg=black,  bg=gray!30}
+\setbeamercolor{alerted text}     {fg=beamer@ensamred, bg=white}
+
+\newcommand{\textblu}[1]{{\color{beamer@ensamred}#1}}
+\newcommand{\textred}[1]{{\color{RedOrange}#1}}
+\newcommand{\textora}[1]{{\color{BurntOrange}#1}}
+\newcommand{\textgre}[1]{{\color{beamer@kthmiddlegray}#1}}
+
+%------------------------------------------------------------------------------
+% Settings
+%
+
+% remove navigation symbols
+\beamertemplatenavigationsymbolsempty
+
+% set margins
+\setbeamersize{text margin left =.03\paperwidth}
+\setbeamersize{text margin right=.03\paperwidth}
+
+%------------------------------------------------------------------------------
+% Coordinate system for the page:
+%
+% -------------------------
+% |(0,1)             (1,1)|
+% |                       |
+% |       (0.5,0.5)       |
+% |                       |
+% |(0,0)             (1,0)|
+% -------------------------
+%
+% invoke by:
+% \node[nodeOptions] (nodeName) at (page cs:xNode,yNode) {nodeContents};
+%
+\makeatletter
+\def\parsecomma#1,#2\endparsecomma{\def\page@x{#1}\def\page@y{#2}}
+\tikzdeclarecoordinatesystem{page}{
+    \parsecomma#1\endparsecomma
+    % Save the lower left corner
+    \pgfpointanchor{current page}{south west}
+    \pgf@xa=\pgf@x%
+    \pgf@ya=\pgf@y%
+    % Save the upper right corner
+    \pgfpointanchor{current page}{north east}
+    \pgf@xb=\pgf@x%
+    \pgf@yb=\pgf@y%
+    % Transform to the correct placement
+    \pgfmathparse{(\pgf@xb-\pgf@xa)*\page@x+\pgf@xa}
+    \expandafter\pgf@x\expandafter=\pgfmathresult pt
+    \pgfmathparse{(\pgf@yb-\pgf@ya)*\page@y+\pgf@ya}
+    \expandafter\pgf@y\expandafter=\pgfmathresult pt
+}
+\makeatother
+
+
+
+%------------------------------------------------------------------------------
+% Title frame
+%
+\newcommand*{\titleframe}%
+{%
+	\centeredlogostrue \dateinfootlinetrue%
+	\begin{frame}%
+		\usebeamertemplate*{title page}%
+	\end{frame}%
+	\addtocounter{framenumber}{-1}%
+	\centeredlogosfalse \dateinfootlinefalse%
+}%
+%
+\defbeamertemplate*{title page}{flow}[1][]%
+{%
+	\begin{tikzpicture}[remember picture, overlay]%
+		%
+		\pgfmathsetmacro{\xshifttt}{.050}
+		%
+		% COVER IMAGE
+		\insertcvrimg%
+		%
+		% TITLE
+		\node[anchor=south,xshift=-\xshifttt\paperwidth] (title) at (current page.center) {
+			\begin{beamercolorbox}[wd=\textwidth]{title page header}%
+				\flushright%
+				\usebeamerfont{title}\textbf{\inserttitle}%
+			\end{beamercolorbox}%
+		};
+		%
+		% AUTHOR AND INSTITUTE
+		\node[anchor=north,xshift=-\xshifttt\paperwidth] (author) at (current page.center) {
+			\begin{beamercolorbox}{author}%
+				\flushright%
+				\usebeamerfont{author}\small\insertauthor%
+				\\[0.5\baselineskip]%
+				\usebeamerfont{normal text}\scriptsize\textit{\insertinstitute}%
+			\end{beamercolorbox}%
+		};
+		%
+	\end{tikzpicture}
+}%
+
+
+%------------------------------------------------------------------------------
+% Thanks frame
+%
+\newcommand*{\thanksframe}%
+{%
+	\centeredlogostrue%
+	\addtocounter{framenumber}{-1}%
+	\begin{frame}%
+		\usebeamertemplate*{thanks page}%
+	\end{frame}%
+	\centeredlogosfalse%
+}%
+%
+\defbeamertemplate*{thanks page}{flow}[1][]%
+{%
+	\begin{tikzpicture}[remember picture, overlay]%
+		%
+		\pgfmathsetmacro{\xshifttt}{.050}
+		%
+		\node[anchor=south,xshift=-\xshifttt\paperwidth] (thanks) at (current page.center) {
+			\begin{beamercolorbox}[wd=\textwidth]{title page header}%
+				\flushright%
+				\usebeamerfont{title}\textbf{Thank you for your attention.}%
+			\end{beamercolorbox}%
+		};
+		%
+		\node[anchor=north,xshift=-\xshifttt\paperwidth] (questions) at (current page.center) {
+			\begin{beamercolorbox}{author}%
+				\flushright%
+				\usebeamerfont{author}\small{Any questions?}%
+			\end{beamercolorbox}%
+		};
+		%
+	\end{tikzpicture}
+}%
+
+
+%------------------------------------------------------------------------------
+% Footline
+%
+\defbeamertemplate*{footline}{flow}[1][]%
+{%
+  %
+	\ifcleanslides
+	\else
+	\begin{tikzpicture}[remember picture, overlay]%
+	  \ifkthofficial
+	    %
+	    % KTH OFFICIAL
+	    %
+      \pgfmathsetmacro{\ymax}{.050}%
+      \pgfmathsetmacro{\ymin}{.025}%
+      \pgfmathsetmacro{\xcor}{.150}%
+      \pgfmathsetmacro{\radius}{.010}%
+	    \setlength{\footheight}{\ymax\paperheight}%
+  		%
+  		\path[rounded corners=\radius\paperheight,fill=beamer@ensamred]
+  		(-.100\paperwidth,-.100\paperheight) -- %to [out= 90,in=180]
+  		(-.100\paperwidth,\ymin\paperheight) -- %to [out=  0,in=180]
+  		(\xcor\paperwidth,\ymin\paperheight) -- %to [out=  0,in=-90]
+  		(\xcor\paperwidth,\ymax\paperheight) -- %to [out=  0,in=180]
+  		(1.100\paperwidth,\ymax\paperheight) -- %to [out=  0,in=180]
+  		(1.100\paperwidth,-.100\paperheight);
+	  \else
+  		%
+  		% FLOW WAVES
+  		%
+      \pgfmathsetmacro{\ymax}{.050}%
+      \pgfmathsetmacro{\ymin}{.035}%
+	    \setlength{\footheight}{\ymax\paperheight}%
+      %
+  		\ifcrappywave
+  			\node[xshift=-.180\paperwidth,yshift= -.100\paperheight] (waveA) at (current page.south west) {};
+  			\node[xshift=-.030\paperwidth,yshift= \ymax\paperheight] (waveB) at (current page.south west) {};
+  			\node[xshift= .120\paperwidth,yshift= \ymin\paperheight] (waveC) at (current page.south west) {};
+  			\node[xshift= .270\paperwidth,yshift= \ymax\paperheight] (waveD) at (current page.south west) {};
+  			\node[xshift= .420\paperwidth,yshift= \ymin\paperheight] (waveE) at (current page.south west) {};
+  			\node[xshift= .570\paperwidth,yshift= \ymax\paperheight] (waveF) at (current page.south west) {};
+  			\node[xshift= .720\paperwidth,yshift= \ymin\paperheight] (waveG) at (current page.south west) {};
+  			\node[xshift= .870\paperwidth,yshift= \ymax\paperheight] (waveH) at (current page.south west) {};
+  			\node[xshift=1.020\paperwidth,yshift= \ymin\paperheight] (waveI) at (current page.south west) {};
+  			%
+  			\node[xshift= .100\paperwidth,yshift=-.100\paperheight] (waveZ) at (current page.south east) {};
+  			%
+  			\path[fill=beamer@ensamred]
+  			(waveA) to [out= 90,in=180]
+  			(waveB) to [out=  0,in=180] % max
+  			(waveC) to [out=  0,in=180]
+  			(waveD) to [out=  0,in=180] % max
+  			(waveE) to [out=  0,in=180]
+  			(waveF) to [out=  0,in=180] % max
+  			(waveG) to [out=  0,in=180]
+  			(waveH) to [out=  0,in=180] % max
+  			(waveI) to [out=  0,in=180]
+  			(waveZ);
+  		\else
+  			\node[xshift=-.100\paperwidth,yshift= -.100\paperheight] (waveA) at (current page.south west) {};
+  			\node[xshift= .000\paperwidth,yshift=  .016\paperheight] (waveB) at (current page.south west) {};
+  			%
+  			\node[xshift= .145\paperwidth,yshift=  .016\paperheight] (waveC) at (current page.south west) {};
+  			\node[xshift= .330\paperwidth,yshift= \ymax\paperheight] (waveD) at (current page.south west) {};
+  			\node[xshift= .430\paperwidth,yshift= \ymin\paperheight] (waveE) at (current page.south west) {};
+  			\node[xshift= .630\paperwidth,yshift= \ymax\paperheight] (waveF) at (current page.south west) {};
+  			\node[xshift= .730\paperwidth,yshift= \ymin\paperheight] (waveG) at (current page.south west) {};
+  			\node[xshift= .930\paperwidth,yshift= \ymax\paperheight] (waveH) at (current page.south west) {};
+  			\node[xshift=1.030\paperwidth,yshift= \ymin\paperheight] (waveI) at (current page.south west) {};
+  			%
+  			\node[xshift= .100\paperwidth,yshift=-.100\paperheight] (waveZ) at (current page.south east) {};
+  			%
+  			\path[fill=beamer@ensamred]
+  			(waveA) to [out= 90,in=180]
+  			(waveB) to [out=-12,in=192]
+  			(waveC) to [out= 12,in=180]
+  			(waveD) to [out=  0,in=180] % max
+  			(waveE) to [out=  0,in=180]
+  			(waveF) to [out=  0,in=180] % max
+  			(waveG) to [out=  0,in=180]
+  			(waveH) to [out=  0,in=180] % max
+  			(waveI) to [out=  0,in=180]
+  			(waveZ);
+  		\fi
+  		%
+  	\fi
+  	%
+		\ifdateinfootline%
+			%
+			% DATE
+			\node[anchor=south east] (foottext) at (current page.south east) {%
+				\begin{beamercolorbox}[wd=.760\paperwidth]{foottext}%
+					\flushright{{\color{white}\scriptsize~\insertdate}}%
+				\end{beamercolorbox}%
+			};%
+			%
+		\else%
+			%
+			% AUTHOR TITLE -- FRAME #
+			\node[anchor=south east] (foottext) at (current page.south east) {%
+			  \ifkthofficial
+			    \begin{beamercolorbox}[wd=\paperwidth]{footext}%
+						\flushright{{\color{white}\scriptsize\hspace{4pt}\insertshortauthor:~\insertshorttitle~--~\insertframenumber~of~\inserttotalframenumber}}%
+					\end{beamercolorbox}%
+			  \else
+				  \ifcrappywave
+					  \begin{beamercolorbox}[wd=\paperwidth]{footext}%
+						  \flushright{{\color{white}\scriptsize\hspace{4pt}\insertshortauthor\hfill\insertshorttitle~--~\insertframenumber~of~\inserttotalframenumber}}%
+					  \end{beamercolorbox}%
+				  \else
+					  \begin{beamercolorbox}[wd=.760\paperwidth]{footext}%
+						  \flushright{{\color{white}\scriptsize~\insertshortauthor\hfill\insertshorttitle~--~\insertframenumber~of~\inserttotalframenumber}}%
+					  \end{beamercolorbox}%
+					\fi
+				\fi
+			};%
+			%
+		\fi
+		%
+		\ifcenteredlogos%
+		   %
+		   \pgfmathsetmacro{\xshifttt}{.050}
+		   %
+		   % LOGO(s) centered
+		   \ifkthofficial
+		     \node[anchor=south west,xshift=.015\paperwidth] (logot) at (current page.west) {
+		        \begin{beamercolorbox}[wd=\xcor\paperwidth]{logot}%
+		      	  \flushleft %
+		    	    \insertlogot
+		        \end{beamercolorbox}%
+		     };
+		     \node[anchor=north west,xshift=.015\paperwidth,yshift=0.8\baselineskip] (logob) at (current page.west) {
+		        \begin{beamercolorbox}[wd=\xcor\paperwidth]{logob}%
+	  	    	  \flushleft %
+	  	    	  \insertlogob\\[0.8\baselineskip]
+  		    	  \insertlogoc
+  		      \end{beamercolorbox}%
+  		   };
+		   \else
+  		   \node[anchor=south east,xshift=-.30\paperwidth] (logot) at (current page.center) {
+  		      \begin{beamercolorbox}[wd=.200\paperwidth]{logot}%
+  		    	  \centering%
+  		    	  \insertlogot
+  		      \end{beamercolorbox}%
+  		   };
+  		   \node[anchor=north east,xshift=-.30\paperwidth,yshift=0.8\baselineskip] (logob) at (current page.center) {
+  		      \begin{beamercolorbox}[wd=.200\paperwidth]{logob}%
+  		    	  \centering%
+  		    	  \insertlogob\\[0.8\baselineskip]
+  		    	  \insertlogoc
+  		      \end{beamercolorbox}%
+  		   };
+  		 \fi
+		   %
+		\else
+			%
+			% LOGO top
+		   \node[anchor=north west, xshift= .015\paperwidth,yshift= -.003\paperheight] (logot) at (current page.north west) {\insertlogot};%
+			%
+			% LOGO bottom
+			\ifkthofficial
+			  \node[anchor=south west, xshift= .015\paperwidth,yshift=  \ymin\paperheight] (logob) at (current page.south west) {\insertlogob};%
+			\else
+			  \ifcrappywave
+				  \node[anchor=south west, xshift= .015\paperwidth,yshift=  \ymax\paperheight] (logob) at (current page.south west) {\insertlogob};%
+			  \else
+				  \node[anchor=south west, xshift= .015\paperwidth,yshift=  .004\paperheight] (logob) at (current page.south west) {\insertlogob};%
+				\fi
+			\fi
+			%
+			% LOGO corner
+		   \node[anchor=north east, xshift=-.015\paperwidth,yshift= -.003\paperheight] (logot) at (current page.north east) {\insertheaderlogoc};%
+			%
+		\fi%
+	\end{tikzpicture}%
+	\fi
+	%
+}%
+
+
+%------------------------------------------------------------------------------
+% Frametitle
+%
+\defbeamertemplate*{frametitle}{flow}[1][]%
+{%
+	\vspace{.01\paperheight}%
+	\hspace{.128\paperwidth}%
+	\textbf{\insertframetitle}%
+	\\[0.2\baselineskip]
+	\hspace{.128\paperwidth}%
+	\small\insertframesubtitle%
+	\vspace{.03\paperheight}%
+}%
+
+%
+% Long life to Gigi!
