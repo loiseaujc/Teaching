@@ -1,0 +1,208 @@
+\section{Oscillators}
+
+\subsection{The Poincaré-Lindstedt method}
+
+\subsection{Weakly nonlinear self-sustained oscillators}
+
+\subsection{Strongly nonlinear oscillators and relaxation oscillations}
+
+\subsection{List of problems}
+
+\subsubsection*{Poincaré-Lindstedt method}
+
+\begin{problem}
+  Consider the conservative Duffing oscillator whose governing equation is given by
+  %
+  \[
+  \ddot{x} + x + \epsilon x^3 = 0 \quad \text{with initial conditions} \quad x(0) = 1, \quad \dot{x}(0) = 0
+  \]
+  %
+  where $\epsilon$ is a small real number.
+  The properties of this sytem and its fixed points have already been studied qualitatively in the previous section.
+  We now aim for a more quantitative analysis.
+
+  \bigskip
+
+  \begin{enumerate}
+  \item[a)] Introducing a strained time variable $\tau = \omega t$ with $\omega = \left( 1 + \epsilon \omega_1 + \cdots\right)$ and assuming that $x(\tau) = x_0(\tau) + \epsilon x_1(\tau) + \cdots$, compute the zeroth and first order approximation of the periodic solution.
+
+  \item[b)] Sketch the evolution of the frequencies in the system as a function of $\epsilon$ (consider both positive and negative values of $\epsilon$).
+
+  \item[c)] Write down a computer program that simulate the system above for different values of $\epsilon$.
+    For each value, compare the computer-generated trajectories in phase plane with your Poincaré-Lindstedt approximation.
+    Compare the frequencies extracted from your simulation using the Fourier transform with the results from your theoretical analysis.
+  \end{enumerate}
+  
+\end{problem}
+
+\bigskip
+
+\begin{problem}
+  When discussing the Poincaré-Lindstedt method for the van der Pol oscillator
+  %
+  \[
+  \ddot{x} + \epsilon \left( x^2 - 1 \right) \dot{x} + x = 0
+  \]
+  %
+  we have seen that, when $\epsilon$ is sufficiently small, the oscillation frequency was given by $\omega = 1 + O(\epsilon^2)$.
+  Assuming now that
+  %
+  \[
+  \omega = 1 + \epsilon \omega_1 + \epsilon^2 \omega_2 + O(\epsilon^3)
+  \]
+  %
+  and
+  %
+  \[
+  x(t) = x_0(t) + \epsilon x_1(t) + \epsilon^2 x_2(t) + O(\epsilon^3),
+  \]
+  %
+  show that the frequency is actually given by $\omega = 1 - \dfrac{1}{16} \epsilon^2 + O(\epsilon^3)$.
+\end{problem}
+
+\subsubsection*{Weakly nonlinear oscillators}
+
+\begin{problem}[A simple model for the Bénard-von Kàrmàn vortex street]
+  Consider the following third-order system
+  %
+  \[
+  \begin{aligned}
+    \dot{x} & = \sigma x - y - xz - \alpha yz\\
+    \dot{y} & = x + \sigma y - yz + \alpha xz\\
+    \dot{z} & = -z + x^2 + y^2.
+  \end{aligned}
+  \]
+  %
+  This model arises as a simplified representation of the Bénard-von K\`arm\`an vortex street in the wake of a two-dimensional cylinder at low Reynolds numbers.
+  Here, $x$ and $y$ represent the two-degrees of freedom needed to describe the oscillatory behaviour of the flow while $z$ is known as the \emph{shift-mode amplitude}.
+  It describes how different the linearly unstable base flow is from the time-averaged mean flow.
+  The term $x^2 + y^2$ in the equation for $z$ models the influence of the fluctuation's Reynolds stresses on the mean flow.
+
+  \begin{enumerate}
+  \item[a)] Show that this dynamical system is equivariant with respect to the transformation
+    %
+    \[
+    \gamma
+    =
+    \begin{bmatrix}
+      \cos(\theta) & \sin(\theta) & 0 \\
+      -\sin(\theta) & \cos(\theta) & 0 \\
+      0 & 0 & 1
+    \end{bmatrix}
+    \]
+    %
+    where $\gamma$ represents a rotation around the $z$-axis.
+
+  \item[b)] Introducing the complex variable $\eta = x + i y = r e^{i\phi}$, where $r$ is the radius of oscillation and $\phi$ the phase, express the system in the cylindrical coordinates system $(r, \phi, z)$.
+
+  \item[c)] Compute the fixed points in the $(r, z)$ plane.
+    You should obtain $(r_0, z_0) = (0, 0)$ and $(r_1, z_1) = (\sqrt{\sigma}, \sigma)$.
+    From a physical point of view, to what state does each of these fixed points correspond to ?
+
+  \item[d)] Show that the origin $(r_0, z_0)$ is linearly unstable while the mean flow $(r_1, z_1)$ is linearly stable.
+
+  \item[e)] The equation for the phase reads
+    %
+    \[
+    \dot{\phi} = 1 + \alpha z.
+    \]
+    %
+    How does the oscillation frequency $\omega(t) = 1 + \alpha z(t)$ evolves as the system transitions from its unstable equilibrium towards its limit cycle ?
+
+  \item[f)] Sketch a three-dimensional phase portrait in the coordinate system $(x, y, z)$.
+  \end{enumerate}
+\end{problem}
+
+\bigskip
+
+\begin{problem}[The Bénard-von Kàrmàn vortex street revisited]
+  Let us revisit the simple model for the Bénard-von Kàrmàn vortex street.
+  Our goal will now be to derive an amplitude equation for the oscillation and the phase using a weakly nonlinear expansion in the vicinity of the fixed point $(x, y, z) = (0, 0, 0)$.
+
+  \begin{enumerate}
+  \item[a)] Introducing the complex variable $\eta = x + i y$, write down the model for $\eta$ and $z$.
+
+  \item[b)] Let us introduce a slow time scale $\tau = \epsilon^2 t$ with $\epsilon^2 = \sigma$.
+    Expanding the solution $(\eta, z)$ in the vicinity of $(\eta_0, z_0) = (0, 0)$ as
+    %
+    \[
+    \begin{aligned}
+      \eta(t, \tau) & = \epsilon \eta_1(t, \tau) + \epsilon^2 \eta_2(t, \tau) + \epsilon^3 \eta_3(t, \tau) + O(\epsilon^4)\\
+      z(t, \tau) & = \epsilon z_1(t, \tau) + \epsilon^2 z_2(t, \tau) + \epsilon^3 z_3(t, \tau) + O(\epsilon^4),
+    \end{aligned}
+    \]
+    %
+    show that you obtain the following set of equations for each order
+    %
+    \[
+    \begin{aligned}
+      O(\epsilon) : \quad & \dfrac{d\eta_1}{dt} = i \eta_1 \\
+      & \dfrac{dz_1}{dt} = - z_1 \\
+      O(\epsilon^2) : \quad & \dfrac{d\eta_2}{dt} = i \eta_2 - (1 - i\alpha) \eta_1 z_1 \\
+      & \dfrac{dz_2}{dt} = - z_2 + \vert \eta_1 \vert^2 \\
+      O(\epsilon^3) : \quad & \dfrac{d\eta_3}{dt} = i \eta_3 + \eta_1 - (1 - i\alpha)(\eta_1 z_2 + \eta_2 z_1) - \dfrac{d\eta_1}{d\tau} \\
+      & \dfrac{dz_3}{dt} = - z_3 + \overline{\eta}_1 \eta_2 + \eta_1 \overline{\eta}_2 - \dfrac{dz_1}{d\tau}.
+    \end{aligned}
+    \]
+
+  \item[c)] The solution for $\eta_1$ is \( \eta_1(t, \tau) = A(\tau) e^{it}\).
+    Show that \( z_2(t, \tau) = \vert A(\tau) \vert^2 \left( 1 - e^{-t} \right) \) (assuming $z_2(0, 0) = 0$).
+
+  \item[d)] Introducing these two expressions in the equation for $\eta_3$, show that invoking the Fredholm theorem to kill the resonant terms leads to
+    %
+    \[
+    \dfrac{dA}{d\tau} = A - \left( 1 - i\alpha \right) \vert A \vert^2 A.
+    \]
+    %
+    Expressing the complex amplitude as $A(\tau) = R(\tau) e^{i \phi(\tau)}$, show that we finally have
+    %
+    \[
+    \begin{aligned}
+      \dfrac{dR}{d\tau} & = R - R^3 \\
+      \dfrac{d\phi}{d\tau} & = \alpha R^2.
+    \end{aligned}
+    \]
+
+  \item[e)] Given that $\tau = \epsilon^2 t = \sigma t$, show that the solution $\eta(t, \tau)$ to first order is
+    %
+    \[
+    \eta(t, \tau) = \sqrt{\sigma} R(\tau) \exp \left( i\omega(\tau)t \right) + O(\epsilon^2)
+    \]
+    %
+    where $\omega(\tau) = 1 + \alpha \sigma R^2(\tau)$.
+    Similarly, assuming that $z_1(0) = 0$, show that the solution for $z(t, \tau)$ up to second order is given by
+    %
+    \[
+    z(t, \tau) = \sigma R^2(\tau) \left( 1 - e^{-t} \right) + O(\epsilon^3).
+    \]
+    Given that $R(\tau) \to 1$ when $\tau \to +\infty$, are your results regarding the amplitude and frequency of the oscillations and the amplitude of the distortion $z(t)$ consistent with the results from the previous exercise ?
+  \end{enumerate}
+  
+\end{problem}
+
+\subsubsection*{Strongly nonlinear oscillators}
+
+%% \begin{problem}
+%%   Consider the FitzHugh-Nagumo model
+%%   %
+%%   \[
+%%   \begin{aligned}
+%%     \dot{v} & = v - \dfrac{v^3}{3} - w + I \\
+%%     \dot{w} & = \epsilon(v + a - b w).
+%%   \end{aligned}
+%%   \]
+%%   %
+%%   This model is a simplified version of the Hodgkin-Huxley model detailing the activation and deactivation dynamics of a spiking neuron.
+%%   Here, $v$ denotes the membrane potential while $w$ is known as the recovery variable.
+%%   The input $I$ is the current imposed to the membrane.
+%%   If $I$ is sufficiently small, no particular long-term dynamics are observed.
+%%   However, when $I$ exceeds a critical value, the neuron starts to spike.
+%%   These periodic spikes (when $I$ is kept constant above this threshold) can be understood as relaxation oscillations.
+%%   Let us try to understand these dynamics using both theoretical and numerical analyses.
+
+%%   \bigskip
+
+%%   \begin{enumerate}
+%%   \item[a)] Show that for $a = b = 0$, the FitzHugh-Nagumo model reduces to the classical van der Pol oscillator.
+%%   \end{enumerate}
+%% \end{problem}

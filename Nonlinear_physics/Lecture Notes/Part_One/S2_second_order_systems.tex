@@ -1,0 +1,417 @@
+\chapter{Second-order systems}\label{chap: second-order systems}
+
+\section{Linear systems}\label{sec: linear systems}
+
+\subsection{List of problems}
+
+\subsubsection*{Linear algebra}
+
+\begin{problem}
+  Given a matrix $\bm{A} \in \mathbb{R}^{2 \times 2}$, show that its characteristic polynomial can be expressed as
+  %
+  \[
+  \lambda^2 - \text{tr}(\bm{A}) \lambda + \det(\bm{A}) = 0
+  \]
+  %
+  where $\text{tr}(\bm{A})$ denotes the trace of the matrix and $\det(\bm{A})$ its determinant.
+\end{problem}
+
+\bigskip
+
+\begin{problem}
+  Show that, if $\bm{A} \in \mathbb{R}^{n \times n}$ is a symmetric matrix (i.e.\ $\bm{A}^T = \bm{A}$), then all of its eigenvalues $\lambda$ are real and its eigenvectors $\bm{v}$'s form an orthonormal basis for $\mathbb{R}^n$.
+\end{problem}
+
+\bigskip
+
+\begin{problem}
+  Show that if $\bm{A}$ is a symmetric negative definite matrix (i.e.\ $\bm{A}^T = \bm{A}$ and all of its eigenvalues are negative) then
+  %
+  \[
+  \dot{\bm{x}} = \bm{Ax}
+  \]
+  %
+  implies
+  %
+  \[
+  \dfrac{1}{2} \dfrac{d}{dt} \| \bm{x} \|_2^2 = - \| \bm{Rx} \|_2^2
+  \]
+  %
+  where $\bm{R}$ is the Cholesky factor of $-\bm{A}$ (i.e.\ $\bm{A} = - \bm{R}^T \bm{R}$ where $\bm{R}^T \bm{R}$ is a symmetric positive definite matrix).
+  What does the equation above implies for the evolution of the energy in the system ?
+\end{problem}
+
+\bigskip
+
+\begin{problem}
+  Show that any matrix of the form
+  %
+  \[
+  \bm{A} = \begin{bmatrix} \lambda & a \\ 0 & \lambda \end{bmatrix}
+  \]
+  %
+  with $a \neq 0$ has only a one-dimensional eigenspace corresponding to the eigenvalue $\lambda$.
+  Then solve the system $\dot{\bm{x}} = \bm{Ax}$ and sketch the phase portrait.
+\end{problem}
+
+\bigskip
+
+\begin{problem}
+  Show that the eigenvalues of a skew-symmetric matrix
+  %
+  \[
+  \bm{A} = \begin{bmatrix} 0 & a \\ -a & 0 \end{bmatrix}
+  \]
+  %
+  are complex conjugate imaginary numbers.
+\end{problem}
+
+\bigskip
+
+\begin{problem}
+  Consider the linear dynamical system $\dot{\bm{x}} = \bm{Ax}$ given by
+  %
+  \[
+  \dfrac{d}{dt} \begin{bmatrix} x \\ y \end{bmatrix}
+  =
+  \begin{bmatrix}
+    1 & -1 \\ 1 & 1
+  \end{bmatrix}
+  \begin{bmatrix}
+    x \\ y
+  \end{bmatrix}.
+  \]
+
+  \begin{enumerate}
+  \item[a)] Show that its eigenvalues are given by $\lambda = 1 \pm i$ and compute its eigenvectors $\bm{v}_1$ and $\bm{v}_2$.
+
+  \item[b)] The general solution is $\bm{x}(t) = \alpha e^{\lambda_1 t} \bm{v}_1 + \beta e^{\lambda_2t} \bm{v}_2$.
+    If $\bm{x}(0) \in \mathbb{R}^2$ then $\bm{x}(t) \in \mathbb{R}^2 \ \forall t$.
+    In such a case, express $\bm{x}(t)$ purely in terms of real-valued functions.
+
+  \item[c)] Which aspect of the dynamics do the real and imaginary parts of $\lambda$ characterize ?
+  \end{enumerate}
+\end{problem}
+
+\subsubsection*{Harmonic oscillator (with and without damping)}
+
+\begin{problem}
+  Consider the canonical harmonic oscillator whose equation of motion is given by
+  %
+  \[
+  \ddot{x} + \omega^2 x = 0.
+  \]
+
+  \begin{enumerate}
+  \item[a)] Introducing a suitable potential $V(x) : \mathbb{R} \to \mathbb{R}$, show that the equation for the harmonic oscillator can be rewritten as
+    %
+    \[
+    \ddot{x} + \dfrac{dV}{dx} = 0.
+    \]
+
+  \item[b)] Show that the equation above implies
+    %
+    \[
+    \dfrac{d}{dt} \left( \dfrac{1}{2} \dot{x}^2 + V(x) \right) = 0.
+    \]
+    %
+    What is the meaning of this equation ?
+    What does the quantity $H(x, \dot{x}) = \dfrac{1}{2} \dot{x}^2 + V(x)$ represent from a physical point of view ?
+
+  \item[c)] Given the expression for the potential $V(x)$ found in the previous question, show that the trajectories of the harmonic oscillator in phase space correspond to ellipses of the form $\omega^2 x^2 + y^2 = C$ with $C > 0$.
+  \end{enumerate}
+\end{problem}
+
+\bigskip
+
+\begin{problem}
+  Consider the simple mechanical system shown in figure~\ref{fig: mass-spring-damper}.
+  Starting from Newton's principles, the equation of motion is given by
+  %
+  \[
+  \ddot{x} + 2k \dot{x} + \omega_0^2 x = 0
+  \]
+  %
+  where $x$ denotes the deviation from the equilibrium position, $k > 0$ is the friction coefficient and $\omega_0$ is the natural frequency of the system in the absence of friction.
+  In this exercise, we aim at classifying all of the possible dynamics exhibited by the system as we vary its parameters.
+  
+  \bigskip
+  
+  \begin{enumerate}
+  \item[a)] In its current form, our model depends explicitely on two parameters, namely the friction coefficient $k$ and the natural frequency of oscillation $\omega_0$.
+    Using a suitable rescaling of time, show that the model can be rewritten as
+    %
+    \[
+    \ddot{x} + 2 \mu \dot{x} + x = 0
+    \]
+    %
+    and give the expression of $\mu$.
+    
+  \item[b)] Rewrite the model above as a two-dimensional linear system of the form $\dot{\bm{x}} = \bm{Ax}$.
+    
+  \item[c)] Compute the characteristic polynomial of the matrix $\bm{A}$ and classify the type of fixed point for all the possible cases.
+    For all cases, sketch the phase portrait of the system.
+    
+  \item[d)] How do these results relate to the standard notions of overdamped, critically damped and underdamped oscillations ?
+  \end{enumerate}
+  
+\end{problem}
+
+\begin{figure}
+  \centering
+  \begin{tikzpicture}[>=stealth]
+      \path[pattern={Lines[angle=45,distance={8pt/sqrt(2)}]}] (-2, 5) edge ++(4,0) rectangle ++ (4, 0.5);
+
+      \draw[decorate,decoration={coil, segment length=5pt, aspect=0.7, amplitude=4pt,
+          pre=lineto, pre length=5mm, post=lineto, post length=5mm}] (0.5, 5) -- (0.5, 2.5)
+      node[left, draw, minimum size=1cm, fill=blue!20] (m) {$m$};
+
+      \draw[] (-0.5, 5) -- (-0.5, 4) {};
+      \draw[] (-0.25, 4) -- (-0.75, 4) {};
+
+      \draw[] (-0.5, 3.75) -- (-0.5, 2.5) {};
+      \draw[] (-0.25, 3.75) -- (-0.75, 3.75) {};
+
+      \draw[] (-0.25, 3.75) -- (-0.25, 4.25) {};
+      \draw[] (-0.75, 3.75) -- (-0.75, 4.25) {};
+
+      \draw[blue] (m.center-|0, 0) ++ (0, 1) -- ++ (-2, 0)
+      edge[<-,edge label'=$x$,shorten >=1pt] (m.center-|-2, 0)
+      (m.center-|0, 0) ++ (0, -1) -- ++ (-2, 0) 
+      edge[<-,edge label=$-x$,shorten >=1pt] (m.center-|-2, 0)
+      (m.east) edge[dashed] (m.east-|2, 0) 
+      (m.east-|2, 0) node[right] {Equilibrium};
+  \end{tikzpicture}
+  \caption{Mechanical system considered in Problem 2.2}\label{fig: mass-spring-damper}
+\end{figure}
+
+\bigskip
+
+\begin{problem}
+  Consider the electric circuit shown in figure~\ref{fig: RLC circuit}.
+  The Kirchoff's voltage law implies
+  %
+  \[
+  V_R(t) + V_L(t) + V_C(t) = V_{\text{in}}(t)
+  \]
+  %
+  where $V_R$, $V_L$ and $V_C$ are the voltages accross R, L, and C respectively and $V_{\text{in}}$ is the (possibly time-varying) voltage from the source.
+  Using Ohm's law, the voltage accross the resistor can be expressed as
+  %
+  \[
+  V_R(t) = R i(t).
+  \]
+  %
+  Similarly, the voltage $V_L$ accross the inductor is related to the intensity of the current by
+  %
+  \[
+  V_L(t) = L \dfrac{di}{dt}.
+  \]
+  %
+  Finally, the intensity $i(t)$ of the current is related to the voltage accross the capacitor by
+  %
+  \[
+  i = C \dfrac{dV_C}{dt}.
+  \]
+  %
+  Combining all of these consitutive equations together yields the following second-order differential equation
+  %
+  \[
+  \dfrac{d^2 V_C}{dt^2} + \dfrac{R}{L} \dfrac{d V_c}{dt} + \dfrac{V_C}{LC} = \dfrac{V_{\text{in}}}{LC}
+  \]
+  %
+  where we'll assume that the source voltage $V_{\text{in}}$ is constant.
+
+  \bigskip
+
+  \begin{enumerate}
+  \item[a)] Show that a natural time scale for the oscillatory behaviour of the system is given by $\tau = \sqrt{LC}$ while the damping due to the resitor occurs on a time scale $\tau = \nicefrac{R}{L}$.
+
+  \item[b)] Show that the system admits a single fixed point given by $V_C = V_{\text{in}}$.
+
+  \item[c)] If $V_{\text{in}} = 0$, show that we have
+    %
+    \[
+    \dfrac{d}{dt} \left( \dfrac{1}{2} Li^2 + \dfrac{1}{2}C V_C^2 \right) = - Ri^2
+    \]
+    %
+    where $\nicefrac{Li^2}{2}$ is the magnetic energy in the coil and $\nicefrac{CV_C^2}{2}$ is the electric energy in the condensator.
+    From a physical point of view, what does the term $-Ri^2$ represent ?
+  \end{enumerate}
+\end{problem}
+
+\begin{figure}
+  \centering
+  \begin{circuitikz}
+    \draw (0, 0) to[battery1, invert] (0, 3) to [R, i>^=$i(t)$, l=$R$] (2.5, 3);
+    \draw (2.5, 3) to [L, l=$L$] (2.5, 0);
+    \draw (2.5, 0) to [C, l=$C$] (0, 0);
+  \end{circuitikz}
+  \caption{RLC circuit for Problem 2.2}\label{fig: RLC circuit}
+\end{figure}
+
+\section{Nonlinear systems}\label{sec: nonlinear systems}
+
+\subsection{List of problems}
+
+\subsubsection*{Conservative systems}
+
+\begin{problem}
+  Consider the Duffing oscillator whose equation is given by
+  %
+  \[
+  \ddot{x} + \epsilon x + x^3 = 0
+  \]
+  %
+  where $\epsilon$ can either be positive or negative.
+
+  \bigskip
+
+  \begin{enumerate}
+  \item[a)] Show that this system is conservative and give the expression of its Hamiltonian.
+
+  \item[b)] For $\epsilon > 0$, show that the system has a nonlinear center at its origin and sketch the phase portrait.
+
+  \item[c)] For $\epsilon < 0$, show that the system admits three fixed points and classify them.
+    Sketch the phase portrait.
+  \end{enumerate}
+\end{problem}
+
+\bigskip
+
+\begin{problem}
+  Consider the \emph{Lotka-Volterra predator-prey model} given by
+  %
+  \[
+  \begin{aligned}
+    \dot{R} & = a R - b RF \\
+    \dot{F} & = -c F + d RF
+  \end{aligned}
+  \]
+  %
+  where $R(t)$ denotes the population of rabbits and $F(t)$ that of foxes.
+  We'll assume that all constants are positive as well as $R(t)$ and $F(t)$.
+
+  \begin{enumerate}
+  \item[a)] Discuss the biological meaning of all the terms in the model as well as its limitations.
+
+  \item[b)] Introducing a suitable rescaling of the variables $R$ and $F$ as well as time, show that the model can be recast as
+    %
+    \[
+    \begin{aligned}
+      \dot{x} & = x - xy \\
+      \dot{y} & = - \mu y + \mu xy.
+    \end{aligned}
+    \]
+
+  \item[c)] Show that the system is conservative.
+
+  \item[d)] Compute the fixed points of the system and classify them.
+
+  \item[e)] Assuming that both $x(0)$ and $y(0)$ are non-zero, show that model predicts cycles in the populations of both species and sketch the phase portrait.
+
+  \item[f)] Sketch the evolution of $x(t)$ and $y(t)$ as a function of time.
+    Explain from a biological point of view what you observe.
+  \end{enumerate}
+\end{problem}
+
+\subsubsection*{Dissipative systems}
+
+\begin{problem}
+  Consider once again the Duffing oscillator but let us now include the influence of friction.
+  The equation becomes
+  %
+  \[
+  \ddot{x} + \dot{x} - x + x^3 = 0
+  \]
+
+  \begin{enumerate}
+  \item[a)] Show that the system is no longer conservative.
+
+  \item[b)] Recast the system as two first-order equations, compute the fixed points of the system and classify them.
+
+  \item[c)] In the vicinity of the origin, the stable manifold can be represented as $y = h(x)$.
+    Assuming that $h(x) = a x + b x^2 + c x^3$, determine the coefficients of this third-order approximation.
+  \end{enumerate}
+\end{problem}
+
+\subsubsection*{Modelling a pandemic}
+
+\begin{problem}
+  The recent years have been marked by the COVID-19 pandemic.
+  Since the begining of the pandemic, numerous models have been proposed to forecast its evolution.
+  One of the simplest, dating back to the seminal work of Kermack and McKendrick in the late 1920's and early 1930's, is known as the SIR model.
+  It is given by
+  %
+  \[
+  \begin{aligned}
+    \dfrac{dS}{dt} & = -\beta \dfrac{SI}{N} \\
+    \dfrac{dI}{dt} & = \beta \dfrac{SI}{N} - \gamma I \\
+    \dfrac{dR}{dt} & = \gamma I
+  \end{aligned}
+  \]
+  %
+  where $N$ is the total population and $S$, $I$ and $R$ denote the number of suceptible (i.e.\ not yet infected), infected and removed (i.e.\ having recovered or died from the disease) persons in the population.
+  The parameter $\beta$ characterizes the probability for susceptible individuals to become infected whenever they meet an infectious person.
+  The parameter $\gamma$ models how fast an infected individual recovers (or dies) from the disease.
+
+  \begin{enumerate}
+  \item[a)] Show that $S(t) + I(t) + R(t)$ is a conserved quantity.
+
+  \item[b)] Introducing a suitable rescaling of the variables and time, show that the model can be recast as
+    %
+    \[
+    \begin{aligned}
+      \dot{x} & = -R_0 xy \\
+      \dot{y} & = R_0 xy - y \\
+      \dot{z} & = y
+    \end{aligned}
+    \]
+    %
+    where $R_0$ is known as the \emph{basic reproduction number}.
+    From an epidemiological point of view, what does this number represent ?
+
+  \item[c)] The equation for $z$ being decoupled from the rest, the dynamics of $x$ and $y$ indeed forms a two-dimensional system.
+    Find and classify all of the fixed points of the system.
+
+  \item[d)] Sketch the nullclines and the phase portrait of the system.
+
+  \item[e)] Let us assume that, as the disease first emerges, most of the population is susceptible (i.e.\ $x_0 \simeq 1$).
+    An epidemic is said to occur if $y(t)$ initially increases.
+    Under what condition on the basic reproduction number $R_0$ does an epidemic can occur ?
+
+  \item[f)] At the begining of a pandemic, $x(t) \simeq 1$.
+    Show that the number of infected individuals initially grows exponentially fast.
+
+  \item[g)] If an outbreak happens, it is considered that \emph{herd immunity} has been achieved once the number of infected individuals starts to decrease.
+    What fraction of the population needs to have been infected at one point or another before such a decrease happens ?
+
+  \item[h)] At the begining of the COVID-19, the basic reproduction number was estimated to be approximately equal to 3.
+    Given that France has a population of roughly 70 millions inhabitants, how many people would have had to contract the disease before herd immunity had been achieved ?
+  \end{enumerate}
+\end{problem}
+
+\bigskip
+
+\begin{problem}
+  Several strategies have been proposed to mitigate the pandemic.
+  Two of the most widely used strategies are social distancing and isolating infected individuals.
+  A simple model for the influence of these two strategies is
+  %
+  \[
+  \begin{aligned}
+    \dot{x} & = -(R_0 - a) xy \\
+    \dot{y} & = (R_0 - a) xy - b y
+  \end{aligned}
+  \]
+  %
+  where $a \geq 0$ characterizes by how much we reduced our social interactions and $b \geq 1$ how fast infected individuals are effectively removed from the population.
+
+  \bigskip
+
+  \begin{enumerate}
+  \item[a)] Show that social distancing leads to a slower growth of the number of infected individuals at the begining of the pandemic.
+
+  \item[b)] Rescaling time, show that isolation effectively leads to a modified basic reproduction number $R_b < R_0$.
+  \end{enumerate}
+\end{problem}

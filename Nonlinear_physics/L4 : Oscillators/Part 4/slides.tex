@@ -1,0 +1,104 @@
+%-------------------------------------------------------------------------------
+%                                PREAMBLE
+%-------------------------------------------------------------------------------
+\documentclass[usenames,dvipsnames,svgnames,10pt,aspectratio=169]{beamer}
+%
+\usefonttheme{professionalfonts}
+% This theme uses TIKZ: compile twice with PDFLaTeX or LuaLaTeX.
+%
+%  Options:
+%  - [clean]:    clean slides, i.e. logos and footbar are removed
+%  - [kth]:      footbar style inspierd to the official KTH template
+%  - [nicewave]: a different style of wave is used (not approved by FLOW)
+%
+\usetheme[clean]{flow}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.geometric, math, positioning, calc, patterns, angles, quotes}
+\usetikzlibrary{patterns.meta,decorations.pathmorphing}
+
+\newcommand{\semaphore}[3]{% #1: color of circle,
+                           % #2: color of semicircle
+                           % #3: angle of semicircle 
+  \tikz[node distance=0mm,baseline]
+       {
+         \node (s1) [circle, fill=#1, minimum size=6mm] {};
+         \node      [semicircle, fill=#2, 
+           inner sep=0pt, outer sep=0pt, minimum size=3mm,
+           anchor=south,
+           at={(s1.center)}, rotate=#3] {};
+       }
+}
+
+\usepackage[]{circuitikz}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{polar}
+
+\usepackage{hyperref,graphicx,lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage{media9}
+\usepackage{xcolor}
+\usepackage{stmaryrd}
+\usepackage{nicefrac}
+\usepackage{multimedia}
+\usepackage{multicol}
+\usepackage{upgreek}
+\usepackage[]{bm}
+\usepackage[]{url}
+\usepackage[]{animate}
+\usepackage{amsmath}
+
+\graphicspath{{imgs/}}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+
+\DeclareMathOperator*{\maximize}{maximize~}
+
+%-------------------------------------------------------------------------------
+%                                TITLE PAGE
+%-------------------------------------------------------------------------------
+\title[Nonlinear physics] % Short title used in footline
+{
+	Weakly nonlinear \\
+  oscillators
+}
+
+\author[J.-Ch.~Loiseau] % Presenting author in short form used in footline
+{
+	\underline{Jean-Christophe Loiseau}
+}
+% - Give the names in the same order as the appear in the paper.
+% - Underline the presenting author.
+
+\institute[unused]
+{
+	\url{jean-christophe.loiseau@ensam.eu} \\
+	Laboratoire DynFluid \\
+	Arts et M\'etiers, France.
+}
+% Keep it simple, no one is interested in your street address.
+
+% University logo(s)
+\logot{\includegraphics[width=.128\paperwidth]{DynFluid_logo}}  % Top logo
+\logob{\includegraphics[width=0.128\paperwidth]{ENSAM_logo}} % Bottom logo
+% \logoc[{\includegraphics[width=.128\paperwidth]{limsi}}]{\includegraphics[width=.128\paperwidth]{limsi}} % Corner logo
+%
+% Cover image: \cvrimg{x position}{y position}{cover image}
+\cvrimg{.77}{.8}{\includegraphics[width=.4\paperwidth]{cover.png}}
+
+\date[unused]{Physique non-lin\'eaire -- 2019-2020}
+
+\begin{document}
+
+\titleframe	% Print the title as the first slide
+
+%-------------------------------------------------------------------------------
+%                           PRESENTATION SLIDES
+%-------------------------------------------------------------------------------
+
+\begin{frame}[t, c]{First-order systems}{Flow on the real number line}
+\end{frame}
+
+
+\end{document}

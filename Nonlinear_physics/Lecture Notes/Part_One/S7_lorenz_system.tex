@@ -1,0 +1,260 @@
+\section{The Lorenz system}
+
+\subsection{List of problems}
+
+\subsubsection*{The Lorenz system}
+
+\begin{problem}[In-depth analysis of the Lorenz system]
+  The Lorenz system reads
+  %
+  \[
+  \begin{aligned}
+    \dot{x} & = \sigma ( y - x ) \\
+    \dot{y} & = x( \rho - z) - y\\
+    \dot{z} & = xy - \beta z
+  \end{aligned}
+  \]
+  %
+  where $\sigma$, $\rho$ and $\beta$ are all positive parameters.
+  In this exercise, you'll dive deep down the rabbit hole and explore this incredible system both from the theoretical and numerical point of view using all of the tools we've discussed so far.
+
+  \paragraph{Simple properties of the Lorenz system}
+  %
+  \begin{enumerate}
+  \item[a)] Show that the Lorenz system is equivariant with respect to the transformation $(x, y, z) \mapsto (-x, -y, z)$.
+    What does this properties tell you about the solutions of the system ?
+
+  \item[b)] Show that the $z$-axis is an invariant line, i.e.\ if $x(0) = y(0) = 0$ then $x(t) = y(t) = 0\ \forall t$.
+
+  \item[c)] Show that the Lorenz system is dissipative and that any volume $V$ of initial conditions evolves according to
+    %
+    \[
+    \dot{V} = -\left( \sigma + 1 + b \right) V.
+    \]
+    %
+    Can the Lorenz system exhibit quasi-periodic dynamics ? Explain your reasonning from a geometrical point of view.
+    Using a similar argument, explain why the Lorenz system cannot have repelling fixed points (i.e.\ unstable nodes) or repelling orbits.
+
+  \item[d)] Compute the fixed points of the Lorenz system and give their domain of existence.
+    In analogy to the Rayleigh-Bénard convection problem, to what type of flow do these fixed points correspond to ?
+  \end{enumerate}
+
+  \paragraph{The origin $(x, y, z) = (0, 0, 0)$}
+  %
+  \begin{enumerate}
+    \item[a)] Given the Lyapunov function
+    %
+    \[
+    V(x, y, z, t) = \dfrac{x^2}{\sigma} + y^2 + z^2 \geq 0,
+    \]
+    %
+    show that the origin is the only attractor in the whole phase space (i.e.\ it is globally stable) for $0 \leq \rho \leq 1$.
+    (\underline{Hint} : Show that $\dot{V} < 0 \ \forall x, y, z$ and that $V = 0$ for $x = y = z = 0$)
+
+  \item[b)] Compute the Jacobian matrix of the system and show that the origin experiences a bifurcation at $\rho_c = 1$.
+    Using a symmetry argument, what type of bifurcation could it be ?
+
+  \item[c)] Let us now start our analysis to determine precisely what type of bifurcation it is.
+    For that purpose, let us write $\rho$ as
+    %
+    \[
+    \begin{aligned}
+      \rho & = \rho_c + \epsilon \\
+      & = 1 + \epsilon.
+    \end{aligned}
+    \]
+    %
+    The equation for $y$ then reads
+    %
+    \[
+    \dot{y} = \left( 1 + \epsilon \right) x - y - xz.
+    \]
+    %
+    For $\epsilon = 0$ (i.e.\ $\rho = \rho_c$), the matrix of eigenvectors $\bm{T}$ is given by
+    %
+    \[
+    \bm{T}
+    =
+    \begin{bmatrix}
+      1 & \sigma & 0 \\
+      1 & -1 & 0 \\
+      0 & 0 & 1
+    \end{bmatrix}.
+    \]
+    %
+    Introducing the change of variable $\bm{x} = \bm{T} \bm{u}$, with $\bm{x} = (x, y, z)$ and $\bm{u} = (u, v, w)$, show that the Lorenz system can be recast as
+    %
+    \[
+    \begin{aligned}
+      \dot{u} & = \dfrac{\sigma}{1+\sigma} \left( \epsilon - w \right) \left( u + \sigma v \right) \\
+      \dot{v} & = -\left( 1 + \sigma \right) v - \dfrac{1}{1 + \sigma} \left( \epsilon r - w \right) \left( u + \sigma v \right) \\
+      \dot{w} & = -\beta w + \left( u + \sigma v \right) \left( u - v \right).
+    \end{aligned}
+    \]
+
+  \item[d)] Let us now supplement the above system with
+    %
+    \[
+    \dot{\epsilon} = 0.
+    \]
+    %
+    The center manifold $W_c$ is given by
+    %
+    \[
+    W_c = \left\{ (u, v, w, \epsilon) : v = h_1(u, \epsilon), w = h_2(u, \epsilon), h_i(0, 0) = 0, Dh_i(0, 0) = 0 \right\}
+    \]
+    %
+    where $Dh_i$ denotes the Jacobian matrix of the nonlinear parametrization $h_i(u, \epsilon)$.
+    Assume now that
+    %
+    \[
+    \begin{aligned}
+      h_1(u, \epsilon) = a_{00} + a_{10} u + a_{01} \epsilon + a_{20} u^2 + a_{11} u\epsilon + a_{22} \epsilon^2 + \cdots \\
+      h_2(u, \epsilon) = b_{00} + b_{10} u + b_{01} \epsilon + b_{20} u^2 + b_{11} u\epsilon + b_{22} \epsilon^2 + \cdots
+    \end{aligned}
+    \]
+    %
+    show that the condition $h_i(0, 0)$ implies
+    %
+    \[
+    a_{00} = b_{00} = 0.
+    \]
+    %
+    Similarly, show that $Dh_i(0, 0) = 0$ implies
+    %
+    \[
+    \begin{aligned}
+      a_{10} & = a_{01} = 0 \\
+      b_{10} & = b_{01} = 0.
+    \end{aligned}
+    \]
+
+  \item[e)] Our parametrizations reduce to
+    %
+    \[
+    \begin{aligned}
+      h_1(u, \epsilon) & = a_{20} u^2 + a_{11} u \epsilon + a_{22} \epsilon^2 \\
+      h_2(u, \epsilon) & = b_{20} u^2 + b_{11} u \epsilon + b_{22} \epsilon^2.
+    \end{aligned}
+    \]
+    %
+    Using the fact that
+    %
+    \[
+    \dfrac{dh_i}{dt} = \dfrac{\partial h_i}{\partial u} \dot{u} + \dfrac{\partial h_i}{\partial \epsilon} \dot{\epsilon},
+    \]
+    %
+    show that the governing equation for $u$ can be expressed as
+    %
+    \[
+    \dot{u} = \mu u + \lambda u^3
+    \]
+    %
+    where $\mu$ and $\lambda$ are to be determined.
+
+  \item[f)] Given the expressions of $\mu$ and $\lambda$ obtained at the previous question, conclude about the nature of the bifurcation happening at $\rho = 1$.
+  \end{enumerate}
+
+
+  \paragraph{The fixed points $C^+$ and $C^-$}
+
+  Let us now turn our attention to the two symmetric fixed points newly created hereafter denoted as
+  %
+  \[
+  \begin{aligned}
+    C^+ & = (\sqrt{\beta(\rho -1)}, \sqrt{(\beta(\rho-1)}, \rho-1) \\
+    C^- & = (-\sqrt{\beta(\rho -1)}, -\sqrt{(\beta(\rho-1)}, \rho-1).
+  \end{aligned}
+  \]
+
+  \begin{enumerate}
+  \item[a)] Show that the characteristic polynomial of the Jacobian matrix at $C^+$, $C^-$ is
+    %
+    \[
+    \lambda^3 + \left( \sigma + \beta + 1 \right) \lambda^2 + \left( \rho + \sigma \right) \beta \lambda + 2 \beta \sigma( \rho - 1) = 0.
+    \]
+    %
+    (\underline{Hint} : Use the fact that, for a $3 \times 3$ matrix $\bm{A}$, its characteristic polynomial is given by $\lambda^3 - \text{tr}(\bm{A})\lambda^2 - \dfrac{1}{2}\left( \text{tr}(\bm{A})^2 - \text{tr}(\bm{A}^2) \right) \lambda - \det(\bm{A}) = 0$.)
+
+  \item[b)] As $\rho$ is increased, $C^+$ and $C^-$ eventually experience a subcritical Hopf bifurcation.
+    Assuming that $\lambda = \pm i \omega$, show that this bifurcation happens for
+    %
+    \[
+    \rho_H = \sigma \dfrac{\sigma + \beta + 3}{\sigma - \beta - 1}.
+    \]
+    %
+    In doing so, why do we need to assume $\sigma > \beta + 1$ ?
+
+  \item[c)] The bifurcation being subcritical, there exists no stable limit cycle in the direct vicinity of $C^+$ and $C^-$.
+    As discussed in \textsection~\ref{??}, the trajectories nonetheless remain bounded in phase space.
+    Show that there exist a ellipsoidal region $\Omega$ of the form
+    %
+    \[
+    \rho x^2 + \sigma y^2 + \sigma(z - 2\rho)^2 \leq C
+    \]
+    %
+    where $C$ is finite positive number such that all trajectories of the Lorenz system eventually enter $\Omega$ and stay in there forever.
+
+  \item[d)] Given all of the results obtained so far, sketch the current status of the bifurcation diagram of the Lorenz system.
+  \end{enumerate}
+
+  \paragraph{Chaotic dynamics}
+
+  Let us now explore the chaotic dynamics of the Lorenz system numerically.
+  For that purpose, we will hereafter consider the classical parameters
+  %
+  \[
+  \rho = 28, \quad \sigma = 1, \quad \text{and} \quad \beta = \dfrac{8}{3}.
+  \]
+
+  \begin{enumerate}
+  \item[a)] Using your favorite programming language, simulate the Lorenz system for this set of parameters and plot its phase portrait.
+    You can discard any initial transients.
+
+  \item[b)] Having computed a sufficiently long time-series of $z(t)$, extract the successive maxima $z_0, z_1, z_2, \cdots$ and plot the Lorenz map $z_{k+1} = f(z_k)$ along with the bisectrice $z_{k+1} = z_k$.
+  \end{enumerate}
+\end{problem}
+
+\subsubsection*{Other Lorenz-like systems}
+
+\begin{problem}[Laser model]
+  As discussed in \cite{??} and \cite{??}, the Maxwell-Block equations for a laser are
+  %
+  \[
+  \begin{aligned}
+    \dot{E} & = \kappa \left( P - E \right) \\
+    \dot{P} & = \gamma_1 \left( ED - p \right) \\
+    \dot{D} & = \gamma_2 \left( \lambda + 1 - D - \lambda EP \right)
+  \end{aligned}
+  \]
+  %
+  where \ldots
+  
+  \begin{enumerate}
+  \item[a)] Find a change of variables that transform this system of equations into the Lorenz system.
+  \item[b)] Show that the supercritical pitchfork happening for $\rho = 1$ in the Lorenz system corresponds to the non-lasing state ($E^* = 0$) in the Maxwell-Block loosing its stability.
+  \end{enumerate}
+\end{problem}
+
+\bigskip
+
+\begin{problem}[The Malkus waterwheel]
+  As discussed in \cite{??}, the equations governing the dynamics of the Malkus waterwheel shown in figure~\ref{fig: malkus waterwheel} are given by
+  %
+  \[
+  \begin{aligned}
+    \dot{a} & = \omega b - K a \\
+    \dot{b} & = -\omega a + q - Kb \\
+    \dot{\omega} & = -\dfrac{\nu}{I} \omega + \dfrac{\pi g r}{I} a,
+  \end{aligned}
+  \]
+  %
+  where \ldots .
+
+  \begin{enumerate}
+  \item[a)] Find a change of variables transforming the waterwheel equations into the Lorenz system.
+  \item[b)] Show that, for the water wheel, $\beta = 1$ in the corresponding Lorenz system.
+  \item[c)] As shown when discussing the Lorenz system, a supercritical pitchfork bifurcation occurs at $\rho = 1$.
+    To what kind of motion do the newly created fixed points correspond to for the waterwheel ?
+  \end{enumerate}
+\end{problem}

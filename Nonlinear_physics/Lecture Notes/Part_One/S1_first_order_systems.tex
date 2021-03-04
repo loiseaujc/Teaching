@@ -1,0 +1,266 @@
+\chapter{First-order systems}\label{chap: first-order systems}
+
+\section{Dynamical systems on the real number line}\label{sec: dyn sys on the real number line}
+
+\subsection{List of problems}
+
+\begin{problem}
+  Consider the simple resistor-capacitor circuit shown in figure~\ref{fig: RC circuit}.
+  The equation governing the evolution of the voltage $Q(t)$ accross the capacitor is given by
+  %
+  \[
+  \dot{Q} = - \dfrac{Q}{RC} + \dfrac{V_0}{RC}
+  \]
+  %
+  where $R$ is the resistance, $C$ is the capacitance and $V_0 > 0$ the voltage of the power supply.
+  For $t < 0$, the voltage accross the capacitor is assumed to be $0$.
+  At $t = 0$, the switch is closed and current starts to flow in the circuit.
+
+  \bigskip
+
+  \begin{enumerate}
+  \item[a)] Show graphically that the system has a single fixed point.
+  \item[b)] Show that the equation above can be recast as
+    %
+    \[
+    \dfrac{dx}{d\tau} = 1 - x
+    \]
+    %
+    if one introduces the rescaled variable $Q(t) = V_0 x(t)$ and time $t = RC \tau$.
+  \item[c)] Solve the equation analytically and show that
+    %
+    \[
+    \lim_{\tau \to +\infty} x(\tau) = 1
+    \]
+    %
+    and give the expression for $Q(t)$.
+  \end{enumerate}
+\end{problem}
+
+\begin{figure}
+  \centering
+  \begin{circuitikz}
+    \draw (0, 0) to[battery1, invert] (0, 3) to [nos] (2.5, 3);
+    \draw (2.5, 3) to [R, i>^=$i(t)$, l=$R$] (2.5, 0);
+    \draw (2.5, 0) to [C, l=$C$] (0, 0);
+  \end{circuitikz}
+  \caption{RC circuit for Problem 1.1}\label{fig: RC circuit}
+\end{figure}
+
+\bigskip
+
+\begin{problem}
+  Consider the following population growth model
+  %
+  \[
+  \dot{P} = \mu P \left( 1 - \dfrac{P}{N} \right)
+  \]
+  %
+  known as the logistic equation (also sometimes called the Verhulst model after Pierre François Verhulst who proposed it during the 1840's).
+  It can be used to model the growth of a population in an environment with limited food supply such as fish in a small lake.
+  In that context, $P(t)$ denotes the current population size, $\mu > 0$ its reproduction rate and $N$ is the \emph{carrying capacity}, i.e.\ the maximum population size that can be sustained in that specific environment.
+
+  \bigskip
+
+  \begin{enumerate}
+  \item[a)] Introducing the rescaled population size $x(t)$ such that $P(t) = N x(t)$, show that the governing equation for $x(t)$ is
+    %
+    \[
+    \dot{x} = \mu x \left( 1 - x \right).
+    \]
+
+  \item[b)] Sketch the phase line of the system assuming $\mu > 0$.
+    How does the population evolves if $x(0)$ is only slightly larger than 0 ?
+    Same question for $x(0)$ much larger than unity.
+
+  \item[c)] This logistic model belongs to the class of \emph{Bernoulli equations} which can be solved analytically.
+    Introducing the change of variable $y = \nicefrac{1}{x}$, show that the equation for $y(t)$ is linear.
+
+  \item[d)] Solve the equation for $y(t)$ and thus for $x(t)$.
+    Are the predictions of your solution for $x(0) \simeq 0$ and $x(0) \gg 1$ consistent with your intuition gained from the phase line ?
+  \end{enumerate}
+\end{problem}
+
+\section{Elementary bifurcations}\label{sec: elementary bifurcations}
+
+\subsection{List of problems}
+
+\begin{problem}
+  Consider the following system
+  %
+  \[
+  \dot{x} = -x \left( x^2 - 2x - \mu \right)
+  \]
+  %
+  where $x \in \mathbb{R}$ is the state of the system and $\mu \in \mathbb{R}$ is our control parameter.
+
+  \bigskip
+
+  \begin{enumerate}
+  \item[a)] Compute all the branches of solutions and discuss their existence and stability properties.
+  \item[b)] Show that a saddle-node bifurcation occurs at $\mu = -1$ and a transcritical one at $\mu = 0$.
+  \item[c)] Sketch the bifurcation diagram of the system.
+  \end{enumerate}
+\end{problem}
+
+\bigskip
+
+\begin{problem}
+  Consider a simple pendulum of mass $m$ and length $L$ in the gravitational field of earth ($g$) and driven by a constant torque $\Gamma$.
+  Starting from Newton's principles, the equation of motion reads
+  %
+  \[
+  m L^2 \ddot{\theta} + b \dot{\theta} + mgL \sin(\theta) = \Gamma.
+  \]
+  %
+  Although it is a second-order equation (i.e.\ it involves a second derivative with respect to time), we'll see that under certain assumptions about the system it can be approximated by a first-order equation.
+  Our aim will be to determine the type of bifurcation experienced by the system as the applied torque $\Gamma$ is varied.
+
+  \bigskip
+
+  \begin{enumerate}
+  \item[a)] Introducing a time scale $\tau$ such that $t \mapsto \tau t$, show that we have the following choices for $\tau$ :
+    %
+    \[
+    \tau = \sqrt{\dfrac{L}{g}} \quad \text{and} \quad \tau = \dfrac{b}{mgL}
+    \]
+    %
+    and discuss their physical meaning.
+
+  \item[b)] If we are in the over-damped situation, the equation of motion can be reduced to
+    %
+    \[
+    \dot{\theta}  = \gamma - \sin(\theta)
+    \]
+    %
+    where $\gamma = \nicefrac{\Gamma}{mgL}$.
+    Sketch the phase line of the system for different values of the control parameter $\gamma$.
+
+  \item[c)] As $\gamma \to 1$ from above, a meta-stable fixed point is created at $\theta = \nicefrac{\pi}{2}$.
+    Introducing $\mu = \gamma - 1$ and using a second-order Taylor expansion of the equation in the vicinity of this fixed point, show that the dynamics of a small perturbation can be approximated by
+    %
+    \[
+    \dot{\eta} = \mu + \dfrac{1}{2}\eta^2.
+    \]
+    %
+    What type of bifurcation is this ?
+
+  \item[d)] For $\vert \gamma \vert < 1$, the system admits two equilibrium solutions.
+    Discuss their stability properties and their physical interpretation.
+  \end{enumerate}
+\end{problem}
+
+\bigskip
+
+\begin{problem}
+  Consider the following mechanical system : an inverted pendulum made of a massless rigid rod is pivoted about its lower end with a torsion spring providing a restoring torque proportional to the angular displacement from the vertical equilibrium.
+  A load, in the form of an attached mass, is applied vertically at the top of the rod.
+  Starting from Newton's principle, the equation of motion is
+  %
+  \[
+  I \ddot{\theta} + \beta \dot{\theta} + k \theta - PL \sin(\theta) = 0
+  \]
+  %
+  where $I$ the moment of inertia of the system, $k$ is the torsional spring constant, $P$ is the applied load, $L$ is the length of the rod and $\beta$ is the damping coefficient.
+  Our goal will be to determine when the system bifurcates and what type of bifurcation it experiences as the applied load $P$ is varied.
+
+  \bigskip
+
+  \begin{enumerate}
+
+  \item[a)] Show that the equation of motion is invariant with respect to the transformation $\theta \mapsto -\theta$.
+    What does this invariance tells you about the properties of the system ?
+
+  \item[b)] As before, we'll consider the over-damped situation (i.e. friction dominates).
+    Once time has been rescaled using $\tau = \nicefrac{\beta}{PL}$, the equation of motion reduces to
+    %
+    \[
+    \dot{\theta} + \dfrac{k}{PL}\theta - \sin(\theta) = 0.
+    \]
+    %
+    Using a third-order Taylor expansion of $\sin(\theta)$ around $\theta = 0$, show that the system experiences a bifurcation for $\nicefrac{k}{PL} = 1$.
+    Sketch the bifurcation diagram.
+    What type of bifurcation is this ?
+
+  \item[c)] In a realistic system, one may have some imperfections breaking the symmetry.
+    Redo the same analysis for the perturbed system
+    %
+    \[
+    I \ddot{\theta} + \beta \dot{\theta} + k \theta - PL \left( h + \sin(\theta) \right) = 0
+    \]
+    %
+    where $h$ models a small imbalance in the applied load.
+    You can assume that $h > 0$.
+    How does the bifurcation change ?
+  \end{enumerate}
+
+\end{problem}
+
+\bigskip
+
+\begin{problem}
+  Let consider once more the evolution of a fish population model by the following logistic growth equation
+  %
+  \[
+  \dot{P} = r P \left( 1 - \dfrac{P}{N} \right)
+  \]
+  %
+  where $P(t) \in \mathbb{R}$ is the fish population, $r$ is the growth rate due to reproduction and $N$ is the carrying capacity of the environment.
+  In this exercise, we'll investigate the influence of different harvesting strategies on the long time evolution of the fish population.
+  Two different strategies will be considered.
+
+  \paragraph{Constant harvesting}
+  The first strategy considered is constant harvesting.
+  In this strategy, fish are harvested at a constant rate irrespective of the current population level.
+  If we denote by $H$ this rate, our model becomes
+  %
+  \[
+  \dot{P} = r P \left( 1 - \dfrac{P}{N} \right) - H
+  \]
+  %
+  supplemented with the initial condition $P(0) = P_0$.
+
+  \bigskip
+
+  \begin{enumerate}
+  \item[a)] The model above has three parameters : the reproduction rate $r$, the carrying capacity $N$ and the harvesting rate $H$.
+    Using a suitable rescaling, show that one of the parameter can be eliminated so that our model can be recast as
+    %
+    \[
+    \dot{x} = r x \left( 1 - x \right) - h.
+    \]
+
+  \item[b)] Assuming $r$ is a positive constant, compute the fixed points of the model and study their linear stability properties.
+
+  \item[c)] Sketch the bifurcation diagram.
+    What type of bifurcation is this ?
+    From a biological point of view, what happens to the fish population when $h$ is too large ?
+
+  \end{enumerate}
+
+  \paragraph{Proportional harvesting}
+  In this second strategy, fish are harvested at a rate proportional to the current population level.
+  Our population model then becomes
+  %
+  \[
+  \dot{P} = r P \left( 1 - \dfrac{P}{N} \right) - HP.
+  \]
+
+  \begin{enumerate}
+  \item[a)] As for the previous model, show that the current one can be written as
+    %
+    \[
+    \dot{x} = r x \left( 1 - x \right) - hx
+    \]
+    %
+    using a suitable rescaling.
+
+  \item[b)] Assuming $r$ is a positive constant, compute the fixed points of the model and study their linear stability properties.
+
+  \item[c)] Sketch the bifurcation diagram.
+    What type of bifurcation is this ?
+    From a biological point of view, what happens to the fish population when $h$ is too large ?
+    How is this different from the previous strategy ?
+
+  \end{enumerate}
+\end{problem}

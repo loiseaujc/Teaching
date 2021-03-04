@@ -1,0 +1,96 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{\@mypartnumtocformat {I}{Introduction to dynamical systems}}{7}{part.1}%
+\ttl@starttoc {default@1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}First-order systems}{9}{chapter.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Dynamical systems on the real number line}{9}{section.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1.1}List of problems}{9}{subsection.1.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Elementary bifurcations}{10}{section.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.1}List of problems}{10}{subsection.1.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Constant harvesting}{12}{section*.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Proportional harvesting}{12}{section*.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Second-order systems}{13}{chapter.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Linear systems}{13}{section.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.1}List of problems}{13}{subsection.2.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Nonlinear systems}{16}{section.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}List of problems}{16}{subsection.2.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Oscillators}{18}{section.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.1}The Poincaré-Lindstedt method}{18}{subsection.2.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.2}Weakly nonlinear self-sustained oscillators}{18}{subsection.2.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.3}Strongly nonlinear oscillators and relaxation oscillations}{18}{subsection.2.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.4}List of problems}{18}{subsection.2.3.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Bifurcations revisited}{20}{section.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.1}List of problems}{20}{subsection.2.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Resonance and synchronization}{21}{chapter.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Chaotic dynamics}{23}{chapter.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Driven oscillators}{23}{section.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}The Lorenz system}{23}{section.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.1}List of problems}{23}{subsection.4.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Simple properties of the Lorenz system}{23}{section*.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{The origin $(x, y, z) = (0, 0, 0)$}{24}{section*.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{The fixed points $C^+$ and $C^-$}{25}{section*.16}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Chaotic dynamics}{25}{section*.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Unimodal maps}{26}{section.4.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}A primer in fractal geometry}{26}{section.4.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.1}List of problems}{26}{subsection.4.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.5}Back to strange attractors}{28}{section.4.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Other types of dynamical systems}{29}{chapter.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Hyper-chaotic systems}{29}{section.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Cellular automata}{29}{section.5.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Stochastic dynamical systems}{29}{section.5.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.4}Spatio-temporal systems}{29}{section.5.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{\@mypartnumtocformat {II}{Introduction to Machine Learning}}{31}{part.2}%
+\ttl@stoptoc {default@1}
+\ttl@starttoc {default@2}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{\@mypartnumtocformat {III}{Data-driven methods for dynamical systems}}{33}{part.3}%
+\ttl@stoptoc {default@2}
+\ttl@starttoc {default@3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\leavevmode {\color {gray}Bibliography}}{35}{chapter*.21}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Articles}{35}{section*.22}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Books}{35}{section*.23}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\leavevmode {\color {gray}Index}}{37}{section*.24}%
+\contentsfinish 
