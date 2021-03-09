@@ -420,14 +420,8 @@
 \end{frame}
 
 \begin{frame}[t, c]{Recherche de racines}{Méthodes numériques}
-  \begin{minipage}{.68\textwidth}
-    Il existe de nombreux algorithmes pour calculer les racines d'une fonction $f : \mathbb{R} \to \mathbb{R}$.
-    Chacun d'eux repose sur différentes hypothèses concernant $f$ (e.g. continuité, dérivabilité, etc) conduisant à plus ou moins d'efficacité et/ou de robustesse.
-  \end{minipage}%
-  \hfill
-  \begin{minipage}{.28\textwidth}
-  \end{minipage}
-
+  Il existe de nombreux algorithmes pour calculer les racines d'une fonction $f : \mathbb{R} \to \mathbb{R}$.
+  Chacun d'eux repose sur différentes hypothèses concernant $f$ (e.g. continuité, dérivabilité, etc) conduisant à plus ou moins d'efficacité et/ou de robustesse.
   \vspace{1cm}
 \end{frame}
 
@@ -453,35 +447,25 @@
 \end{frame}
 
 \begin{frame}[t, c]{Recherche de racines}{Méthode de la bissection}
-  \begin{minipage}{.68\textwidth}
-    \textbf{Théorème de Bolzano :} Pour toute fonction continue $f : \left[a, b \right] \to \mathbb{R}$ telle que $f(a)$ et $f(b)$ soient de signe opposé, il existe au moins un réel $c \in \left[a, b\right]$ tel que $f(c) = 0$.
-  \end{minipage}%
-  \hfill
-  \begin{minipage}{.28\textwidth}
-  \end{minipage}
+  \textbf{Théorème de Bolzano :} Pour toute fonction continue $f : \left[a, b \right] \to \mathbb{R}$ telle que $f(a)$ et $f(b)$ soient de signe opposé, il existe au moins un réel $c \in \left[a, b\right]$ tel que $f(c) = 0$.
 \end{frame}
 
 \begin{frame}[t, c, fragile]{Recherche de racines}{Méthode de la bissection}
-  \begin{minipage}{.68\textwidth}
-    Supposons que les conditions pour que le théorème de Bolzano soit applicable sont vérifiées.
-    Il est alors possible d'approximer numériquement une racine de $f(x)$ à l'aide l'algorithme ci-dessous.
-
-    \bigskip
-
-    \begin{lstlisting}[language=Python]
-      while abs(b-a) < tol:
-          c = (a+b) / 2
-          if (f(a) * f(b) < 0):
-              b = c
-          else:
-              a = c
-    \end{lstlisting}
-
-    C'est ce que l'on appelle \textbf{\alert{méthode de la bissection}} ou \textbf{\alert{méthode de la dichotomie}}.
-  \end{minipage}%
-  \hfill
-  \begin{minipage}{.28\textwidth}
-  \end{minipage}
+  Supposons que les conditions pour que le théorème de Bolzano soit applicable sont vérifiées.
+  Il est alors possible d'approximer numériquement une racine de $f(x)$ à l'aide l'algorithme ci-dessous.
+  
+  \bigskip
+  
+  \begin{lstlisting}[language=Python]
+    while abs(b-a) < tol:
+        c = (a+b) / 2
+        if (f(a) * f(b) < 0):
+            b = c
+        else:
+            a = c
+  \end{lstlisting}
+  
+  C'est ce que l'on appelle \textbf{\alert{méthode de la bissection}} ou \textbf{\alert{méthode de la dichotomie}}.
 \end{frame}
 
 \begin{frame}[t, c]{Recherche de racines}{Méthode de la bissection}
@@ -531,6 +515,8 @@
   \end{minipage}%
   \hfill
   \begin{minipage}{.28\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{newton_portrait}
   \end{minipage}
 
   \vspace{1cm}
@@ -549,25 +535,37 @@
   \end{minipage}%
   \hfill
   \begin{minipage}{.28\textwidth}
+    \centering
+    \begin{tikzpicture}[>=stealth]
+      \draw[->, thick] (-2, 0) -- (2, 0) node[below] {$x$};
+      \draw[->, thick] (0, -1) -- (0, 2) node[left] {$y$};
+
+      \draw[-, lightgray, variable=\x, domain=-2:2, thick] plot (\x, {exp(0.5*\x) - 1}) node[left] {$f(x)$};
+
+      \draw[-] (1, 0.1) -- (1, -0.1) node[below] {$x_0$};
+      \draw[-] (1, 0) -- (1, 0.6487212707001282) node[] {};
+
+      \draw[-, blue, dashed, variable=\x, domain=-1:2, thick] plot (\x, {(exp(0.5) - 1) + 0.5*exp(0.5)*(\x-1)} );
+
+      \node[circle, fill=white, draw=black, inner sep=0pt, minimum size=4pt] (a) at (0, 0) {};
+
+      \node[circle, fill=black, draw=black, inner sep=0pt, minimum size=3pt] (a) at (1, 0.6487212707001282) {};
+
+    \end{tikzpicture}
   \end{minipage}
 
   \vspace{1cm}
 \end{frame}
 
 \begin{frame}[t, c]{Recherche de racines}{Méthode de Newton-Raphson}
-  \begin{minipage}{.68\textwidth}
-    Il est facile de montrer que la racine de $g_0(x)$ est donnée par
-    %
-    \[
-    x_1 = x_0 - \dfrac{f(x_0)}{f^{\prime}(x_0)}.
-    \]
-    %
-    Si $x_0$ est une bonne estimation de la racine de $f(x)$, alors $x_1$ tend à être encore meilleure.
-    On peut ensuite répéter ce processus à l'infini et montrer que la convergence est quadratique.
-  \end{minipage}%
-  \hfill
-  \begin{minipage}{.28\textwidth}
-  \end{minipage}
+  Il est facile de montrer que la racine de $g_0(x)$ est donnée par
+  %
+  \[
+  x_1 = x_0 - \dfrac{f(x_0)}{f^{\prime}(x_0)}.
+  \]
+  %
+  Si $x_0$ est une bonne estimation de la racine de $f(x)$, alors $x_1$ tend à être encore meilleure.
+  On peut ensuite répéter ce processus à l'infini et montrer que la convergence est quadratique.
 \end{frame}
 
 \begin{frame}[t, c]{Recherche de racines}{Méthode de Newton-Raphson}
@@ -576,24 +574,19 @@
 \end{frame}
 
 \begin{frame}[t, c, fragile]{Recherche de racines}{Méthode de Newton-Raphson}
-  \begin{minipage}{.68\textwidth}
-    Si l'on écrit ce processus en pseudocode, on obtient alors l'algorithme ci-dessous.
-
-    \bigskip
-
-    \begin{lstlisting}[language=Python]
-      while abs(f(x)) < tol:
-           x = x - f(x) / fprime(x)
-    \end{lstlisting}
-
-    \bigskip
-
-    En pratique, le code est légèrement plus compliqué puisque l'on doit vérifier que $f^{\prime}(x)$ n'est pas nulle.
-    On peut également ajouter une limite au nombre d'itérations.
-  \end{minipage}%
-  \hfill
-  \begin{minipage}{.28\textwidth}
-  \end{minipage}
+  Si l'on écrit ce processus en pseudocode, on obtient alors l'algorithme ci-dessous.
+  
+  \bigskip
+  
+  \begin{lstlisting}[language=Python]
+    while abs(f(x)) < tol:
+    x = x - f(x) / fprime(x)
+  \end{lstlisting}
+  
+  \medskip
+  
+  En pratique, le code est légèrement plus compliqué puisque l'on doit vérifier que $f^{\prime}(x)$ n'est pas nulle.
+  On peut également ajouter une limite au nombre d'itérations.
 \end{frame}
 
 \begin{frame}[t, c, fragile]{Recherche de racines}{Méthode de Newton-Raphson}
@@ -621,7 +614,7 @@
     \begin{lstlisting}[language=Python]
       import numpy as np
       from scipy.optimize import root_scalar
-      from scipy.optimize import approx_frpime
+      from scipy.optimize import approx_fprime
       
       # --> Definition de la fonction et de sa derivee.
       f = lambda x : np.pi/4 - x + np.sin(x)
@@ -642,18 +635,12 @@
 \end{frame}
 
 \begin{frame}[t, c]{Recherche de racines}{Méthode de la sécante}
-  \begin{minipage}{.68\textwidth}
-    La méthode de Newton-Raphson est sans doute la méthode la plus efficace pour calculer des racines.
-    Elle nécessite néanmoins la connaissance de $f^{\prime}(x)$.
-
-    \bigskip
-
-    Malheureusement, dans certaines situations, $f^{\prime}(x)$ ne peut être calculée analytiquement et son approximation peut être extrêmement coûteuse en terme de temps de calcul.
-  \end{minipage}%
-  \hfill
-  \begin{minipage}{.28\textwidth}
-  \end{minipage}
-
+  La méthode de Newton-Raphson est sans doute la méthode la plus efficace pour calculer des racines.
+  Elle nécessite néanmoins la connaissance de $f^{\prime}(x)$.
+  
+  \bigskip
+  
+  Malheureusement, dans certaines situations, $f^{\prime}(x)$ ne peut être calculée analytiquement et son approximation peut être extrêmement coûteuse en terme de temps de calcul.
   \vspace{1cm}
 \end{frame}
 
@@ -673,40 +660,30 @@
 \end{frame}
 
 \begin{frame}[t, c]{Recherche de racines}{Méthode de la sécante}
-  \begin{minipage}{.68\textwidth}
-    On obtient alors la relation de récurrence suivante
-    %
-    \[
-    x_{n+1} = x_n - \dfrac{x_n - x_{n-1}}{f(x_n) - f(x_{n-1})} f(x_n).
-    \]
-    %
-    Il est important de noter que $x_0$ et $x_1$ ne doivent pas nécessairement encadrée la racine recherchée (même si cela peut être préférable).
-  \end{minipage}%
-  \hfill
-  \begin{minipage}{.28\textwidth}
-  \end{minipage}
+  On obtient alors la relation de récurrence suivante
+  %
+  \[
+  x_{n+1} = x_n - \dfrac{x_n - x_{n-1}}{f(x_n) - f(x_{n-1})} f(x_n).
+  \]
+  %
+  Il est important de noter que $x_0$ et $x_1$ ne doivent pas nécessairement encadrée la racine recherchée (même si cela peut être préférable).
 \end{frame}
 
 
 \begin{frame}[t, c, fragile]{Recherche de racines}{Méthode de la sécante}
-  \begin{minipage}{.68\textwidth}
-    En supposant que \verb+a+ et \verb+b+ aient été correctement initialisés, l'algorithme correspondant est présenté ci-dessous.
+  En supposant que \verb+a+ et \verb+b+ aient été correctement initialisés, l'algorithme correspondant est présenté ci-dessous.
 
-    \bigskip
-
-    \begin{lstlisting}[language=Python]
-      while abs(f(x)) < tol:
-           x = x - (b-a) / (f(b)-f(a)) * f(b)
-           a, b = b, x
-    \end{lstlisting}
-
-    \bigskip
-
-    Tout comme pour la méthode de Newton, on ajoutera en pratique également une condition sur le nombre maximum d'itération.
-  \end{minipage}%
-  \hfill
-  \begin{minipage}{.28\textwidth}
-  \end{minipage}
+  \bigskip
+  
+  \begin{lstlisting}[language=Python]
+    while abs(f(x)) < tol:
+        x = x - (b-a) / (f(b)-f(a)) * f(b)
+        a, b = b, x
+  \end{lstlisting}
+  
+  \bigskip
+  
+  Tout comme pour la méthode de Newton, on ajoutera en pratique également une condition sur le nombre maximum d'itération.
 \end{frame}
 
 \begin{frame}[t, c, fragile]{Recherche de racines}{Méthode de la sécante}
