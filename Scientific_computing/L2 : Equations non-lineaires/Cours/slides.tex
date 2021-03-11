@@ -580,7 +580,7 @@
   
   \begin{lstlisting}[language=Python]
     while abs(f(x)) < tol:
-    x = x - f(x) / fprime(x)
+        x = x - f(x) / fprime(x)
   \end{lstlisting}
   
   \medskip
@@ -707,12 +707,13 @@
 \begin{frame}[t, c]{Recherche de racines}{Résumé}
   \centering
   \begin{tabular}{c|ccc}
-    Méthode & Bissection & Sécante & Newton-Raphson \\
-    \hline
-    Hypothèses sur $f(x)$ & Continue & Continue & Continue et dérivable \\
-    Initialisation & $a$ et $b$ tels que $f(a) f(b) < 0$ & $x_0$ et $x_1$ & $x_0$ \\
-    Nécessite & $f(x)$ & $f(x)$ & $f(x)$ et $f^{\prime}(x)$ \\
-    Convergece & {\color{red}Lente} & {\color{orange}Moyenne} & {\color{green} Rapide} \\
+    \hline \\
+    Méthode & Bissection & Sécante & Newton-Raphson \\ \\
+    \hline \hline \\
+    Hypothèses sur $f(x)$ & Continue & Continue & Continue et dérivable \\ \\
+    Initialisation & $a$ et $b$ tels que $f(a) f(b) < 0$ & $x_0$ et $x_1$ & $x_0$ \\ \\
+    Nécessite & $f(x)$ & $f(x)$ & $f(x)$ et $f^{\prime}(x)$ \\ \\
+    Convergence & {\color{red}Lente} & {\color{orange}Moyenne} & {\color{green} Rapide} \\ \\
     Robustesse & {\color{green} Très robuste} & {\color{orange} Moyennement robuste} & {\color{red} Peu robuste}
   \end{tabular}
 
