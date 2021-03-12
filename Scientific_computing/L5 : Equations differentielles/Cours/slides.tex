@@ -16,6 +16,9 @@
 \usepackage{tikz}
 \usepackage{pgfplots}
 \usepgfplotslibrary{polar}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.geometric, math, positioning, calc, patterns, angles, quotes}
+\usetikzlibrary{patterns.meta,decorations.pathmorphing}
 
 \usepackage{hyperref,graphicx,lmodern}
 \usepackage[utf8]{inputenc}
@@ -159,45 +162,86 @@
 \end{frame}
 
 \begin{frame}[t, c]{Equations différentielles ordinaires}{Linear-time invariant dynamical systems}
-  \begin{minipage}{.68\textwidth}
-    Intéressons-nous tout d'abord à des systèmes linéaires du type
+  Intéressons-nous tout d'abord à des systèmes linéaires du type
+  %
+  \[
+  \begin{aligned}
+    \dot{\bm{x}} & = \bm{Ax} + \bm{Bu} \\
+    \bm{y} & = \bm{Cx} + \bm{Du}.
+  \end{aligned}
+  \]
+  %
+  Ici, $\bm{x} \in \mathbb{R}^n$ est le vecteur d'état, $\bm{u} \in \mathbb{R}^p$ les inputs et $\bm{y} \in \mathbb{R}^q$ les mesures faites au cours du temps.
+\end{frame}
+
+\begin{frame}[t, c]{Equations différentielles ordinaires}{Linear-time invariant dynamical systems}
+  Si $\bm{u}(t)$ est connu à l'avance, alors la solution du système s'écrit
+  %
+  \[
+  \bm{x}(t) = e^{t \bm{A}} \bm{x}_0 + \int_0^t e^{(t-\tau) \bm{A}} \bm{Bu}(\tau) \ \mathrm{d}\tau.
+  \]
+  %
+  Le premier terme correspond à la \alert{\textbf{réponse naturelle}} (ou homogène) tandis que le second décrit la \alert{\textbf{réponse forcée}} du système.
+\end{frame}
+
+\begin{frame}[t, c]{Equations différentielles ordinaires}{Linear-time invariant dynamical systems}
+  \begin{minipage}{.48\textwidth}
+    En partant des principes de Newton, les équations du mouvement sont données par
     %
     \[
-    \begin{aligned}
-      \dot{\bm{x}} & = \bm{Ax} + \bm{Bu} \\
-      \bm{y} & = \bm{Cx} + \bm{Du}.
-    \end{aligned}
+    \ddot{x} = - 2\lambda \dot{x} - x + u(t).
     \]
     %
-    Ici, $\bm{x} \in \mathbb{R}^n$ est le vecteur d'état, $\bm{u} \in \mathbb{R}^p$ les inputs et $\bm{y} \in \mathbb{R}^q$ les mesures faites au cours du temps.
+    En introduisant $x_1 = x$ et $x_2 = \dot{x}$, on peut ré-écrire le système comme
+    %
+    \[
+    \dfrac{d}{dt} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix}
+    =
+    \begin{bmatrix}
+      0 & 1 \\
+      -1 & -2\lambda
+    \end{bmatrix}
+    \begin{bmatrix}
+      x_1 \\ x_2
+    \end{bmatrix}
+    +
+    \begin{bmatrix}
+      0 \\ 1
+    \end{bmatrix}
+    u(t)
+    \]
   \end{minipage}%
   \hfill
-  \begin{minipage}{.28\textwidth}
+  \begin{minipage}{.48\textwidth}
+      \centering
+      \begin{tikzpicture}[>=stealth]
+        \path[pattern={Lines[angle=45,distance={8pt/sqrt(2)}]}] (-2, 5) edge ++(4,0) rectangle ++ (4, 0.5);
+        
+        \draw[decorate,decoration={coil, segment length=5pt, aspect=0.7, amplitude=4pt,
+            pre=lineto, pre length=5mm, post=lineto, post length=5mm}] (0.5, 5) -- (0.5, 2.5)
+        node[left, draw, minimum size=1cm, fill=blue!20] (m) {$m$};
+        
+        \draw[] (-0.5, 5) -- (-0.5, 4) {};
+        \draw[] (-0.25, 4) -- (-0.75, 4) {};
+        
+        \draw[] (-0.5, 3.75) -- (-0.5, 2.5) {};
+        \draw[] (-0.25, 3.75) -- (-0.75, 3.75) {};
+        
+        \draw[] (-0.25, 3.75) -- (-0.25, 4.25) {};
+        \draw[] (-0.75, 3.75) -- (-0.75, 4.25) {};
+        
+        \draw[blue] (m.center-|0, 0) ++ (0, 1) -- ++ (-2, 0)
+        edge[<-,edge label'=$x$,shorten >=1pt] (m.center-|-2, 0)
+        (m.center-|0, 0) ++ (0, -1) -- ++ (-2, 0) 
+        edge[<-,edge label=$-x$,shorten >=1pt] (m.center-|-2, 0)
+      (m.east) edge[dashed] (m.east-|2, 0) 
+        (m.east-|2, 0) node[right] {Equilibrium};
+      \end{tikzpicture}
   \end{minipage}
 \end{frame}
 
 \begin{frame}[t, c]{Equations différentielles ordinaires}{Linear-time invariant dynamical systems}
-  \begin{minipage}{.68\textwidth}
-    Si $\bm{u}(t)$ est connu à l'avance, alors la solution du système s'écrit
-    %
-    \[
-    \bm{x}(t) = e^{t \bm{A}} \bm{x}_0 + \int_0^t e^{(t-\tau) \bm{A}} \bm{Bu}(\tau) \ \mathrm{d}\tau.
-    \]
-    %
-    Le premier terme correspond à la \alert{\textbf{réponse naturelle}} (ou homogène) tandis que le second décrit la \alert{\textbf{réponse forcée}} du système.
-  \end{minipage}%
-  \hfill
-  \begin{minipage}{.28\textwidth}
-
-  \end{minipage}
-\end{frame}
-
-\begin{frame}[t, c]{Equations différentielles ordinaires}{Linear-time invariant dynamical systems}
-  
-\end{frame}
-
-\begin{frame}[t, c]{Equations différentielles ordinaires}{Linear-time invariant dynamical systems}
-  \begin{minipage}{.68\textwidth}
+  \begin{minipage}{.58\textwidth}
     L'exponentielle d'une matrice est définie comme
     %
     \[
@@ -211,44 +255,41 @@
     Pour des problèmes de grande taille, calculer ces valeurs propres et vecteurs propres peut néanmoins s'avérer extrêmement compliqué.
   \end{minipage}%
   \hfill
-  \begin{minipage}{.28\textwidth}
+  \begin{minipage}{.38\textwidth}
+    \[
+    \begin{aligned}
+      e^{\bm{A}} & = \bm{I} + \bm{A} + \dfrac{\bm{A}^2}{2} + \dfrac{\bm{A}^3}{3!} + \cdots \\
+      & = \bm{VV}^{-1} + \bm{V} \boldsymbol{\Uplambda} \bm{V}^{-1} + \dfrac{\bm{V} \boldsymbol{\Uplambda}^2 \bm{V}}{2} + \cdots \\
+      & = \bm{V} \left( \bm{I} + \boldsymbol{\Uplambda} + \dfrac{\boldsymbol{\Uplambda}^2}{2} + \cdots \right) \bm{V}^{-1} \\
+      & = \bm{V} e^{\boldsymbol{\Uplambda}} \bm{V}^{-1}
+    \end{aligned}
+    \]
   \end{minipage}
 \end{frame}
 
 \begin{frame}[t, c]{Equations différentielles ordinaires}{Linear-time invariant dynamical systems}
-  \begin{minipage}{.68\textwidth}
-    Comment faire alors pour simuler \( \dot{\bm{x}} = \bm{Ax} + \bm{Bu} \) ?
-    Pour cela, on va avoir besoin de \alert{\textbf{discrétiser}} l'équation, i.e. considérer la solution à des intervalles de temps réguliers $t_k = k \Delta t$ avec $\Delta t$ le \alert{\textbf{pas de temps}}.
-  \end{minipage}%
-  \hfill
-  \begin{minipage}{.28\textwidth}
-    
-  \end{minipage}
+  Comment faire alors pour simuler \( \dot{\bm{x}} = \bm{Ax} + \bm{Bu} \) ?
+  Pour cela, on va avoir besoin de \alert{\textbf{discrétiser}} l'équation, i.e. considérer la solution à des intervalles de temps réguliers $t_k = k \Delta t$ avec $\Delta t$ le \alert{\textbf{pas de temps}}.
 \end{frame}
 
 \begin{frame}[t, c]{Equations différentielles ordinaires}{Linear-time invariant dynamical systems}
-  \begin{minipage}{.68\textwidth}
-    En absence de forçage externe, la solution au temps $t_{k+1} = (k+1)\Delta t$ est donnée par
-    %
-    \[
-    \bm{x}_{k+1} = e^{\Delta t \bm{A}} \bm{x}_k.
-    \]
-    %
-    Si $\Delta t$ est suffisament petit, on peut alors approximer l'exponentielle par son développement de Taylor
-    %
-    \[
-    e^{\Delta t \bm{A}} = \bm{I} + \Delta t \bm{A} + \mathcal{O}(\Delta t^2)
-    \]
-    %
-    ce qui nous donne alors
-    %
-    \[
-    \bm{x}_{k+1} = \bm{x}_k + \Delta t \bm{Ax}_k + \mathcal{O}(\Delta t^2).
-    \]
-  \end{minipage}%
-  \hfill
-  \begin{minipage}{.28\textwidth}
-  \end{minipage}
+  En absence de forçage externe, la solution au temps $t_{k+1} = (k+1)\Delta t$ est donnée par
+  %
+  \[
+  \bm{x}_{k+1} = e^{\Delta t \bm{A}} \bm{x}_k.
+  \]
+  %
+  Si $\Delta t$ est suffisament petit, on peut alors approximer l'exponentielle par son développement de Taylor
+  %
+  \[
+  e^{\Delta t \bm{A}} = \bm{I} + \Delta t \bm{A} + \mathcal{O}(\Delta t^2)
+  \]
+  %
+  ce qui nous donne alors
+  %
+  \[
+  \bm{x}_{k+1} = \bm{x}_k + \Delta t \bm{Ax}_k + \mathcal{O}(\Delta t^2).
+  \]
 \end{frame}
 
 \begin{frame}[t, c]{Equations différentielles ordinaires}{Linear-time invariant dynamical systems}
@@ -316,7 +357,24 @@
 \end{frame}
 
 \begin{frame}[t, c]{Equations différentielles ordinaires}{Linear-time invariant dynamical systems}
-  
+  \begin{overprint}
+    \onslide<1>
+    \centering
+    \includegraphics[width=.8\textwidth]{analytic_solution}
+
+    \onslide<2>
+    \centering
+    \includegraphics[width=.8\textwidth]{explicit_solution}
+
+    \onslide<3>
+    \centering
+    \includegraphics[width=.8\textwidth]{implicit_solution}
+    
+    \onslide<4>
+    \centering
+    \includegraphics[width=.8\textwidth]{crank_nicholson_solution}
+
+  \end{overprint}
 \end{frame}
 
 \begin{frame}[t, c]{Equations différentielles ordinaires}{Linear-time invariant dynamical systems}
@@ -333,51 +391,41 @@
 \end{frame}
 
 \begin{frame}[t, c]{Equations différentielles ordinaires}{Systèmes non-linéaires}
-  \begin{minipage}{.68\textwidth}
-    La plupart des systèmes d'intérêt en pratique sont non-linéaires
-    %
-    \[
-    \dot{\bm{x}} = \bm{f}(\bm{x})
-    \]
-    %
-    avec $\bm{f} : \mathbb{R}^n \to \mathbb{R}^n$ une fonction non-linéaire qui ne respecte donc pas le principe de superposition, i.e.
-    %
-    \[
-    \bm{f}(\alpha \bm{x}) \neq \alpha \bm{f}(\bm{x}) \quad \text{et} \quad \bm{f}(\bm{x} + \bm{y}) \neq \bm{f}(\bm{x}) + \bm{f}(\bm{y}).
-    \]
-    %
-    Leur simulation repose néanmoins sur les mêmes principes.
-  \end{minipage}%
-  \hfill
-  \begin{minipage}{.28\textwidth}
-  \end{minipage}
+  La plupart des systèmes d'intérêt en pratique sont non-linéaires
+  %
+  \[
+  \dot{\bm{x}} = \bm{f}(\bm{x})
+  \]
+  %
+  avec $\bm{f} : \mathbb{R}^n \to \mathbb{R}^n$ une fonction non-linéaire qui ne respecte donc pas le principe de superposition, i.e.
+  %
+  \[
+  \bm{f}(\alpha \bm{x}) \neq \alpha \bm{f}(\bm{x}) \quad \text{et} \quad \bm{f}(\bm{x} + \bm{y}) \neq \bm{f}(\bm{x}) + \bm{f}(\bm{y}).
+  \]
+  %
+  Leur simulation repose néanmoins sur les mêmes principes.
 \end{frame}
 
 \begin{frame}[t, c]{Equations différentielles ordinaires}{Systèmes non-linéaires}
-  \begin{minipage}{.68\textwidth}
-    \begin{itemize}
-    \item \alert{\textbf{Schéma d'Euler explicite du premier ordre}}
-      %
-      \[
-      \bm{x}_{k+1} = \bm{x}_k + \Delta t \bm{f}(\bm{x}_k)
-      \]
-
-    \item \alert{\textbf{Schéma d'Euler implicite du premier ordre}}
-      %
-      \[
-      \bm{x}_{k+1} - \Delta t \bm{f}(\bm{x}_{k+1}) = \bm{x}_k
-      \]
-
-    \item \alert{\textbf{Schéma de Crank-Nicholson du deuxième ordre}}
-      %
-      \[
-      \bm{x}_{k+1} - \dfrac{\Delta t}{2} \bm{f}(\bm{x}_{k+1}) = \bm{x}_k + \dfrac{\Delta t}{2} \bm{f}(\bm{x}_k)
-      \]
-    \end{itemize}
-  \end{minipage}%
-  \hfill
-  \begin{minipage}{.28\textwidth}
-  \end{minipage}
+  \begin{itemize}
+  \item \alert{\textbf{Schéma d'Euler explicite du premier ordre}}
+    %
+    \[
+    \bm{x}_{k+1} = \bm{x}_k + \Delta t \bm{f}(\bm{x}_k)
+    \]
+    
+  \item \alert{\textbf{Schéma d'Euler implicite du premier ordre}}
+    %
+    \[
+    \bm{x}_{k+1} - \Delta t \bm{f}(\bm{x}_{k+1}) = \bm{x}_k
+    \]
+    
+  \item \alert{\textbf{Schéma de Crank-Nicholson du deuxième ordre}}
+    %
+    \[
+    \bm{x}_{k+1} - \dfrac{\Delta t}{2} \bm{f}(\bm{x}_{k+1}) = \bm{x}_k + \dfrac{\Delta t}{2} \bm{f}(\bm{x}_k)
+    \]
+  \end{itemize}
 \end{frame}
 
 \begin{frame}[t, c, fragile]{Equations différentielles ordinaires}{Python}
@@ -569,13 +617,15 @@
 
 \begin{frame}[t, c]{Equations différentielles ordinaires}{Exemple : le modèle SIR}
   \begin{minipage}{.58\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{sir_model}
   \end{minipage}%
   \hfill
   \begin{minipage}{.38\textwidth}
-    \begin{tabular}{lcr}
-      \texttt{$R_0$} & : & ?? \\ \\
-      \texttt{Pop.\ tot.\ infectée} & : & ?? \\ \\
-      \texttt{Pic de l'épidémie} & : & \texttt{20\textsuperscrit{e} jour} \\ \\
+    \begin{tabular}{lcc}
+      \texttt{$R_0$} & : & 3 \\ \\
+      \texttt{Pop.\ tot.\ infectée} & : & 94\% \\ \\
+      \texttt{Pic de l'épidémie} & : & \texttt{120\textsuperscript{e} jour} \\ \\
     \end{tabular}
   \end{minipage}
 \end{frame}
