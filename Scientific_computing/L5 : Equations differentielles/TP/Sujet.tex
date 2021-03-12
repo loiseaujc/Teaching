@@ -124,7 +124,7 @@ où $\theta$ est l'angle de hausse du canon.
 Nous avons vu au TP précédent qu'en absence de frottement (i.e.\ $\alpha = 0$), la trajectoire était donnée par
 %
 \[
-y(x, \theta) = -\dfrac{1}{2} \dfrac{x^2}{\cos(\theta)} + \tan(\theta)x
+y(x, \theta) = -\dfrac{1}{2} \dfrac{x^2}{\cos^2(\theta)} + \tan(\theta)x
 \]
 %
 Pour des frottements linéaires (i.e.\ $f(\dot{x}, \dot{y}) = 1$), la trajectoire est maintenant donnée par
@@ -263,7 +263,49 @@ où $\bm{r}$ est le vecteur position de la masse $m$ et $r = \sqrt{x^2 + y^2}$ s
 Il est possible encore une fois grâce à un changement de variables de ré-écrire ce système comme
 %
 \[
-\ddot{\bm{r}} = -\dfrac{1}{r^3} \bm{r}.
+\ddot{\bm{r}} = -\dfrac{1}{r^3} \bm{r}
 \]
+%
+de façon à éliminer toute dépendence paramétrique.
+On peut ré-écrire ce système sous la forme d'un système d'équations du premier ordre
+%
+\[
+\begin{aligned}
+  \dot{\bm{r}} & = \bm{v} \\
+  \dot{\bm{v}} & = -\dfrac{1}{r^3} \bm{r}.
+\end{aligned}
+\]
+%
+Puisque l'on considère une orbite plannaire, ce système est alors formée de quatre équations différentielles du premier ordre.
+Il est possible de simplifier encore ce système en passant dans le système de coordonnées polaires et en utilisant le principe de \textbf{conservation du moment cinétique}.
+Le système final est le suivant
+%
+\[
+\begin{aligned}
+  \dot{r} & = v_r \\
+  \dot{\theta} & = \dfrac{J}{r^2} \\
+  \dot{v}_r & = -\dfrac{1}{r^2} + \dfrac{J^2}{r^3}
+\end{aligned}
+\]
+%
+où $r$ est la distance à la masse fixe, $\theta$ la position angulaire et $v_r$ la vitesse radiale du corps en mouvement.
+Le paramètre $J$ est le \textbf{moment cinétique} du corps en mouvement et est le seul paramètre du problème.
+L'objectif de cet exercice est alors de simuler un tel système et de vérifier ``expérimentalement'' certaines propriétés physiques d'un tel système.
+
+\begin{enumerate}
+\item Ecrire la fonction \verb+python+ correspondant à notre système d'équations.
+  Son entête doit être de la forme
+  %
+  \begin{lstlisting}[language=Python]
+    def func(t, u, J):
+  \end{lstlisting}
+  %
+  Vérifiez que votre implémentation est correcte en calculant \verb+fun(t, u, J)+ pour \verb+t=0+, \verb+u = np.array([1, np.pi/2, 0])+ et \verb+J=-0.5+.
+  Votre calcul devrait retourner \verb+[0, 0, 0]+.
+
+\item 
+
+\item 
+\end{enumerate}
 
 \end{document}
