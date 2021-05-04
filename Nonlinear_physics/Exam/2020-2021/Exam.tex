@@ -1,4 +1,4 @@
-\documentclass[12pt]{exam}
+\documentclass[12pt, answers]{exam}
 \usepackage[utf8]{inputenc}
 
 \usepackage[margin=1in]{geometry}
@@ -7,6 +7,7 @@
 \usepackage[]{graphicx}
 \usepackage[]{bm}
 \usepackage[]{nicefrac}
+\usepackage[]{xcolor}
 
 \newcommand{\class}{Physique non-linéaire}
 \newcommand{\term}{Master 2}
@@ -19,6 +20,7 @@
 \runningheader{\class}{\examnum\ - Page \thepage\ of \numpages}{\examdate}
 \runningheadrule
 
+\usepackage[]{tikz}
 
 \begin{document}
 
@@ -79,11 +81,98 @@ Le nombre total de point est de \numpoints.
     \dot{x} = x \left( 1 - x \right) - h.
     \]
 
-    \part[2] En supposant $h \geq 0$ (et $h = 0$ si $x = 0$), calculez les points fixes du système et étudiez leur stabilité en fonction de $h$.
+    \begin{solution}
+      {\color{blue}
+        En introduisant les changements de variable suivants
+        %
+        \[
+        P(t) \to N x(t), \quad \text{et} \quad t \to \tau t
+        \]
+        %
+        l'équation gouvernant la dynamique du système s'écrit
+        %
+        \[
+        \begin{aligned}
+          \dfrac{N}{\tau} \dot{x} & = rN x \left( 1 - x \right) - H \\
+          \dot{x} & = \tau r x \left( 1 - x \right) - \dfrac{H \tau}{N}
+        \end{aligned}
+        \]
+        %
+        En posant $\tau = \nicefrac{1}{r}$ et $h = \nicefrac{H}{Nr}$, on obtient alors l'équation adimensionnée
+        %
+        \[
+        \dot{x} = x \left(1 - x \right) - h.
+        \]
+      }
+    \end{solution}
+
+    \part[2] En supposant $h \geq 0$ (et $x \geq 0$), calculez les points fixes du système et étudiez leur stabilité en fonction de $h$.
+
+    \begin{solution}
+      {\color{blue}
+        Les points fixes du système vérifient l'équation
+        %
+        \[
+        \begin{aligned}
+          x \left( 1 - x \right) - h & = 0 \\
+          x^2 - x + h & = 0.
+        \end{aligned}
+        \]
+        %
+        Le discriminant est alors $\Delta = 1 - 4h$. Ses solutions sont données par
+        %
+        \[
+        x_1 = \dfrac{1 + \sqrt{\Delta}}{2}, \quad \text{et} \quad x_2 = \dfrac{1 - \sqrt{\Delta}}{2}.
+        \]
+        %
+        Le nombre de points fixes dépend alors du signe de $\Delta$
+        %
+        \begin{itemize}
+        \item Si $h > \nicefrac{1}{4}$, alors $\Delta < 0$ et $x_1$ et $x_2$ sont complexes.
+          Le système n'admet donc pas de point fixe (hormis $x_0 = 0$ si nécessaire)
+
+        \item Si $h = \nicefrac{1}{4}$, alors $\Delta = 0$ et le système admet un point fixe, i.e.\ $x_1 = \nicefrac{1}{2}$.
+
+        \item Pour $h < \nicefrac{1}{4}$, alors $\Delta > 0$ et le système admet deux points fixes, $x_1$ et $x_2$ définis précédemment.
+        \end{itemize}
+        %
+        La stabilité des points fixes est dictée par l'évolution de perturbations infinitésimales à leur voisinage.
+        La dynamique de telles perturbations est gouvernées par
+        %
+        \[
+        \dot{\eta} = 1 - 2x_i \eta.
+        \]
+        %
+        En remplaçant $x_i$ par $x_1$ ou $x_2$, il est alors facile de montrer que $x_1$ est linéairement stable et $x_2$ linéairement instable.
+        A noter que la stabilité de $x_0=0$ est un problème mal posé dans le cas présent.
+      }
+    \end{solution}
 
     \part[2] Faites un schéma du diagramme de bifurcation.
     De quel type de bifurcation s'agit-il ?
     D'un point de vue biologique, qu'arrive-t'il à la population de poissons si le taux de prélèvement $h$ est trop élevé ?
+
+    \begin{figure}[h]
+      \centering
+      \begin{tikzpicture}[>=stealth]
+        \draw[->, thick] (0, 0) -- (8, 0) node[below] {$h$};
+        \draw[->, thick] (0, 0) -- (0, 4) node[left] {$x$};
+
+        \draw[-, blue, variable=\h, domain=0:4, thick, smooth, samples=1024] plot (\h, {1.5*( 1 + sqrt(1 - 4*\h/16) )}) {};
+        \draw[-, blue, dashed, variable=\h, domain=0:4, thick, smooth, samples=1024] plot (\h, {1.5*( 1 - sqrt(1 - 4*\h/16) )}) {};
+
+        \draw[-] (4, 0.1) -- (4, -0.1) node[below] {$h = \dfrac{1}{4}$};
+      \end{tikzpicture}
+    \end{figure}
+
+    \begin{solution}
+      {\color{blue}
+        Le diagramme de bifurcation du système est représenté sur la figure ci-dessus.
+        Il s'agit d'une bifurcation de type \textbf{noeud-col}.
+        Du point de vue de l'écosystème, la population de poissons décroît progressivement avec le taux de pêche pour de petites valeurs de $h$.
+        Pour $h > \nicefrac{1}{4}$, on assiste en revanche à une disparition brutale de la population de poissons.
+      }
+    \end{solution}
   \end{parts}
 
   \bigskip
@@ -106,12 +195,65 @@ Le nombre total de point est de \numpoints.
     %
     après un adimensionnement approprié.
 
+    \begin{solution}
+      {\color{blue}
+        Le principe est le même que pour la première question et ne sera donc pas détaillé dans cette correction.
+      }
+    \end{solution}
+
     \part[2] En supposant $h \geq 0$, calculez les points fixes du système et étudiez leur stabilité en fonction de $h$.
+
+    \begin{solution}
+      {\color{blue}
+        Les points fixes du système vérifient l'équation suivante
+        %
+        \[
+        \begin{aligned}
+          x \left( 1 - x \right) - hx & = 0 \\
+          x^2 - \left(1 - h \right) x & = 0 \\
+          x \left( x - 1 + h \right) & = 0.
+        \end{aligned}
+        \]
+        %
+        Il est alors facile de montrer que le système admet deux points fixes, i.e.\ $x_0 = 0$ et $x_1 = 1 - h$.
+        La stabilité de ces points fixes est déterminée par le système linéarisé
+        %
+        \[
+        \dot{\eta} = 1 - 2x_i \eta - h.
+        \]
+        %
+        En remplaçant $x_i$ par les deux points fixes, on trouve alors que $x_0 = 0$ est stable pour $h \geq 1$ tandis que $x_1$ est stable pour $h \leq 1$.
+      }
+    \end{solution}
 
     \part[2] Faites un schéma du diagramme de bifurcation.
     De quel type de bifurcation s'agit-il ?
     D'un point de vue biologique, qu'arrive-t'il à la population de poissons quand $h$ est trop grand ?
     En quoi est-ce différent de ce qu'il se passe dans le cas d'une pêche constante ?
+
+        \begin{figure}[h]
+      \centering
+      \begin{tikzpicture}[>=stealth]
+        \draw[->, thick] (0, 0) -- (8, 0) node[below] {$h$};
+        \draw[->, thick] (0, 0) -- (0, 4) node[left] {$x$};
+
+        \draw[-, red, thick, dashed] (0, 0) -- (4, 0) {};
+        \draw[-, red, thick] (4, 0) -- (7.5, 0) {};
+        \draw[-, blue, thick] (0, 3) -- (4, 0) {};
+
+        \draw[-] (4, 0.1) -- (4, -0.1) node[below] {$h = 1$};
+      \end{tikzpicture}
+    \end{figure}
+
+    \begin{solution}
+      {\color{blue}
+        Le diagramme de bifurcation du système est représenté sur la figure ci-dessus.
+        Il s'agit d'une bifurcation de type \textbf{transcritique}.
+        Du point de vue de l'écosystème, la population de poissons décroît progressivement avec le taux de pêche pour de petites valeurs de $h$.
+        La disparition de la population de poissons ne se fait alors pas de façon soudaine comparée au cas précédent.
+      }
+    \end{solution}
+
   \end{parts}
   \addpoints
 
@@ -137,6 +279,12 @@ Le nombre total de point est de \numpoints.
   \begin{parts}
     \part[1] Montrez que $S(t) + I(t) + R(t)$ est une quantité conservée du système.
 
+    \begin{solution}
+      {\color{blue}
+        Il est facile de montrer que $\dfrac{dS}{dt} + \dfrac{dI}{dt} + \dfrac{dR}{dt} = 0$ impliquant alors que $S(t) + I(t) + R(t)$ est une quantité conservée.
+      }
+    \end{solution}
+
     \part[1] En adimensionnant correctement le temps $t$ et les variables $S$, $I$ et $R$, montrez que ce modèle peut se ré-écrire comme suit
     %
     \[
@@ -151,8 +299,52 @@ Le nombre total de point est de \numpoints.
     Donnez son expression.
     D'un point de vue épidémiologique, que représente-t'il ?
 
+    \begin{solution}
+      {\color{blue}
+        En posant
+        %
+        \[
+        S = N x, \quad I = N y, \quad R = Nz \quad \text{et} \quad \tau = \dfrac{1}{\gamma},
+        \]
+        %
+        on obtient alors le système adimensionné.
+        Le nombre de reproduction de base est alors défini par
+        %
+        \[
+        R_0 = \dfrac{\beta}{\gamma}.
+        \]
+        %
+        On peut le voir comme le rapport de l'échelle de temps associée à la facilité de propagation du virus et de celle associée à la guérison (ou mort) des patients infectés.
+      }
+    \end{solution}
+
     \part[1] L'équation pour $z$ est découplée du reste de sorte que $(x, y)$ forme un système du second-ordre.
     Calculez et classifiez tous les points fixes du système.
+
+    \begin{solution}
+      {\color{blue}
+        Le système étudié se réduit à
+        %
+        \[
+        \begin{aligned}
+          \dot{x} & = - R_0 xy \\
+          \dot{y} & = R_0 xy - y.
+        \end{aligned}
+        \]
+        %
+        Les points fixes du système doivent alors vérifier
+        %
+        \[
+        \begin{aligned}
+          xy & = 0 \\
+          y \left( R_0 x - 1 \right) & = 0.
+        \end{aligned}
+        \]
+        %
+        Afin de vérifier simultanément ces deux équations, il est nécessaire d'avoir $y = 0$.
+        Le système admet alors une infinité de points fixes formant l'axe $(0, x)$ du plan de phase.
+      }
+    \end{solution}
 
     \part[1] Tracez les isoclines du système et un schéma du portrait de phase.
 
@@ -160,13 +352,72 @@ Le nombre total de point est de \numpoints.
     Une épidémie a lieu si $y(t)$ croît initiallement au cours du temps.
     Sous quelle(s) condition(s) sur le nombre de reproduction de base $R_0$ est-ce qu'une épidémie peut avoir lieu ?
 
+    \begin{solution}
+      {\color{blue}
+        Une épidémie peut avoir lieu si $R_0 \geq 1$.
+      }
+    \end{solution}
+
     \part[2] Montrez qu'au début de l'épidémie (i.e.\ $x_0 \simeq 1$), le nombre d'individus infectés croît initialement de façon exponentielle.
+
+    \begin{solution}
+      {\color{blue}
+        Considérons l'équation pour $y(t)$
+        %
+        \[
+        \dot{y} = R_0 xy - y.
+        \]
+        %
+        Au début de l'épidémie, $x(0) \simeq 1$, d'où
+        %
+        \[
+        \dot{y} = \left( R_0 - 1 \right) y.
+        \]
+        %
+        On a alors
+        %
+        \[
+        y(t) = e^{\left(R_0 - 1 \right) t} y_0.
+        \]
+        %
+        Notez que l'on retrouve la condition $R_0 \geq 1$ pour une propagation de l'épidémie dans la population.
+      }
+    \end{solution}
 
     \part[2] On considère que l'immunité collective a été atteinte dès lors que le nombre d'infections commence à décroître (i.e.\ $\dot{y} < 0$).
     Quelle fraction de la population doit avoir été infectée avant que cette immunité collective ne soit atteinte ?
 
+    \begin{solution}
+      {\color{blue}
+        En partant de l'équation pour $y(t)$
+        %
+        \[
+        \dot{y} = R_0 x y - y,
+        \]
+        %
+        on trouve que la condition $\dot{y} \leq 0$ est atteinte dès lors que
+        %
+        \[
+        x(t) = \dfrac{1}{R_0}.
+        \]
+        %
+        A ce moment particulier, la fraction de la population ayant contractée à un moment ou un autre la maladie est alors
+        %
+        \[
+        N = 1 - \dfrac{1}{R_0}.
+        \]
+      }
+    \end{solution}
+
     \part[1] En France, le nombre $R_0$ au début de l'épidémie a été estimé aux alentours de $R_0 \simeq 3$.
     Sachant que la population est d'environ 70 millions de personnes, combien de personnes auraient dû contracter la maladie avant que l'immunité collective ne soit atteinte ?
+
+    \begin{solution}
+      {\color{blue}
+        En utilisant le résultat obtenu à la question précédente, on trouve que l'immunité collective aurait été acquise dès lors que près de 47 millions de Français aient été atteint de la maladie.
+      }
+    \end{solution}
+
   \end{parts}
   \addpoints
 
@@ -205,10 +456,59 @@ Le nombre total de point est de \numpoints.
     i.e.\ $\gamma \cdot \dot{\bm{x}} = \bm{f} \left( \gamma \cdot \bm{x} \right)$.
     Selon vous, à quoi correspond physiquement cette équivariance?
 
+    \begin{solution}
+      {\color{blue}
+        Il s'agit de simples manipulations algébriques qui ne seront pas détaillées dans cette correction.
+        D'un point de vue physique, cette équivariance correspond au fait que la dynamique du lâcher tourbillonaire est périodique en temps.
+        Ainsi, on peut la voir comme une invariance par rotation dans l'espace des phases.
+      }
+    \end{solution}
+
     \part[2] En introduisant la variable complexe $\eta = x + i y = r e^{i\varphi}$, où $r$ est l'amplitude des oscillations et $\varphi$ la phase, exprimez les équations en terme des variables $(r, \varphi, z)$.
+
+    \begin{solution}
+      {\color{blue}
+        En posant $\eta = x + i y$, notre système d'équations s'écrit
+        %
+        \[
+        \begin{aligned}
+          \dot{\eta} & = \left(\sigma + i \right) \eta - \left( 1 + \alpha \right) \eta z \\
+          \dot{z} & = -z + \vert \eta \vert^2.
+        \end{aligned}
+        \]
+        %
+        De là, il est facile de monter que
+        %
+        \[
+        \begin{aligned}
+          \dot{r} & = \sigma r - rz \\
+          \dot{\varphi} & = 1 + \alpha z \\
+          \dot{z} & = -z + r^2
+        \end{aligned}
+        \]
+        %
+        avec $ \eta = r(t) e^{\varphi(t)}$.
+      }
+    \end{solution}
 
     \part[2] Calculez les points fixes du système dans le plan $(r, z)$ et étudiez leur stabilité.
     Physiquement, à quoi correspondent ces deux points fixes ?
+    %
+    \begin{solution}
+      {\color{blue}
+        Dans le plan $(r, z)$, le système se réduit à
+        %
+        \[
+        \begin{aligned}
+          \dot{r} & = \sigma r - r z \\
+          \dot{z} & = -z + r^2.
+        \end{aligned}
+        \]
+        %
+        De là, on peut montrer que le système admet deux points fixes, i.e.\ $(r_0, z_0) = (0, 0)$ et $(r_1, z_1) = (\sqrt{\sigma}, \sigma)$.
+        Physiquement, $(r_0, z_0)$ correspond au champ de base linéairement instable des équations de Navier-Stokes modélisant l'écoulement au passage d'un cylindre bidimensionel tandis que $(r_1, z_1)$ correspond au champ moyen.
+      }
+    \end{solution}
 
     \part[2] L'équation pour la phase est
     %
@@ -218,7 +518,21 @@ Le nombre total de point est de \numpoints.
     %
     Comment varie la fréquence propre $\omega(t)$ des oscillations lorsque le système transitionne de son point fixe linéairement instable vers son cycle limite ?
 
+    \begin{solution}
+      {\color{blue}
+        Pour $z = 0$, la pulsation des oscillations est simplement donnée par $\omega = \dot{\varphi} = 1$.
+        Pour $z = \sigma$, elle est donnée par $\omega = 1 + \alpha \sigma$.
+        En supposant que $\alpha > 0$, la fréquence des oscillations augmentent donc au fur à mesure qu'elles gagnent en amplitude.
+      }
+    \end{solution}
+
     \part[2] Tracez schématiquement le portrait de phase du système en trois dimensions (i.e. dans le repère $(x, y, z)$).
+
+    \begin{solution}
+      {\color{blue}
+        Voir le cours.
+      }
+    \end{solution}
   \end{parts}
 
 
