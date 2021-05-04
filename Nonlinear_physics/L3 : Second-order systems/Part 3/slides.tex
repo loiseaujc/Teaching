@@ -453,7 +453,7 @@
       \draw[->] (-2, 0) -- (2, 0) node[below] {$x$};
       \draw[->] (0, -2) -- (0, 2) node[left] {$y$};
 
-
+      \draw[->, >=stealth, gray, domain=0:50, variable=\t, samples=1024, thick] plot ({2*sqrt(0.25*0.001 / (0.001 + exp(-0.5*\t)*(0.25-0.001))) * cos((\t+pi/4) r)}, {2*sqrt(0.25*0.001 / (0.001 + exp(-0.5*\t)*(0.25-0.001))) * sin((\t+pi/4) r)});
 
       \draw[->, >=stealth, gray, domain=0:50, variable=\t, samples=1024, thick] plot ({2*sqrt(0.25*1.5 / (1.5 + exp(-0.5*\t)*(0.25-1.5))) * cos((\t+pi/4) r)}, {2*sqrt(0.25*1.5 / (1.5 + exp(-0.5*\t)*(0.25-1.5))) * sin((\t+pi/4) r)});
 
