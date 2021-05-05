@@ -127,3 +127,23 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+*.aux
+
+*.toc
+
+*.nav
+
+*.out
+
+*.snm
+
+Nonlinear_physics/Additional material/
+
+*.fdb_latexmk
+
+*.fls
+
+*.vrb
+
+Scientific_computing/Additional material/
