@@ -32,7 +32,12 @@
 \usepackage{amsmath}
 
 \graphicspath{{imgs/}}
-\setbeamertemplate{blocks}[rounded][shadow=true]
+
+%\setbeamertemplate{blocks}[rounded][shadow=true]
+
+\setbeamercolor{background canvas}{bg=black}
+\setbeamercolor{frametitle}{fg=white}
+\setbeamercolor{normal text}{fg=white}
 
 
 %-------------------------------------------------------------------------------
@@ -80,19 +85,15 @@
 \begin{frame}[t, c]{Basic information}{Organization}
 	\begin{minipage}{.68\textwidth}
 		\begin{itemize}
-			\item Lectures every Tuesdays and Thurdays, from 3:30pm to 5:30pm until late February.
+			\item Lectures: Tuesdays and Thurdays, from 3:30pm to 5:30pm.
 
 			\bigskip
 
-			\item Evaluation is divided into two parts:
+			\item Evaluation divided into two parts:
 			\begin{itemize}
 				\item[\( \hookrightarrow \)] A two-hour long written exam late February.
 				\item[\( \hookrightarrow \)] A homework project.
 			\end{itemize}
-
-			\medskip
-
-			\item Do not hesitate to go through your linear algebra notes during Christmas vacation !
 		\end{itemize}
 	\end{minipage}%
 	\hfill
@@ -121,20 +122,13 @@
 				\item[\( \hookrightarrow \)] Open-source programming languages for scientific computing.
 			\end{itemize}
 
-			\medskip
+			\bigskip
 
 			\item You can install both of them from scratch or using \alert{\textbf{Anaconda}}.
 			\begin{itemize}
 				\item[\( \hookrightarrow \)] Available for Windows, Mac OS and Linux.
 			\end{itemize}
 
-			\medskip
-
-			\item Numerous online resources to get familiar with both languages if needed, e.g.
-			\begin{itemize}
-			\item[\( \hookrightarrow \)] \url{https://www.codeacademy.com}
-      \item[\( \hookrightarrow \)] \url{https://juliaacademy.com}
-			\end{itemize}
 		\end{itemize}
 	\end{minipage}
 
@@ -220,7 +214,8 @@
   \end{block}
 \end{frame}
 
-\begin{frame}[t, c]{Some examples}{Celestial Mechanics}
+%\begin{frame}[t, c]{Some examples}{Celestial Mechanics}
+\begin{frame}[t, c]{}{}
   \begin{minipage}{.58\textwidth}
     \centering
     \includegraphics[width=\textwidth]{solar_system}
@@ -235,43 +230,47 @@
     \]
   \end{minipage}
 
-  \vspace{1cm}
+  \vspace{-1cm}
 \end{frame}
 
-\begin{frame}[t, c]{Some examples}{Mechanical Engineering}
+%\begin{frame}[t, c]{Some examples}{Mechanical Engineering}
+\begin{frame}[t, c]{}{}
 	\begin{minipage}{.28\textwidth}
 		\centering
 		\includegraphics[width=.9\textwidth]{double_pendulum_geometry}
 	\end{minipage}%
 	\hfill
 	\begin{minipage}{.68\textwidth}
-    \centering
-    \textbf{Lagrangian Mechanics}
-    %
-    \[
-    \begin{aligned}
-      \mathcal{L}(\theta_1, \theta_2, \dot{\theta}_1, \dot{\theta}_2) & = \text{Kinetic Energy} - \text{Potential Energy} \\
-      & \dfrac{\mathrm{d}}{\mathrm{dt}} \left( \dfrac{\partial \mathcal{L}}{\partial \dot{\theta}_i} \right) - \dfrac{\partial \mathcal{L}}{\partial \theta_i}  = 0
-    \end{aligned}
-    \]
+    \begin{overprint}
+      \onslide<1>
+      \centering
+      \textbf{Lagrangian Mechanics}
+      %
+      \[
+      \begin{aligned}
+        \mathcal{L}(\theta_1, \theta_2, \dot{\theta}_1, \dot{\theta}_2) & = \text{Kinetic Energy} - \text{Potential Energy} \\
+        & \dfrac{\mathrm{d}}{\mathrm{dt}} \left( \dfrac{\partial \mathcal{L}}{\partial \dot{\theta}_i} \right) - \dfrac{\partial \mathcal{L}}{\partial \theta_i}  = 0
+      \end{aligned}
+      \]
 
-    \medskip
-
-    \textbf{Hamiltonian Mechanics}
-    %
-    \[
-    \begin{aligned}
-      \mathcal{H}(p_1, p_2, q_1, q_2) & = \text{Kinetic Energy} + \text{Potential Energy} \\
-      \dfrac{\mathrm{d}p_i}{\mathrm{d}t} & = -\dfrac{\partial \mathcal{H}}{\partial q_i}, \quad \dfrac{\mathrm{d}q_i}{\mathrm{d}t} = \dfrac{\partial \mathcal{H}}{\partial p_i}
-    \end{aligned}
-    \]
-
+      \onslide<2>
+      \centering
+      \textbf{Hamiltonian Mechanics}
+      %
+      \[
+      \begin{aligned}
+        \mathcal{H}(p_1, p_2, q_1, q_2) & = \text{Kinetic Energy} + \text{Potential Energy} \\
+        \dfrac{\mathrm{d}p_i}{\mathrm{d}t} & = -\dfrac{\partial \mathcal{H}}{\partial q_i}, \quad \dfrac{\mathrm{d}q_i}{\mathrm{d}t} = \dfrac{\partial \mathcal{H}}{\partial p_i}
+      \end{aligned}
+      \]
+    \end{overprint}
 	\end{minipage}
 
-	\vspace{1cm}  
+	\vspace{-1cm}  
 \end{frame}
 
-\begin{frame}[t, c]{Some examples}{Mechanical Engineering}
+%\begin{frame}[t, c]{Some examples}{Mechanical Engineering}
+\begin{frame}[t, c]{}{}
 	\begin{minipage}{.48\textwidth}
 		\begin{itemize}
 			\item Simple mechanical sytem exhibiting nonetheless complex dynamics.
@@ -287,13 +286,13 @@
 	\end{minipage}%
 	\hfill
 	\begin{minipage}{.48\textwidth}
-		\vspace{-1cm}
+		\vspace{-0.25cm}
 		\begin{center}
 			\movie[width=\textwidth, autostart, loop]{\includegraphics[width=\textwidth]{double_pendulum}}{imgs/double_pendulum.mp4}
 		\end{center}
 	\end{minipage}
 
-	\vspace{1cm}
+	\vspace{-1cm}
 \end{frame}
 
 \begin{frame}[t, c]{Some examples}{Fluid dynamics}

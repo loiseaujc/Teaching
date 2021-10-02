@@ -1,0 +1,616 @@
+\documentclass[12pt, answers]{exam}
+\usepackage[utf8]{inputenc}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage[]{graphicx}
+\usepackage[]{bm}
+\usepackage[]{nicefrac}
+\usepackage[]{xcolor}
+
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
+\DeclareMathAlphabet\mathbfcal{OMS}{cmsy}{b}{n}
+\DeclareMathOperator*{\minimize}{minimize~}
+\DeclareMathOperator*{\maximize}{maximize~}
+\DeclareMathOperator*{\subjectto}{subject~to~}
+
+
+\newcommand{\class}{Mathematics for Engineers}
+\newcommand{\term}{Master 2}
+\newcommand{\examnum}{Final Exam}
+\newcommand{\examdate}{2020-2021}
+\newcommand{\timelimit}{120 Minutes}
+
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - Page \thepage\ of \numpages}{\examdate}
+\runningheadrule
+
+\usepackage[]{tikz}
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+  \textbf{\class} \\%& \textbf{Nom -- Prénom:} & \makebox[2in]{\hrulefill}\\
+  % \textbf{\term} &&\\
+  \textbf{\examnum} &&\\
+  \textbf{\examdate} && \\
+  % \textbf{Time Limit: \timelimit} & Teaching Assistant & \makebox[2in]{\hrulefill}
+  \textbf{Time limit: \timelimit} %&&
+\end{tabular*}\\
+\rule[2ex]{\textwidth}{2pt}
+
+This exam contains \numpages\ pages (including this cover page) and \numquestions\ exercises. \\
+
+%% \begin{center}
+%%   Barême\\
+%%   \bigskip
+%%   \addpoints
+%%   \gradetable[v][questions]
+%% \end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+  %%%%%
+  %%%%%
+  %%%%%     MINIMUM ENERGY CONTROL
+  %%%%%
+  %%%%%
+
+  \question \textbf{Minimum energy control}
+  \noaddpoints
+
+  Consider the single-input multiple-output discrete-time linear dynamical system
+  %
+  \begin{equation}
+    \begin{aligned}
+      \bm{x}(k+1) & = \bm{Ax}(k) + \bm{B}u(k) \\
+      \bm{y}(k) & = \bm{Cx}(k),
+    \end{aligned}
+    \label{eq: ex 1}
+  \end{equation}
+  %
+  with $\bm{A} \in \mathbb{R}^{n \times n}$, $\bm{B} \in \mathbb{R}^{n \times 1}$ and $\bm{C} \in \mathbb{R}^{q \times n}$.
+  Starting from a random initial condition $\bm{x}(0)$, your goal is to devise a minimum energy control scheme such that, at $k = t$, we have $\bm{y}(t) = \bm{y}_{\text{des}}$ where $\bm{y}_{\text{des}}$ is the desired output of the system.
+  From a mathematical point of view, you thus need to the sequence of inputs $u(0)$, $u(1)$, $\cdots$, $u(t-1)$ that minimize the cost function
+  %
+  \[
+  \mathcal{J} = \sum_{k=0}^{t-1} u(k)^2
+  \]
+  %
+  under the constraints that the dynamics of the system are given by Eq.~\eqref{eq: ex 1} and that $\bm{y}(t) = \bm{y}_{\text{des}}$.
+  You can assume that the system is both controlable and observable.
+
+  \begin{parts}
+    \part[1] Given all the problem data (i.e. $\bm{x}(0)$, $\bm{A}$, $\bm{B}$, $\bm{C}$, $\bm{y}_{\text{des}}$ and $t$), detail how you can reformulate this problem as a least-norm problem.
+    If you need to make any assumption regarding the properties of the matrices, say so.
+
+    \begin{solution}
+      {\color{blue}
+        Starting from the arbitrary initial condition $\bm{x}(0) = \bm{x}_0$, we can write
+          %
+          \[
+          \begin{aligned}
+            \bm{y}(0) & = \bm{Cx}_0 \\
+            \bm{y}(1) & = \bm{CAx}_0 + \bm{CB}u_0 \\
+            \bm{y}(2) & = \bm{CA}^2\bm{x}_0 + \bm{CAB}u_0 + \bm{CB}u_1 \\
+            \bm{y}(3) & = \bm{CA}^3\bm{x}_0 + \bm{CA}^2\bm{B}u_0 + \bm{CAB}u_1 + \bm{CB}_2 \\
+            \vdots \\
+            \bm{y}(k) & = \bm{CA}^k \bm{x}_0 + \bm{CA}^{k-1} \bm{B}u_0 + \bm{CA}^{k-2}\bm{B}u_1 + \bm{CA}^{k-3} \bm{B} u_2 + \cdots + \bm{CB}u_{k-1}.
+          \end{aligned}
+          \]
+          %
+          We can rewrite this equation in matrix form as follows
+          %
+          \[
+          \bm{y}(k) - \bm{CA}^k \bm{x}_0 = \begin{bmatrix} \bm{CA}^{k-1} \bm{B} & \bm{CA}^{k-2} \bm{B} & \bm{CA}^{k-3} \bm{B} & \cdots & \bm{CB} \end{bmatrix} \begin{bmatrix} u_0 \\ u_1 \\ u_2 \\ \vdots \\ u_{k-1} \end{bmatrix}.
+          \]
+          %
+          Finding the minimum energy input sequence $\bm{u} = \left\{ u_k \right\}_{k=0, t-1}$ such that $\bm{y}(t) = \bm{y}_{\text{des}}$ then amounts to solve the following least-norm problem
+          %
+          \[
+          \begin{aligned}
+            \minimize_{\bm{u}} & \| \bm{u} \|^2_2 \\
+            \subjectto & \bm{Hu} = \bm{y}_{\text{des}} - \bm{CA}^{t} \bm{x}_0
+          \end{aligned}
+          \]
+          %
+          with
+          %
+          \[
+          \bm{H} = \begin{bmatrix} \bm{CA}^{t-1} \bm{B} & \bm{CA}^{t-2} \bm{B} & \bm{CA}^{t-3} \bm{B} & \cdots & \bm{CB} \end{bmatrix}.
+          \]
+          %
+          This constrained minimization problem can be transformed into an equivalent unconstrained problem by introducing a \emph{Lagrange multiplier} $\boldsymbol{\lambda}$ such that it reads
+          %
+          \[
+          \minimize_{\bm{u}, \boldsymbol{\lambda}} \bm{u}^T \bm{u} + \boldsymbol{\lambda}^T \left( \bm{Hu} - \bm{y}_{\text{des}} - \bm{CA}^t \bm{x}_0 \right).
+          \]
+          %
+          The components of the gradient of this augmented cost function $\mathcal{L}(\bm{u}, \boldsymbol{\lambda})$ are given by
+          %
+          \[
+          \begin{aligned}
+            \dfrac{\partial \mathcal{L}}{\partial \bm{u}} & = 2 \bm{u} + \bm{H}^T \boldsymbol{\lambda} \\
+            \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{\lambda}} & = \bm{Hu} - \left( \bm{y}_{\text{des}} - \bm{CA}^t \bm{x}_0 \right).
+          \end{aligned}
+          \]
+          %
+          Setting the first component to zero yields
+          %
+          \[
+          \bm{u} = -\dfrac{1}{2} \bm{H}^T \boldsymbol{\lambda}.
+          \]
+          %
+          Introducing this expression for $\bm{u}$ into the second equation and setting it to zero yields
+          %
+          \[
+          \boldsymbol{\lambda} = - 2 \left( \bm{HH}^T \right)^{-1} \left( \bm{y}_{\text{des}} - \bm{CA}^t \bm{x}_0 \right).
+          \]
+          %
+          Combining these two expressions finally provides us with the minimum energy control sequence
+          %
+          \[
+          \bm{u} = \bm{H}^T \left( \bm{HH}^T \right)^{-1} \left( \bm{y}_{\text{des}} - \bm{CA}^t \bm{x}_0 \right)
+          \]
+          %
+          where $\bm{H}^T \left( \bm{HH}^T \right)^{-1}$ is the Moore-Penrose pseudoinverse of $\bm{H}$.
+          Note that in this process, we implicitely assume that $\bm{HH}^T$ is invertible.
+      }
+    \end{solution}
+
+    \part[1] Using your computer, carry out your method on the particular problem instance with data
+    %
+    \[
+    \bm{A} = \begin{bmatrix} 1 & 0.1 \\ 0 & 0.9 \end{bmatrix}, \quad \bm{B} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}, \quad \bm{C} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
+    \]
+    %
+    and
+    %
+    \[
+    \bm{x}(0) = \begin{bmatrix} 0 \\ 0 \end{bmatrix}, \quad \bm{y}_{\text{des}} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \quad \text{and } t = 10.
+    \]
+    %
+    Please plot the optimal sequence of inputs and return the value of the cost function $\mathcal{J}(\bm{u})$ for this particular sequence.
+
+    \begin{solution}
+      {\color{blue}
+        Please refer to \verb+ex1.jl+ for the Julia implementation and \verb+ex1.py+ for the python one.
+        A Matlab implementation can also be provided on demand.
+      }
+    \end{solution}
+  \end{parts}
+
+
+
+
+  %%%%%
+  %%%%%
+  %%%%%     LIGHT BEAM
+  %%%%%
+  %%%%%
+
+  \question \textbf{Estimating direction and amplitude of a light beam}
+
+  A light beam with (non-negative) amplitude $a$ comes from a direction $\bm{d} \in \mathbb{R}^3$, where $\| \bm{d} \|_2 = 1$ (this means that the beam travels in the direction $-\bm{d}$).
+  The beam falls on $m \geq 3$ photodetectors, each of which generates a scalar signal that depends on the beam's amplitude and direction as well as on the direction in which the photodetector is pointed.
+  Specifically, photodetector $i$ generates an output signal $p_i$
+  %
+  \[
+  p_i = \alpha a \cos(\beta_i) + v_i
+  \]
+  %
+  where $\beta_i$ is the angle between the beam direction $\bm{d}$ and the outward normal vector $\bm{q}_i$ on the surface of the i\textsuperscript{th} photodetector.
+  For the sake of simplicity, we'll assume that all photodetectors have the same sensitivity $\alpha$.
+  You can interpret $\bm{q}_i \in \mathbb{R}^3$ (with $\| \bm{q}_i \| = 1$) as the direction the i\textsuperscript{th} photodetector is pointed.
+  We'll assume furthermore that $\vert \beta_i \vert \leq 90^\circ$, i.e. the beam illuminates the top of the photodetectors.
+  The numbers $v_i$ are small measurement errors.
+  Assume you are given the photodetector direction vectors $\bm{q}_1, \cdots, \bm{q}_m \in \mathbb{R}^3$, their sensitivity $\alpha$ and the noisy output $p_1, \cdots, p_m \in \mathbb{R}$.
+  Your job is to estimate the beam direction $\bm{d} \in \mathbb{R}^3$ and its amplitude $a \in \mathbb{R}^+$.
+
+  \begin{parts}
+    \part[1] Explain how you can recast this problem in the least-squares framework. If some matrix (or matrices) needs to be full rank for it to work, say so.
+
+    \begin{solution}
+      {\color{blue}
+        Let us begin by reformulating slightly the problem.
+        Given that $\| \bm{d} \| = 1$ and $\| \bm{q}_i \| = 1$, the i\textsuperscript{th} measurement can be written as
+        %
+        \[
+        p_i = \alpha \bm{q}_i^T \bm{d} a + v_i.
+        \]
+        %
+        Moreover, if we introduce $\bm{x} = a \bm{d}$, this equation becomes
+        %
+        \[
+        p_i = \alpha \bm{q}_i^T \bm{x} + v_i.
+        \]
+        %
+        Considering all of the measurements simulataneously leads to
+        %
+        \[
+        \begin{aligned}
+          \begin{bmatrix}
+            p_1 \\ p_2 \\ p_3 \\ \vdots \\ p_m
+          \end{bmatrix}
+          & =
+          \alpha
+          \begin{bmatrix}
+            \bm{q}_1^T \\
+            \bm{q}_2^T \\
+            \bm{q}_3^T \\
+            \vdots \\
+            \bm{q}_m^T
+          \end{bmatrix}
+          \bm{x} + \bm{v} \\
+          \bm{p} & = \alpha \bm{Qx} + \bm{v}
+        \end{aligned}
+        \]
+        %
+        where $\bm{v}$ is the vector of measurement errors.
+        The unknown vector $\bm{x}$ can then be found as the solution of the following least-squares problem
+        %
+        \[
+        \minimize_{\bm{x}} \dfrac{1}{2} \| \bm{p} - \alpha \bm{Qx} \|_2^2.
+        \]
+        %
+        The gradient of this cost function $\mathcal{J}(\bm{x})$ is given by
+        %
+        \[
+        \dfrac{\partial \mathcal{J}}{\partial \bm{x}} = \alpha^2 \bm{Q}^T \bm{Qx} - \alpha \bm{Q}^T\bm{p}.
+        \]
+        %
+        Setting this gradient to zero yields to the normal equation
+        %
+        \[
+        \bm{Q}^T \bm{Qx} = \dfrac{1}{\alpha} \bm{Q}^T \bm{p}.
+        \]
+        %
+        Assuming $\bm{Q}^T \bm{Q}$ is full-rank, the least-squares solution is then
+        %
+        \[
+        \bm{x} = \dfrac{1}{\alpha} \left( \bm{Q}^T \bm{Q} \right)^{-1} \bm{Q}^T \bm{p}.
+        \]
+        %
+        Once $\bm{x}$ has been identified, the estimated amplitude of the beam is given by $a = \| \bm{x} \|$ while its direction is $\bm{d} = \bm{x}/ a$.
+      }
+    \end{solution}
+
+    \part[1] To describe unit vectors $\bm{q}_1, \cdots, \bm{q}_m \in \mathbb{R}^3$, we will use azimuthal and elevation defined as follows
+    %
+    \[
+    \bm{q}_i
+    =
+    \begin{bmatrix}
+      \cos(\varphi) \cos(\vartheta) \\
+      \cos(\varphi) \sin(\vartheta) \\
+      \sin(\varphi)
+    \end{bmatrix}
+    \]
+    %
+    where $\varphi$ is the elevation (between $0^\circ$ and $90^\circ$ since all photodetectors point upward).
+    The azimuth angle $0^\circ \leq \vartheta \leq 360^\circ$ gives the direction in the plane spanned by the first and second coordinates.
+    Carry out your method on the particular problem instance
+    %
+    \[
+    \bm{p}
+    =
+    \begin{bmatrix}
+      1.58 \\ 1.50 \\ 2.47 \\ 1.1 \\ 0.001
+    \end{bmatrix},
+    \quad
+    \boldsymbol{\varphi}
+    =
+    \begin{bmatrix}
+      88 \\ 34 \\ 30 \\ 20 \\ 50
+    \end{bmatrix},
+    \quad
+    \text{and}
+    \quad
+    \boldsymbol{\vartheta}
+    =
+    \begin{bmatrix}
+      3 \\ 10 \\ 80 \\ 150 \\ 275
+    \end{bmatrix}.
+    \]
+    %
+    Note that you may have to express these angles in radians rather than degrees.
+    Give your final estimate of the beam's amplitude $a$ and direction $\bm{d}$ (with azimuth and elevation angles in degrees).
+
+    \begin{solution}
+      {\color{blue}
+        Please refer to \verb+ex2.jl+ for the Julia implementation and \verb+ex2.py+ for the python one.
+        A Matlab implementation can also be provided on demand.
+      }
+    \end{solution}
+
+  \end{parts}
+
+
+
+
+  %%%%%
+  %%%%%
+  %%%%%     CONVEX OPTIMIZATION
+  %%%%%
+  %%%%%
+
+  \question \textbf{Convex optimization}
+
+  Consider the quadratic functional $f : \mathbb{R}^2 \to \mathbb{R}$ given by
+  %
+  \[
+  f(x_1, x_2) = 2 x_1^2 + x_2^2 + x_1 x_2 + x_1 + x_2.
+  \]
+  %
+  The aim of this exercise is to design an algorithm to find the solution $(x_1, x_2)$ minimizing the function $f(x_1, x_2)$.
+
+  \begin{parts}
+    \part[1] Show that the problem above can be cast as
+    %
+    \[
+    \minimize_{\bm{x}} \dfrac{1}{2} \bm{x}^T \bm{Px} - \bm{x}^T \bm{q} + c
+    \]
+    %
+    where $\bm{P} \in \mathbb{R}^{2 \times 2}$ is a symmetric positive definite matrix, $\bm{q}$ is in $\mathbb{R}^2$ and $c$ a constant.
+
+    \begin{solution}
+      {\color{blue}
+        Straightforward algebraic manipulations show that
+        %
+        \[
+        \bm{P}
+        =
+        \begin{bmatrix}
+          4 & 1 \\ 1 & 2
+        \end{bmatrix},
+        \quad
+        \bm{q} = -\begin{bmatrix} 1 \\ 1 \end{bmatrix},
+        \quad
+        \text{and}
+        \quad
+        c = 0.
+        \]
+        %
+        It can moreover easily be shown that the eigenvalues of $\bm{P}$ are indeed positive.
+      }
+    \end{solution}
+
+    \part[1] Show that minimize of this problem is also solution of
+    %
+    \[
+    \bm{Px} = \bm{q}
+    \]
+    %
+    and solve the proble analytically.
+
+    \begin{solution}
+      {\color{blue}
+        The gradient of the function $f$ with respect to $\bm{x}$ is given by
+        %
+        \[
+        \dfrac{\partial f}{\partial \bm{x}} = \bm{Px} - \bm{q}.
+        \]
+        %
+        Setting this gradient to zero (optimilaty condition) yields
+        %
+        \[
+        \bm{Px} = \bm{q}.
+        \]
+        %
+        The analytical resolution is left to the students.
+      }
+    \end{solution}
+
+    \part[1] Solve the problem numerically, return the optimal value of $\bm{x}$ as well as the corresponding value of the function $f(\bm{x}) = \dfrac{1}{2}\bm{x}^T \bm{Px} - \bm{x}^T \bm{q} + c$.
+  \end{parts}
+
+
+
+
+  %%%%%
+  %%%%%
+  %%%%%     TRIDIAGONAL SOLVER
+  %%%%%
+  %%%%%
+
+  \question \textbf{Specialized solver for tridiagonal matrices}
+
+  Tridiagonal matrices are of the form
+  %
+  \[
+  \bm{A}
+  =
+  \begin{bmatrix}
+    a_1 & b_1 & 0 & 0 & 0 & \cdots & 0 \\
+    c_1 & a_2 & b_2 & 0 & 0 & \cdots & 0 \\
+    0 & c_2 & a_3 & b_3 & 0 & \cdots & 0 \\
+    \vdots & \ddots & \ddots & \ddots & \cdots & \vdots & \vdots \\
+    0 & \cdots & \cdots & \cdots & c_{n-2} & a_{n-1} & b_{n-1} \\
+    0 & \cdots & \cdots & \cdots & 0 & c_{n-1} & a_n
+  \end{bmatrix}
+  \]
+  %
+  They are ubiquituous in applied mathematics (see the discretization of differential operations).
+  It is possible to leverage their particular structure to design efficient algorithms to solve linear problems involving such matrices.
+  In this exercise, you'll have to design such an algorithm.
+
+  \begin{parts}
+    \part[1] Design an algorithm solving $\bm{Ax} = \bm{b}$ that leverages the tridiagonal structure of this type of matrices.
+    Your algorithm should work no matter the size $n$ of the matrix.
+    You can assume that all the entries $a_i$ on the main diagonal are non-zero.
+
+    \begin{solution}
+      {\color{blue}
+        The particular algorithm you had to come up with is known as \emph{Thomas algorithm}.
+        There are plenty of resources online about it so it won't be detailed hereafter.
+      }
+    \end{solution}
+
+    \part[1] Implement your algorithm and consider the following $10 \times 10$ matrix
+    %
+    \[
+    \bm{A}
+    =
+    \begin{bmatrix}
+      2 & -1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+      -1 & 2 & -1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+      0 & -1 & 2 & -1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+      0 & 0 & -1 & 2 & -1 & 0 & 0 & 0 & 0 & 0 \\
+      0 & 0 & 0 & -1 & 2 & -1 & 0 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0 & -1 & 2 & -1 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0 & 0 & -1 & 2 & -1 & 0 & 0 \\
+      0 & 0 & 0 & 0 & 0 & 0 & -1 & 2 & -1 & 0 \\
+      0 & 0 & 0 & 0 & 0 & 0 & 0 & -1 & 2 & -1 \\
+      0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & -1 & 2
+    \end{bmatrix}
+    \]
+    %
+    also known as the \emph{Strang matrix} and the right hand side vector
+    %
+    \[
+    \bm{b}
+    =
+    \begin{bmatrix}
+      1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1
+    \end{bmatrix}^T.
+    \]
+  \end{parts}
+
+
+
+
+  %%%%%
+  %%%%%
+  %%%%%     THEORY PROBLEM
+  %%%%%
+  %%%%%
+
+  \question \textbf{It's the dreaded theory problem ! And it's mandatory !}
+
+  Consider the SISO discrete-time linear system
+  %
+  \[
+  \begin{aligned}
+    \bm{x}_{k+1} & = \bm{Ax}_k + \bm{B}u_k \\
+    y_k & = \bm{Cx}_k.
+  \end{aligned}
+  \]
+
+  \begin{parts}
+    \part[1] Under which condition is this system linearly unstable?
+    \begin{solution}
+      {\color{blue}
+        In the absence of external forcing, the solution to this system is given by
+        %
+        \[
+        \bm{x}_k = \bm{A}^k \bm{x}_0.
+        \]
+        %
+        Introducing the eigendecomposition $\bm{A} = \bm{V} \boldsymbol{\Lambda} \bm{V}^{-1}$, it can be rewritten as
+        %
+        \[
+        \bm{x}_k = \bm{V} \boldsymbol{\Lambda}^k \bm{V}^{-1} \bm{x}_0.
+        \]
+        %
+        Hence, if at least one eigenvalue of $\bm{A}$ is outside the unit circle, then
+        \[
+        \lim_{k \to \infty} \| \boldsymbol{\Lambda}^k \|_2^2 = \infty
+        \]
+        %
+        and the system is linearly unstable.
+      }
+    \end{solution}
+
+    \part[1] Give the expression of the impulse response filter $\bm{h}_k$ as a function of $k$, $\bm{A}$, $\bm{B}$ and $\bm{C}$.
+
+    \begin{solution}
+      {\color{blue}
+        The impulse response is given by
+        %
+        \[
+        \bm{h}_k
+        =
+        \begin{cases}
+          \bm{CA}^k \bm{B}, \quad & \text{for} k > 0, \\
+          \bm{0}, \quad & \text{otherwise}.
+        \end{cases}
+        \]
+      }
+    \end{solution}
+
+    \part[1] Show that $\bm{h}_k$ is invariant with respect to an invertible change of coordinates.
+
+    \begin{solution}
+      {\color{blue}
+        Consider the change of coordinates $\bm{z} = \bm{V}^{-1} \bm{x}$.
+        The governing equations for $\bm{z}$ are given by
+        %
+        \[
+        \begin{aligned}
+          \bm{z}_{k+1} & = \bm{V}^{-1} \bm{AVz}_k + \bm{V}^{-1} \bm{Bu}_k \\
+          \bm{y}_k & = \bm{CVz}_k.
+        \end{aligned}
+        \]
+        %
+        It can then easily be shown that the Markov parameters are the same.
+      }
+    \end{solution}
+
+    \part[1] Assume that $\bm{x}_0 = \bm{0}$.
+    Consider the two vectors $\bm{u} = \begin{bmatrix} u_0 & u_1 & u_2 & \cdots & u_{N-1} \end{bmatrix}^T$ and $\bm{y} = \begin{bmatrix} y_1 & y_2 & y_3 & \cdots & y_N \end{bmatrix}^T$.
+    Find the matrix $\bm{T} \in \mathbb{R}^{N \times N}$ that maps the input sequence $\bm{u}$ to the output sequence $\bm{y}$, i.e. $\bm{y} = \bm{Tu}$.
+
+    \begin{solution}
+      {\color{blue}
+        Starting from the definition of the system and the fact that $\bm{x}_0 = \bm{0}$, we can write
+        %
+        \[
+        \begin{aligned}
+          y_0 & = 0 \\
+          y_1 & = \bm{CB}u_0 \\
+          y_2 & = \bm{CAB}u_0 + \bm{CB}u_1 \\
+          y_3 & = \bm{CA}^2 \bm{B}u_0 + \bm{CAB} u_1 + \bm{CB}u_2 \\
+          \vdots \\
+          y_N & = \bm{CA}^{N-1} \bm{B}u_0 + \bm{CA}^{N-2} \bm{B} u_1 + \bm{CA}^{N-3} \bm{B} u_2 + \cdots + \bm{CB}u_{N-1}.
+        \end{aligned}
+        \]
+        %
+        In matrix form, this set of equation can be rewritten as
+        %
+        \[
+        \begin{bmatrix}
+          y_1 \\ y_2 \\ y_3 \\ \vdots \\ y_N
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+          \bm{CB} & 0 & 0 & \cdots & 0 \\
+          \bm{CAB} & \bm{CB} & 0 & \cdots & 0 \\
+          \bm{CA}^2 \bm{B} & \bm{CAB} & \bm{CB} & \cdots & 0 \\
+          \vdots & \ddots & \ddots & \ddots & \vdots \\
+          \bm{CA}^{N-1} \bm{B} & \bm{CA}^{N-2}\bm{B} & \bm{CA}^{N-3}\bm{B} & \cdots & \bm{CB}
+        \end{bmatrix}
+        \begin{bmatrix}
+          u_0 \\ u_1 \\ u_2 \\ \vdots \\ u_{N-1}
+        \end{bmatrix}.
+        \]
+      }
+    \end{solution}
+
+    \part[1] What do the respective eigendirections of the observability and controllability Gramians represents?
+
+    \begin{solution}
+      {\color{blue}
+        Assuming the eigenvalues of the observability (resp.\ controllability) Gramian have been sorted in decreasing order, the i\textsuperscript{th} eigendirection corresponds to the i\textsuperscript{th} most observable (resp.\ controllable) direction in phase space.
+      }
+    \end{solution}
+  \end{parts}
+\end{questions}
+
+\end{document}

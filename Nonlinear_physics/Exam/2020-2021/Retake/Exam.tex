@@ -1,0 +1,86 @@
+\documentclass[12pt, answers]{exam}
+\usepackage[utf8]{inputenc}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage[]{graphicx}
+\usepackage[]{bm}
+\usepackage[]{nicefrac}
+\usepackage[]{xcolor}
+
+\newcommand{\class}{Physique non-linéaire}
+\newcommand{\term}{Master 2}
+\newcommand{\examnum}{Examen final}
+\newcommand{\examdate}{Février 2021}
+\newcommand{\timelimit}{120 Minutes}
+
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - Page \thepage\ of \numpages}{\examdate}
+\runningheadrule
+
+\usepackage[]{tikz}
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+% \textbf{\class} & \textbf{Nom -- Prénom:} & \makebox[2in]{\hrulefill}\\
+% \textbf{\term} &&\\
+\textbf{\examnum} &&\\
+\textbf{\examdate} &&
+% \textbf{Time Limit: \timelimit} & Teaching Assistant & \makebox[2in]{\hrulefill}
+\textbf{Durée: \timelimit} %&&
+\end{tabular*}\\
+\rule[2ex]{\textwidth}{2pt}
+
+Ce sujet contient \numpages\ pages (en comptant la page de garde) et \numquestions\ exercices.\\
+Le nombre total de point est de \numpoints.
+
+\begin{center}
+  Barême\\
+  \bigskip
+  \addpoints
+  \gradetable[v][questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+  \question[10] \textbf{Exercice 1}
+  \noaddpoints
+
+  Considérons un pendule simple de masse $m$ et de longueur $L$ dans le champ gravitationel ($g$) de la Terre and forcé par un couple constant $\Gamma$.
+  En partant des principes de Newton, l'équation de la dynamique s'écrit
+  %
+  \[
+  m L^2 \ddot{\theta} + b \dot{\theta} + mgL \sin(\theta) = \Gamma.
+  \]
+  %
+  L'objectif est alors de déterminer le type de bifurcation rencontrée par le système en fonction du couple $\Gamma$ appliqué.
+
+  \begin{parts}
+    \part En introduisant $\tau$ telle que $t \mapsto \tau t$, montrez qu'il y'a deux choix possibles pour définir cette échelle de temps et discutez de leurs implications physiques.
+
+    \part En supposant que l'on se trouve dans la situation où les forces de frottement dominent, l'équation de la dynamique peut se réduire (au moins en première approximation) à
+    %
+    \[
+    \dot{\theta} = \gamma - \sin(\theta)
+    \]
+    %
+    avec $\gamma = \nicefrac{\Gamma}{mgL}$.
+    Faites un schéma de la ligne de phase du système pour différentes valeurs de $\gamma$.
+
+    \part Lorsque $\gamma \to 1_{+}$, un point fixe métastable est créé en $\theta = \nicefrac{\pi}{2}$.
+    Déterminez le type de bifurcation rencontrée.
+
+    \part Pour $\vert \gamma \vert < 1$, le système possède deux états d'équilibre.
+    Discutez de leur stabilité et de leur interprétation physique.
+  \end{parts}
+
+\end{questions}
+
+\end{document}
