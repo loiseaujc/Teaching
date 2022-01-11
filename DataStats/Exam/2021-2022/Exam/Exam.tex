@@ -1,0 +1,277 @@
+%\documentclass[12pt, answers]{exam}
+\documentclass[12pt]{exam}
+\usepackage[utf8]{inputenc}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage[]{graphicx}
+\usepackage[]{bm}
+\usepackage[]{nicefrac}
+\usepackage[]{xcolor}
+
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
+\DeclareMathAlphabet\mathbfcal{OMS}{cmsy}{b}{n}
+\DeclareMathOperator*{\minimize}{minimize~}
+\DeclareMathOperator*{\maximize}{maximize~}
+\DeclareMathOperator*{\subjectto}{subject~to~}
+
+
+\newcommand{\class}{Signal Processing and Statistics}
+\newcommand{\term}{Master 2}
+\newcommand{\examnum}{Final Exam}
+\newcommand{\examdate}{2021-2022}
+\newcommand{\timelimit}{90 Minutes}
+
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - Page \thepage\ of \numpages}{\examdate}
+\runningheadrule
+
+\usepackage[]{tikz}
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+  \textbf{\class} \\%& \textbf{Nom -- Prénom:} & \makebox[2in]{\hrulefill}\\
+  % \textbf{\term} &&\\
+  \textbf{\examnum} &&\\
+  \textbf{\examdate} && \\
+  % \textbf{Time Limit: \timelimit} & Teaching Assistant & \makebox[2in]{\hrulefill}
+  \textbf{Time limit: \timelimit} %&&
+\end{tabular*}\\
+\rule[2ex]{\textwidth}{2pt}
+
+This exam contains \numpages\ pages (including this cover page) and \numquestions\ exercises. \\
+
+%% \begin{center}
+%%   Barême\\
+%%   \bigskip
+%%   \addpoints
+%%   \gradetable[v][questions]
+%% \end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+  %%%%%
+  %%%%%
+  %%%%%     MINIMUM ENERGY CONTROL
+  %%%%%
+  %%%%%
+
+  \question \textbf{Fourier series}
+  \noaddpoints
+
+  Let us consider a real-valued function $x(t)$ such that $x(t + 2\pi) = x(t)$.
+  Its Fourier series representation is given by
+  %
+  \[
+  x(t) = \dfrac{a_0}{2} + \sum_{n=1}^{\infty} \left( a_n \cos(2\pi n f_0 t) + b_n \sin(2\pi n f_0 t) \right).
+  \]
+  %
+  The coefficients $a_0$, $a_n$ and $b_n$ are given by
+  %
+  \[
+  \begin{aligned}
+    a_0 & = \dfrac{1}{\pi} \int_{-\pi}^\pi x(t) \ \mathrm{d}t, \\
+    a_n & = \dfrac{1}{\pi} \int_{-\pi}^\pi x(t) \cos(2\pi n f_0 t) \ \mathrm{d}t, \\
+    b_n & = \dfrac{1}{\pi} \int_{-\pi}^\pi x(t) \sin(2\pi n f_0 t) \ \mathrm{d}t,
+  \end{aligned}
+  \]
+  %
+  with $f_0 = \nicefrac{1}{T}$ its fundamental frequency.
+
+  \begin{parts}
+    \part[2] Prove that the basis of real harmonic oscillations
+    %
+    \[
+    \sin(2\pi n f_0 t), \quad \cos(2\pi n f_0 t), \quad n = 1, 2, \cdots
+    \]
+    %
+    forms an orthogonal basis, i.e. their inner product is equal to $0$ if $m \neq n$ and non-zero otherwise.
+
+    \begin{solution}
+      {\color{blue}
+        Solution
+      }
+    \end{solution}
+
+    \part[1] Using the results of the previous question, find formulas for the amplitudes $c_n$ and phases $\theta_n$ in the expansion of the periodic signal $x(t)$ in terms of only cosines, i.e.
+    %
+    \[
+    x(t) = \sum_{n=0}^\infty c_m \cos(2\pi n f_0 t + \theta_n).
+    \]
+
+    \part[2] Using these results, show that
+    %
+    \[
+    \dfrac{a_0^2}{2} + \sum_{n=1}^{\infty} \left( a_n^2 + b_n^2 \right) = \dfrac{1}{\pi} \int_{-\pi}^{\pi} x^2(t) \ \mathrm{d}t.
+    \]
+    %
+    This result is known as \emph{Parseval's theorem}.
+  \end{parts}
+
+  \question \textbf{Stochastic systems}
+  \noaddpoints
+
+  Consider the following continuous-time linear system
+  %
+  \[
+  \dot{x} = -\alpha x + w
+  \]
+  %
+  with $x \in \mathbb{R}$ the state variable, $w \in \mathbb{R}$ the noise, $\alpha > 0$ and $\sigma > 0$.
+
+  \begin{parts}
+    \part[1] Let us assume the autocorrelation function of the noise $w$ is given by
+    %
+    \[
+    R_{ww}(\tau) = \sigma^2 \delta(\tau).
+    \]
+    %
+    What does this tell you about the properties of the noise process $w$ ?
+
+    \part[2] The impulse response of $\dot{x} = \alpha x$ is given by
+    %
+    \[
+    h(\tau) = \begin{cases}
+      e^{-\alpha \tau} \quad \text{if } \tau \geq 0 \\
+      0 \quad \text{otherwise}.
+      \end{cases}
+    \]
+    %
+    The cross-correlation function between $w(t)$ and $x(t)$ is given by
+    %
+    \[
+    \begin{aligned}
+      R_{wx}(\tau) & = h(\tau) * R_{ww}(\tau) \\
+      & = \int_{-\infty}^{\infty} h(t) R_{ww}(\tau-t) \ \mathrm{d}t.
+    \end{aligned}
+    \]
+    %
+    Give the analytical expression of $R_{wx}(\tau)$.
+
+    \part[2] The auto-correlation of $x(t)$ is given by
+    %
+    \[
+    R_{xx}(\tau) = h(-\tau) * h(\tau) * R_{ww}(\tau),
+    \]
+    %
+    Given the analytical expression of $R_{xx}(\tau)$.
+    What is the typical time-scale over which the signal $x(t)$ is correlated ?
+  \end{parts}
+
+
+\question \textbf{Bivariate statistics}
+\noaddpoints	
+
+The value of 2 statistical variables $X$ and $Y$ is given in table \ref{table:data_exercise_2} for 5 people.
+
+  \begin{table}[h]
+	\centering
+	\begin{tabular}{|l|c|c|}
+		\hline
+		%& Velocity   & Turbulent kinetic energy & Reynolds shear stress& Skin friction coefficient \\
+		& X    & Y  \\\hline
+		Inividual 1  &  3 & 12  \\\hline 
+		Inividual 2  &  4 & 14  \\\hline
+		Inividual 3  &  2 & 8   \\\hline
+		Inividual 4  &  5 & 19   \\\hline
+		Inividual 5  &  3 & 11  \\\hline
+	\end{tabular}
+	\caption{Statistical variables $X$ and $Y$ evaluated for 5 people.}
+	\label{table:data_exercise_2}
+    \end{table}
+
+\begin{parts}
+	
+	\part[1] Compute the marginal arithmetic means $\overline{X}$ and $\overline{Y}$ for each variable.
+	
+	\begin{solution}
+	\end{solution}
+
+	\part[1] Compute the marginal standard deviations $\sigma(X)$ and $\sigma(Y)$ for each variable.
+
+    \begin{solution}
+    \end{solution}
+
+	\part[1] Compute the covariance $\text{cov}(X,Y)$ between $X$ and $Y$ .
+
+    \begin{solution}
+    \end{solution}
+
+	\part[1] Suppose that a linear correlation holds between X and Y. Compute the equation of the regression line, X being the explanatory variable.
+
+    \begin{solution}
+    \end{solution}
+
+	\part[1] Compute the correlation coefficient between $X$ and $Y$. What do you conclude?
+
+    \begin{solution}
+    \end{solution}
+	
+\end{parts}  	
+
+  %%%%%
+  %%%%%
+  %%%%%     PRINCIPAL COMPONENT ANALYSIS
+  %%%%%
+  %%%%%
+
+  \question \textbf{Principal component analysis}
+  \noaddpoints
+  
+  Consider the table \ref{table:data_exercise_1}, in which the size and weight of 6 people is given. In this exercise, we apply the Principal Component Analysis (PCA) on this set of data.
+  
+  \begin{table}[h]
+  	\centering
+  	\begin{tabular}{|l|c|c|}
+  		\hline
+  		%& Velocity   & Turbulent kinetic energy & Reynolds shear stress& Skin friction coefficient \\
+  		&size [cm]    & weight [kg]  \\\hline
+  		Inividual 1  & 51 & 162  \\\hline 
+  		Inividual 2  & 64  & 165  
+  		\\\hline
+  		Inividual 3  &  60  & 150   \\\hline
+  		Inividual 4  &  90  & 190   \\\hline
+  		Inividual 5  &  95  & 180   \\\hline
+  		Inividual 6  &  85  & 185   \\\hline
+  	\end{tabular}
+  	\caption{Size and weight of 6 people.}
+  	\label{table:data_exercise_1}
+  \end{table}
+
+We note $n$ the number of individuals and $p$ the number of variables. We note $X \in M_{n,p}(\mathbb{R})$, the data matrix gathering the data of table \ref{table:data_exercise_1} (each line of $X$ corresponds to a specific individual, the first column of $X$ corresponds to the variable "size" and the second one corresponds to the variable "weight"). 
+
+\begin{parts}
+	\part[1] Compute the line vectors $\overline{X}^{T}$, $\text{Var}(X)^{T}$ and $\sigma(X)^T$ gathering respectively the marginal arithmetic means, variances and standard deviations of each variable. 
+	
+	\begin{solution}
+    \end{solution}
+
+	\part[1] We note m the number of principal components that can be computed. What is the value of m? How many principal components must be considered to describe 100\% of the variability of the data. 
+    \begin{solution}
+    \end{solution}
+
+	\part[1] Compute the centered data matrix $X_c$ and the covariance matrix of the centered data $\text{Cov}(X_c)$.
+    \begin{solution}
+    \end{solution}
+
+	\part[1] We note $q_i$ ($1 \leq i \leq m$) the m principal components. Compute the m principal components. For each value of i, compute the part (in \%) of the variability of the data explained by the first i principal components.
+    \begin{solution}
+    \end{solution}
+
+	\part[1] Express the centered data matrix $Y$ of the data coordinates in the principal components coordinate system.
+    \begin{solution}
+    \end{solution}
+
+\end{parts}  	
+
+\end{questions}
+
+\end{document}

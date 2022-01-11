@@ -1,0 +1,6 @@
+- Part 1: Linear damped oscillator with harmonic forcing
+- Part 2: Weakly nonlinear damped oscillator with harmonic forcing
+- Part 3: Self-sustained oscillator with forcing --> Derivation of the Adler's equation.
+- Part 4: Arnold's tongue
+- Part 5: Coupling two Stuart-Landau oscillators
+- Part 6: Kuramoto model
