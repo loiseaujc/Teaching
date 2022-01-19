@@ -177,7 +177,6 @@
 
 
 \begin{frame}[t, c]{Two-dimensional cylinder flow}{Finding fixed points}
-  \begin{minipage}{.68\textwidth}
     \[
     \tcboxmath[colframe=beamer@kthblue, colback=white]{
       \nabla \cdot \left( \bm{u} \otimes \bm{u} \right) = - \nabla p + \dfrac{1}{Re} \nabla^2 \bm{u}
@@ -188,10 +187,10 @@
     
     Define the state vector $\bm{q} = \left( \bm{u}, p \right)^T$.
     Reformulate the problem as a root-finding problem $\mathcal{F}(\bm{q}, Re) = \bm{0}$ and use Newton's method (or variants) to solve it.
-  \end{minipage}%
-  \hfill
-  \begin{minipage}{.28\textwidth}
-  \end{minipage}
+
+    \begin{center}
+      \includegraphics[width=.75\textwidth]{baseflow}
+    \end{center}
 
 \end{frame}
 
@@ -344,11 +343,15 @@
   \begin{minipage}{.48\textwidth}
     \centering
     \underline{\textbf{Base flow solution}}
+
+    \includegraphics[width=\textwidth]{baseflow}
   \end{minipage}%
   \hfill
   \begin{minipage}{.48\textwidth}
     \centering
     \underline{\textbf{Time-averaged solution}}
+
+    \includegraphics[width=\textwidth]{mean_flow}
   \end{minipage}
 \end{frame}
 
@@ -434,30 +437,25 @@
 
 
 \begin{frame}[t, c]{Two-dimensional cylinder flow}{Dimensionality reduction}
-  \begin{minipage}{.68\textwidth}
-    \begin{tcolorbox}[colback=white, colframe=beamer@kthblue]
-      \textbf{Objective :} Find proxies for the vortex shedding's amplitude, phase and distortion between the base flow and the mean flow.
-    \end{tcolorbox}
-
-    \bigskip
-
+  \begin{tcolorbox}[colback=white, colframe=beamer@kthblue]
+    \textbf{Objective :} Find proxies for the vortex shedding's amplitude, phase and distortion between the base flow and the mean flow.
+  \end{tcolorbox}
+  
+  \bigskip
+  
+  \begin{itemize}
+  \item Snapshots of the full state vector $\left\{ \bm{q}(\bm{x}, t_k) \right\}$ are available :
     \begin{itemize}
-    \item Snapshots of the full state vector $\left\{ \bm{q}(\bm{x}, t_k) \right\}$ are available :
-      \begin{itemize}
-      \item[$\hookrightarrow$] use linear dimensionality reduction techniques such as POD/PCA or DMD.
-      \end{itemize}
-
-      \medskip
-
-    \item If only limited sensor measurements are available :
-      \begin{itemize}
-      \item[$\hookrightarrow$] Use time-delay embeddings to construct the proxies.
-      \end{itemize}
+    \item[$\hookrightarrow$] use linear dimensionality reduction techniques such as POD/PCA or DMD.
     \end{itemize}
-  \end{minipage}%
-  \hfill
-  \begin{minipage}{.28\textwidth}
-  \end{minipage}
+    
+    \medskip
+    
+  \item If only limited sensor measurements are available :
+    \begin{itemize}
+    \item[$\hookrightarrow$] Use time-delay embeddings to construct the proxies.
+    \end{itemize}
+  \end{itemize}
 \end{frame}
 
 
@@ -472,7 +470,7 @@
 
 
 \begin{frame}[t, c]{Two-dimensional cylinder flow}{Dimensionality reduction}
-  \begin{minipage}{.68\textwidth}
+  \begin{minipage}{.48\textwidth}
     \underline{\textbf{Modes 1 and 2 :}} Spatial structure of the vortex shedding.
     Their time-dependant amplitudes provide our proxy variables to describe the evolution of the oscillations.
 
@@ -482,7 +480,16 @@
     Its amplitude provides the remaining proxy variable for our model.
   \end{minipage}%
   \hfill
-  \begin{minipage}{.28\textwidth}
+  \begin{minipage}{.48\textwidth}
+    \centering
+
+    \includegraphics[width=\textwidth]{pod_mode}
+
+    \medskip
+    \includegraphics[width=\textwidth]{pod_mode_bis}
+
+    \medskip
+    \includegraphics[width=\textwidth]{shift_mode}
 
   \end{minipage}
 
@@ -574,14 +581,6 @@
     \]
   \end{tcolorbox}
 \end{frame}
-
-
-
-
-\begin{frame}[t, c]{Two-dimensional cylinder flow}{POD-Galerkin reduced-order model}
-  
-\end{frame}
-
 
 
 
