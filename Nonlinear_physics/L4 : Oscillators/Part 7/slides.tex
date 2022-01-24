@@ -34,6 +34,12 @@
 \usepackage[]{circuitikz}
 
 \usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\pgfplotsset{
+  compat=newest,
+  colormap={mycolormap}{color=(lightgray) color=(white) color=(lightgray)}
+}
+
 \usepgfplotslibrary{polar}
 
 \usepackage{hyperref,graphicx,lmodern}
@@ -120,29 +126,25 @@
 
 
 \begin{frame}[t, c]{Two-dimensional cylinder flow}{A canonical example of flow oscillators}
-  \begin{minipage}{.68\textwidth}
-    Its dynamics are governed by the \alert{\textbf{Navier-Stokes}} equations
-    %
-    \[
-    \begin{aligned}
-      \dfrac{\partial \bm{u}}{\partial t} + \nabla \cdot \left( \bm{u} \otimes \bm{u} \right) & = -\nabla p + \dfrac{1}{Re} \nabla^2 \bm{u} \\
-      \nabla \cdot \bm{u} & = 0
-    \end{aligned}
-    \]
-    %
-    where $\bm{u}(\bm{x}, t)$ is the velocity field and $p(\bm{x}, t)$ is the pressure field.
-  \end{minipage}%
-  \hfill
-  \begin{minipage}{.28\textwidth}
-    Add DNS movie
-  \end{minipage}
+  Its dynamics are governed by the \alert{\textbf{Navier-Stokes}} equations
+  %
+  \[
+  \begin{aligned}
+    \dfrac{\partial \bm{u}}{\partial t} + \nabla \cdot \left( \bm{u} \otimes \bm{u} \right) & = -\nabla p + \dfrac{1}{Re} \nabla^2 \bm{u} \\
+    \nabla \cdot \bm{u} & = 0
+  \end{aligned}
+  \]
+  %
+  where $\bm{u}(\bm{x}, t)$ is the velocity field and $p(\bm{x}, t)$ is the pressure field.
 \end{frame}
 
 
 
 
 \begin{frame}[t, c]{Two-dimensional cylinder flow}{A canonical example of flow oscillators}
-  
+  \centering
+
+  \includegraphics[width=.75\textwidth]{dns_snapshot}
 \end{frame}
 
 
@@ -500,7 +502,46 @@
 
 
 \begin{frame}[t, c]{Two-dimensional cylinder flow}{Low-dimensional representation}
-  
+  \centering
+  \begin{minipage}{.48\textwidth}
+    \centering
+    \begin{tikzpicture}
+      \begin{axis}[
+          xmin=-1.25, ymin=-1.25, zmin=0,
+          xmax=1.25, ymax=1.25, zmax=1.75,
+          samples=32,
+          axis lines=center, axis on top, ticks=none,
+          %z buffer=sort,
+          set layers=default,
+          xlabel={$x$}, ylabel={$y$}, zlabel={$z$},
+          xlabel style={anchor=south west},
+          ylabel style={anchor=south west},
+          zlabel style={anchor=south west},
+        ]
+        
+        \addplot3[red!70, thick, smooth, mark=none] table [x=x, y=y, z=z]{trajectory.txt};
+      \end{axis}
+    \end{tikzpicture}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.48\textwidth}
+    \centering
+    \begin{tikzpicture}
+      \begin{axis}[
+          xmin=-1.25, ymin=-1.25,
+          xmax=1.25, ymax=1.25,
+          axis lines=center, axis on top, ticks=none,
+          axis equal image,
+          set layers=default,
+          xlabel={$x$}, ylabel={$y$},
+          xlabel style={anchor=south west},
+          ylabel style={anchor=south west},
+        ]
+        
+        \addplot[red!70, thick, smooth, mark=none] table [x=x, y=y]{trajectory.txt};
+      \end{axis}
+    \end{tikzpicture}
+  \end{minipage}%
 \end{frame}
 
 
@@ -828,6 +869,20 @@
   \end{minipage}%
   \hfill
   \begin{minipage}{.28\textwidth}
+    \centering
+    \begin{tikzpicture}[>=stealth]
+      \draw[->] (0, 0) -- (3, 0) node[below] {$r$};
+      \draw[->] (0, -2) -- (0, 2) node[left] {$\dot{r}$};
+      
+      \draw[gray, line width=0.5mm, domain=0:2.5] plot (\x, {(1/4) * \x * ( 4 - \x * \x)});
+      
+      \node[rotate=-90, inner sep=0pt] () at (1.5, 0) {\tikz\draw[-triangle 45](0, 0) ;};
+      \node[circle, fill=white, draw=black, inner sep=0pt, minimum size=4pt] (a) at (0, 0) {};
+
+
+      \node[rotate=90, inner sep=0pt] () at (2.5, 0) {\tikz\draw[-triangle 45](0, 0) ;};
+      \node[circle, fill=black, draw=black, inner sep=0pt, minimum size=4pt] (a) at (2, 0) {};
+    \end{tikzpicture}
   \end{minipage}
 \end{frame}
 
@@ -846,7 +901,36 @@
   \end{minipage}%
   \hfill
   \begin{minipage}{.48\textwidth}
+    \centering
+    \begin{tikzpicture}
+      \begin{axis}[
+          xmin=-1.25, ymin=-1.25, zmin=0,
+          xmax=1.25, ymax=1.25, zmax=1.75,
+          samples=32,
+          axis lines=center, axis on top, ticks=none,
+          %z buffer=sort,
+          set layers=default,
+          xlabel={$x$}, ylabel={$y$}, zlabel={$z$},
+          xlabel style={anchor=south west},
+          ylabel style={anchor=south west},
+          zlabel style={anchor=south west},
+        ]
+        \addplot3[
+          surf,
+          draw=none,
+          restrict z to domain=0:1.5,
+          data cs=polar,
+          domain=0:360,
+          y domain=0:3,
+          shader=faceted interp,
+          opacity=0.2,
+          colormap name=mycolormap,
+          thin,
+        ](x, y, y^2);
 
+        \addplot3[red!70, thick, smooth, mark=none] table [x=x, y=y, z=z]{trajectory.txt};
+      \end{axis}
+    \end{tikzpicture}
   \end{minipage}
 \end{frame}
 
@@ -854,7 +938,30 @@
 
 
 \begin{frame}[t, c]{Two-dimensional cylinder flow}{Piecing everything together}
-
+  \begin{tikzpicture}[>=stealth]
+    \begin{axis}[
+        axis lines = middle,
+        axis line style = {->},
+        xlabel=Reynolds number,
+        ylabel=Frequency ($\times 2\pi$),
+        xmin=40, xmax=104,
+        ymin=0.7447139, ymax=1.25,
+        width=.8\textwidth,
+        height=.4\textheight,
+        scale only axis = true,
+        legend style = {draw=none},
+        x label style={at={(axis description cs:0.5,-0.1)},anchor=north},
+        y label style={at={(axis description cs:-0.075,.5)},rotate=90,anchor=south},
+      ]
+      
+      \draw[fill=gray!50, opacity=.7, draw=none] (axis cs:40, 0.7447139) -- (axis cs:46.205, 0.7447139) -- (axis cs:46.205, 1.25) -- (axis cs:40, 1.25) -- cycle ;
+      
+      \addplot[smooth, red, thick] table{data/Strouhal_linear.dat};
+      
+      \addplot[smooth, beamer@kthblue, thick] table{data/Strouhal_nonlinear.dat};
+      \legend{Linear stability, DNS}        
+    \end{axis}
+  \end{tikzpicture}  
 \end{frame}
 
 
