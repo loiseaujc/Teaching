@@ -111,6 +111,7 @@
 
 \lstset{style=mystyle}
 
+\usepackage[]{stanli}
 
 \title{Driven oscillators and the resonance phenomenon}
 \author{Jean-Christophe LOISEAU}
@@ -232,7 +233,7 @@
   \begin{minipage}{.48\textwidth}
     \centering
     \onslide<4>
-    \begin{tikzpicture}
+    \begin{tikzpicture}[>=stealth]
       \begin{axis}[
           xmin=0, xmax=2,
           ymin=0, ymax=10,
@@ -268,7 +269,7 @@
     \vfill
     \centering
 
-    \begin{tikzpicture}
+    \begin{tikzpicture}[>=stealth]
       \begin{axis}[
           xmin=0, xmax=50,
           ymin=-2, ymax=2,
@@ -322,7 +323,7 @@
   \begin{minipage}{.48\textwidth}
     \centering
     \onslide<4>
-    \begin{tikzpicture}
+    \begin{tikzpicture}[>=stealth]
       \begin{axis}[
           xmin=0, xmax=2,
           ymin=0, ymax=10,
@@ -453,7 +454,7 @@
   \hfill
   \begin{minipage}{.48\textwidth}
     \centering
-    \begin{tikzpicture}
+    \begin{tikzpicture}[>=stealth]
       \begin{axis}[
           xmin=0, xmax=2,
           ymin=0, ymax=10,
@@ -494,7 +495,7 @@
   \hfill
   \begin{minipage}{.48\textwidth}
     \centering
-    \begin{tikzpicture}
+    \begin{tikzpicture}[>=stealth]
       \begin{axis}[
           xmin=0, xmax=2,
           ymin=0, ymax=10,
@@ -598,7 +599,7 @@
   \end{minipage}%
   \hfill
   \begin{minipage}{.48\textwidth}
-    \begin{tikzpicture}
+    \begin{tikzpicture}[>=stealth]
       \begin{axis}[
           xmin=0, xmax=2,
           ymin=0, ymax=10,
@@ -650,7 +651,7 @@
   \end{minipage}%
   \hfill
   \begin{minipage}{.48\textwidth}
-    \begin{tikzpicture}
+    \begin{tikzpicture}[>=stealth]
       \begin{axis}[
           xmin=0, xmax=2,
           ymin=0, ymax=10,
@@ -694,7 +695,7 @@
   \end{minipage}%
   \hfill
   \begin{minipage}{.48\textwidth}
-    \begin{tikzpicture}
+    \begin{tikzpicture}[>=stealth]
       \begin{axis}[
           xmin=0, xmax=2,
           ymin=0, ymax=10,
@@ -738,7 +739,7 @@
   \end{minipage}%
   \hfill
   \begin{minipage}{.48\textwidth}
-    \begin{tikzpicture}
+    \begin{tikzpicture}[>=stealth]
       \begin{axis}[
           xmin=0, xmax=2,
           ymin=0, ymax=10,
@@ -778,13 +779,16 @@
   \setbeamercolor{normal text}{fg=black}
   \usebeamercolor[fg]{normal text}
   \setbeamercolor{frametitle}{fg=black}
+  \setbeamercolor{framesubtitle}{fg=black}
 
-  \begin{frame}[t, c]{The cusp catastrophe}{}
+  \setbeamercolor{itemize item}{fg=black}
+
+  \begin{frame}[t, c]{The cusp catastrophe}{\small Forced nonlinear oscillator}
 
     \centering
     \vfill
 
-    \begin{tikzpicture}
+    \begin{tikzpicture}[>=stealth]
       \begin{axis}[
           xmin=0, xmax=2,
           ymin=0, ymax=3,
@@ -818,7 +822,7 @@
   \end{frame}
 
 
-  \begin{frame}[t, c]{The cusp catastrophe}{}
+  \begin{frame}[t, c]{The cusp catastrophe}{\small Forced nonlinear oscillator}
     \vfill
     \large
 
@@ -826,7 +830,7 @@
       The response function is of the form
 
       \[
-      X^3 + \lambda_1 X + \lambda_2 = 0.
+      X^3 + p X + q = 0.
       \]
 
       This is the canonical form of the \textbf{\alert{cusp catastrophe}}.
@@ -840,7 +844,7 @@
     \vfill
   \end{frame}
 
-  \begin{frame}[t, c]{The cusp catastrophe}{}
+  \begin{frame}[t, c]{The cusp catastrophe}{\small Forced nonlinear oscillator}
     \vfill
     \large
 
@@ -851,8 +855,8 @@
 
         %\draw[help lines] (-3, -1) grid (3, 5);
 
-        \draw[->, thick] (-3, 0) -- (-3, 1) node[left] {$\lambda_1$};
-        \draw[->, thick] (-3, 0) -- (-2, 0) node[below] {$\lambda_2$};
+        \draw[->, thick] (-3, 0) -- (-3, 1) node[left] {$p$};
+        \draw[->, thick] (-3, 0) -- (-2, 0) node[below] {$q$};
 
         \draw[name path=A, domain=-3:3, smooth, thick, fill=gray!20, samples=257] plot (\x, {3*(\x*\x / 2)^(1/3)});
 
@@ -866,7 +870,7 @@
         %\draw[help lines] (-3, 0) grid (3, 3);
 
         \draw[->, thick] (-3, 0) -- (-3, 1) node[left] {$X$};
-        \draw[->, thick] (-3, 0) -- (-2, 0) node[below] {$\lambda_2$};
+        \draw[->, thick] (-3, 0) -- (-2, 0) node[below] {$q$};
 
         \draw[-, thick, name path=A] (-2, 0.25) -- (-2, 3) node[] {};
         \draw[-, thick, name path=B] (2, 0.25) -- (2, 3) node[] {};
@@ -888,7 +892,7 @@
         %\draw[help lines] (-3, 0) grid (3, 3);
 
         \draw[->, thick] (-3, 0) -- (-3, 1) node[left] {$X$};
-        \draw[->, thick] (-3, 0) -- (-2, 0) node[below] {$\lambda_1$};
+        \draw[->, thick] (-3, 0) -- (-2, 0) node[below] {$p$};
 
         \draw[-, thick, name path=A] (0, 0) -- (0, 3) node[] {};
         \draw[white, -, thick, name path=B] (3, 0) -- (3, 3) node[] {};
@@ -906,12 +910,38 @@
     \vfill
   \end{frame}
 
-  \begin{frame}[t, c]{The cusp catastrophe}{}
-    Add schematic
+  \begin{frame}[t, c]{The cusp catastrophe}{\small Buckling beam}
+    \centering
+    \begin{tikzpicture}[>=stealth]
+      %\draw[help lines] (-2,0) grid (10,6);
+
+      \point{a}{0}{2};
+      \point{b}{4}{4};
+      \point{c}{8}{2};
+
+      \beam{2}{a}{b};
+      \beam{2}{b}{c};
+
+      \addon{3}{c}{a}{b}[-1];
+
+      \support{2}{a};
+      \hinge{1}{b};
+      \support{2}{c};
+
+      \load{1}{a}[180];
+      \load{1}{b}[90];
+      \load{1}{c};
+
+      \draw[] (8, 2) -- (7, 2) node[] {};
+      \node[above] at (4, 5.25) (mass) {$F$};
+      \node[left] at (-1.25, 2) (compressions left) {$\beta$};
+      \node[right] at (9.25, 2) (compression right) {$\beta$};
+
+    \end{tikzpicture}
   \end{frame}
   
   
-  \begin{frame}[t, c]{The cusp catastrophe}{}
+  \begin{frame}[t, c]{The cusp catastrophe}{\small Buckling beam}
     \vfill
     \large
     
@@ -922,14 +952,14 @@
         \underline{Total energy in the system}
         
         \[
-        V = 2 \mu \theta^2 + m \sin(\theta) - 2\beta \left( 1 - \cos(\theta) \right)
+        V = 2 \mu \theta^2 + F \sin(\theta) - 2\beta \left( 1 - \cos(\theta) \right)
         \]
         
         \onslide<2>
         \underline{Taylor expansion (and $\beta = 2 \mu + b)$}
         
         \[
-        V = \dfrac{2\mu + b}{12} \theta^4 - \dfrac{m}{6} \theta^3 - b \theta^2 + m \theta
+        V = \dfrac{2\mu + b}{12} \theta^4 - \dfrac{F}{6} \theta^3 - b \theta^2 + m \theta
         \]
         
       \end{overprint}
@@ -964,13 +994,13 @@
         \end{axis}
       \end{tikzpicture}
       
-      Potential for $m = 0$
+      Potential for $F = 0$
     \end{minipage}
     
     \vfill
   \end{frame}
   
-  \begin{frame}[t, c]{The cusp catastrophe}{}
+  \begin{frame}[t, c]{The cusp catastrophe}{\small Buckling beam}
     \vfill
     \large
     
@@ -979,7 +1009,7 @@
       \underline{Equilibria are stationary points}
       
       \[
-      \dfrac{2\mu + b}{3} \theta^3 - \dfrac{m}{3} \theta^2 - 2b\theta + m = 0
+      \dfrac{2\mu + b}{3} \theta^3 - \dfrac{F}{2} \theta^2 - 2b\theta + F = 0
       \]
     \end{minipage}%
     \hfill
@@ -989,7 +1019,7 @@
         \begin{axis}[
             xmin=-2.5, xmax=2.5,
             ymin=-2, ymax=2,
-            xlabel={$m$}, ylabel={$\theta$},
+            xlabel={$F$}, ylabel={$\theta$},
             width=\textwidth,
             axis lines = middle,
             axis line style = {->},
@@ -1012,7 +1042,7 @@
     \vfill
   \end{frame}
   
-  \begin{frame}[t, c]{The cusp catastrophe}{}
+  \begin{frame}[t, c]{The cusp catastrophe}{\small Buckling beam}
     \vfill
     \large
     
@@ -1021,7 +1051,7 @@
       \underline{Canonical form of the cusp catastrophe}
       
       \[
-      X^3 + \lambda_1 X + \lambda_2 = 0
+      X^3 + p X + q = 0
       \]
     \end{minipage}%
     \hfill
@@ -1032,7 +1062,117 @@
     
     \vfill
   \end{frame}
-  
+
+  \begin{frame}[t, c]{The cusp catastrophe}{\small Burger's equation}
+    \vfill
+    \large
+
+    \begin{minipage}{.48\textwidth}
+      \centering
+      \underline{Convex conservation laws}
+
+      \[
+      \begin{aligned}
+        & \dfrac{\partial u}{\partial t} + \nabla \cdot \bm{f} = 0 \\
+        & u(\bm{x}, 0) = \varphi_0(\bm{x})
+      \end{aligned}
+      \]
+    \end{minipage}%
+    \hfill
+    \begin{minipage}{.48\textwidth}
+      \begin{itemize}
+      \item $\bm{x}$ is 1-space variable,
+      \item $\bm{f} = f(u)$, i.e. flux depends only on the state variable,
+      \item $f(u)$ is $C^{\infty}$ and convex, i.e. $f^{\prime\prime}(u) > 0$.
+      \end{itemize}
+    \end{minipage}
+
+    \vfill
+  \end{frame}
+
+  \begin{frame}[t, c]{The cusp catastrophe}{\small Burger's equation}
+    \vfill
+    \large
+
+    \begin{minipage}{.48\textwidth}
+      \centering
+
+      \underline{Burger's equation}
+
+      \begin{overprint}
+        \onslide<1>
+        \[
+        \begin{aligned}
+          & \dfrac{\partial u}{\partial t} + \dfrac{1}{2} \dfrac{\partial u^2}{\partial x} = 0 \\
+          & u(x, 0) = \varphi_0(x)
+        \end{aligned}
+        \]
+
+        \onslide<2>
+        \[
+        \begin{aligned}
+          & \dfrac{\partial u}{\partial t} + u \dfrac{\partial u}{\partial x} = 0 \\
+          & u(x, 0) = \varphi_0(x)
+        \end{aligned}
+        \]
+
+      \end{overprint}
+    \end{minipage}%
+    \hfill
+    \begin{minipage}{.48\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{burgers_profile}
+    \end{minipage}
+
+    \vfill
+  \end{frame}
+
+  \begin{frame}[t, c]{The cusp catastrophe}{\small Burger's equation}
+    \vfill
+    \large
+    
+    The following equation is quite useful in solving this PDE.
+    Let
+    
+    
+    \[
+    \begin{aligned}
+      \dfrac{dx}{dt} & = u(x(t), t) \\
+      x(0) & = x_0.
+    \end{aligned}
+    \]
+    
+    \medskip
+    
+    It is known as the \textbf{characteristic equation}.
+
+    \vfill
+  \end{frame}
+
+  \begin{frame}[t, c]{The cusp catastrophe}{\small Burger's equation}
+    \vfill
+    \large
+
+    Differentiating with respect to time $t$ yields
+    
+    \[
+    \begin{aligned}
+      \dfrac{d^2 x}{dt^2} & = \dfrac{\partial u}{\partial t} + u \dfrac{\partial u}{\partial x} \\
+      & = 0.
+    \end{aligned}
+    \]
+    
+    Hence, $(x(t), t)$ is a straight line called a \textbf{characteristic}.
+    Furthermore, the slope is constant and given by $u(x(t), t) = u(x_0, 0) = \varphi{x_0}$.
+
+    \vfill
+  \end{frame}
+
+  \begin{frame}[t, c]{The cusp catastrophe}{\small Burger's equation}
+    \centering
+    \includegraphics[width=\textwidth]{burgers_characteristics}
+  \end{frame}
+
 }
 
 
