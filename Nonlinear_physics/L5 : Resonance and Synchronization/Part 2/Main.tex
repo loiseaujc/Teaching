@@ -1,0 +1,149 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usetheme{default}
+\usefonttheme{professionalfonts}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize items}[circle]
+\setbeamercolor{itemize item}{fg=white}
+
+\setbeamerfont{title}{series=\bfseries, size=\normalfont\Large}
+\setbeamercolor{title}{fg=white}
+
+\setbeamerfont{author}{size=\normalfont\small}
+\setbeamercolor{author}{fg=white}
+
+\setbeamerfont{frametitle}{series=\bfseries, size=\normalfont}
+\setbeamercolor{frametitle}{fg=white}
+
+\setbeamerfont{framesubtitle}{size=\normalfont\large}
+\setbeamercolor{framesubtitle}{fg=white}
+
+\setbeamercolor{background canvas}{bg=black}
+\setbeamercolor{normal text}{fg=white}
+
+\setbeamercolor{local structure}{fg=white}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[]{bm}
+\usepackage[]{multimedia}
+\usepackage[]{multicol}
+\usepackage[squaren,Gray]{SIunits}
+\usepackage[]{nicefrac}
+
+\graphicspath{{imgs/}}
+
+\DeclareMathOperator*{\minimize}{minimize}
+\DeclareMathOperator*{\maximize}{maximize}
+\DeclareMathOperator*{\subjectto}{subject~to}
+
+
+\usepackage{tikz} % Required for drawing custom shapes
+\usetikzlibrary{shapes.geometric, math, positioning, calc, patterns, angles, quotes}
+\usetikzlibrary{patterns.meta,decorations.pathmorphing}
+
+\usepackage{circuitikz}
+\ctikzset{bipoles/thickness=1.2}
+
+\newcommand{\midlabelline}[3]{
+  \node (midlabel) at ($ (#1)!.5!(#2) $) {#3};
+  \draw[latex-] (#1) --  (midlabel);
+  \draw[-latex] (midlabel) -- (#2);
+}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{fillbetween, groupplots}
+
+%\usepackage[]{listings}
+\usepackage[many]{tcolorbox}
+\tcbuselibrary{listings}
+
+%% \definecolor{codegreen}{rgb}{0,0.8,0}
+%% \definecolor{codegray}{rgb}{0.5,0.5,0.5}
+%% %\definecolor{codepurple}{rgb}{0.58,0,0.82}
+%% \definecolor{codepurple}{rgb}{0,0.8,0}
+%% \definecolor{backcolour}{rgb}{0.0, 0.0, 0.0}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codered}{rgb}{0.6,0.1,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0, 0, 0}
+\definecolor{lightgray}{gray}{0.95}
+\definecolor{codeblue}{rgb}{0.117,0.403,0.713}
+
+\newcounter{ipythcntr}
+\renewcommand{\theipythcntr}{\texttt{[\arabic{ipythcntr}]}}
+\newcommand{\ipin}[1][]{
+  \stepcounter{ipythcntr}
+  \hspace{-10pt}
+  \color{codeblue}In  \theipythcntr}
+\newcommand{\ipout}[1][\theipythcntr]{
+  \hspace{-10pt}
+  \color{codered}Out \theipythcntr}
+
+\lstdefinestyle{mystyle}{
+  language=Python,
+  moredelim=[is][\ipin]{In[}{]},
+  moredelim=[is][\ipout]{Out[}{]},
+  backgroundcolor=\color{backcolour},
+  commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  keepspaces=true,
+  numbers=left,
+  numbersep=5pt,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2,
+}
+
+\lstset{style=mystyle}
+
+
+\title{Synchronization of self-sustained oscillators}
+\author{Jean-Christophe LOISEAU}
+\institute{Arts \& Métiers Institute of Technology, January 2022}
+\date{}
+
+\begin{document}
+
+\frame{\titlepage}
+
+{
+  \setbeamercolor{background canvas}{bg=white}
+  \begin{frame}
+    \centering
+    
+  \end{frame}
+
+}
+
+
+\begin{frame}
+  \vfill
+  \centering
+  \large
+
+  \underline{Forced Liénard equation}
+
+  \[
+  \ddot{x} + f(x) \dot{x} + g(x) = \gamma \cos(\omega t)
+  \]
+
+  \vfill
+\end{frame}
+
+
+\end{document}
