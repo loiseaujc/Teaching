@@ -1,0 +1,188 @@
+%\documentclass[12pt, answers]{exam}
+\documentclass[12pt]{exam}
+\usepackage[utf8]{inputenc}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage[]{graphicx}
+\usepackage[]{bm}
+\usepackage[]{nicefrac}
+\usepackage[]{xcolor}
+
+\newcommand{\class}{Physique non-linéaire}
+\newcommand{\term}{Master 2}
+\newcommand{\examnum}{Examen final}
+\newcommand{\examdate}{Février 2022}
+\newcommand{\timelimit}{120 Minutes}
+
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - Page \thepage\ of \numpages}{\examdate}
+\runningheadrule
+
+\usepackage[]{tikz}
+
+\begin{document}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+% \textbf{\class} & \textbf{Nom -- Prénom:} & \makebox[2in]{\hrulefill}\\
+% \textbf{\term} &&\\
+\textbf{\examnum} &&\\
+\textbf{\examdate} &&
+% \textbf{Time Limit: \timelimit} & Teaching Assistant & \makebox[2in]{\hrulefill}
+\textbf{Durée: \timelimit} %&&
+\end{tabular*}\\
+\rule[2ex]{\textwidth}{2pt}
+
+Ce sujet contient \numpages\ pages (en comptant la page de garde) et \numquestions\ exercices.\\
+Le nombre total de point est de \numpoints.
+
+\begin{center}
+  Barême\\
+  \bigskip
+  \addpoints
+  \gradetable[v][questions]
+\end{center}
+
+\noindent
+\rule[2ex]{\textwidth}{2pt}
+
+\begin{questions}
+
+  \question[10] \textbf{Exercice n°1}
+  \noaddpoints
+
+  Pour chacun des exemples ci-dessous, tracez qualitativement la ligne de phase pour différentes valeurs du paramètre de contrôle $\mu$.
+  Déterminez pour quelle valeur de $\mu$ une bifurcation a lieu.
+  Tracez ensuite le diagramme de bifurcation et déterminez de quel type de bifurcation il s'agit.
+
+  \begin{multicols}{3}
+    \begin{itemize}
+    \item $\dot{x} = \mu - 3x^2$
+    \item $\dot{x} = 5 - \mu e^{-x^2}$
+    \item $\dot{x} = \mu x - \dfrac{x}{1+x}$
+    \item $\dot{x} = x + \tanh(\mu x)$
+    \item $\dot{x} = \mu x + \dfrac{x}{1+x^2}$
+    \item $\dot{x} = \mu x + \dfrac{x^3}{1 + x^2}$
+    \end{itemize}
+  \end{multicols}
+
+  \addpoints
+  \question[10] \textbf{Exercice n°2}
+  \noaddpoints
+
+  Considérons le système mécanique formé d'une barre rigide placée verticalement avec un ressort de torsion à sa base appliquant une force proportionelle à l'angle que fait le barre avec la verticale.
+  Un amortisseur est également présent dont la force de frottement est proportionnelle à la vitesse angulaire.
+  Enfin, une charge est appliquée verticallement au sommet de la barre.
+  En partant des principes de Newton, l'équation gouvernant la dynamique du système est donnée par
+  %
+  \[
+  I \dfrac{d^2\theta}{dt^2} + \beta \dfrac{d\theta}{dt} + k \theta - PL \sin(\theta) = 0
+  \]
+  %
+  avec $I$ le moment d'inertie du système, $k$ la constante de raideur du ressort, $P$ le poids exercée par la masse, $L$ la longueur de la barre et $\beta$ le coefficient d'amortissement.
+  L'objectif de cet exercice est de déterminer le type de bifurcations rencontrées par le système lorsque l'on fait varier la charge appliquée.
+
+  \begin{parts}
+    \part[2] Montrez que les équations du mouvement sont équivariantes vis à vis de la transformation $\theta \mapsto -\theta$.
+    Quelle conséquence cette équivariance a-t'elle vis à vis des propriétés du système ?
+
+    \part[4] En posant $\mu = \nicefrac{PL}{k}$, les états d'équilibre du système sont solutions de l'équation suivante
+    %
+    \[
+    \theta = \mu \sin(\theta).
+    \]
+    %
+    Déterminer le nombre de point(s) fixe(s) du système en fonction de $\mu$, étudiez leur stabilité linéaire et tracer le diagramme de bifurcation correspondant.
+    De quel type de bifurcation s'agit-il ?
+
+    \part[4] Comparé à cette situation idéalisée, un système réel présente toujours de petites imperfections qui brisent la symétrie.
+    Refaite l'analyse de la question précédente pour le système suivant
+    %
+    \[
+    I \dfrac{d^2 \theta}{dt^2} + \beta \dfrac{d\theta}{dt} + k \theta - PL \left( h + \sin(\theta) \right) = 0
+    \]
+    %
+    où $h$ modélise une petite imperfection (e.g. une distribution non-uniforme de la masse appliquée).
+    Comment évolue votre diagramme de bifurcation en fonction de $h$ ?
+    De quel phénomène s'agit-il ?
+
+  \end{parts}
+
+  \addpoints
+  \question[10] \textbf{Exercice n°3}
+  \noaddpoints
+
+  La dynamique du lâcher tourbillonnaire derrière un cylindre bi-dimensionel peut être modélisé à l'aide des équations suivantes
+  %
+  \[
+  \begin{aligned}
+    \dot{x} & = \sigma x - y - xz \\
+    \dot{y} & = x + \sigma y - yz \\
+    \dot{z} & = -z + x^2 + y^2
+  \end{aligned}
+  \]
+  %
+  où $x(t)$ et $y(t)$ décrivent l'amplitude des parties réelles et imaginaires du mode instable et $z(t)$ caractérise la distortion du champ porteur, i.e. la différence entre le champ de base et le champ moyen.
+  L'objectif de cet exercice est de dériver des équations d'amplitude pour le lâcher tourbillonnaire.
+
+  \begin{parts}
+    \part[1] En introduisant la variable complexe $\eta = x + i y$, montrez dans un premier temps que les équations peuvent se mettre sous la forme
+    %
+    \[
+    \begin{aligned}
+      \dot{\eta} & = \left( \sigma + i \right) \eta - \eta z \\
+      \dot{z} & = -z + \vert \eta \vert^2.
+    \end{aligned}
+    \]
+    %
+    Ensuite, en posant $\eta(t) = r(t) \exp\left( i \varphi(t) \right)$ où $r$ est l'amplitude du lâcher tourbillonnaire et $\varphi$ sa phase, montrez que cela implique
+    %
+    \[
+    \begin{aligned}
+      \dot{r} & = \sigma r - rz \\
+      \dot{z} & = -z + r^2
+    \end{aligned}
+    \]
+    %
+    tandis que la phase est simplement donnée par $\varphi(t) = \varphi_0 + t$.
+    Par analogie avec les équations de Navier-Stokes, quel rôle joue le terme $r^2$ dans la seconde équation ?
+
+    \part[4] En posant $\sigma = \varepsilon^2$ et en introduisant l'échelle de temps super-lente $\tau = \epsilon^2 t$, montrez qu'aux différents ordres, on obtient les équations suivantes
+    %
+    \[
+    \begin{aligned}
+      \mathcal{O}(\varepsilon) : & \quad \dfrac{\partial r_1}{\partial t} = 0 \\
+      & \quad \dfrac{\partial z_1}{\partial t} = -z_1\\
+      %
+      \mathcal{O}(\varepsilon^2) : & \quad \dfrac{\partial r_2}{\partial t} = -r_1 z_1 \\
+      & \quad \dfrac{\partial z_2}{\partial t} = - z_2 + r_1^2 \\
+      %
+      \mathcal{O}(\varepsilon^3) : & \quad \dfrac{\partial r_3}{\partial t} = r_1 + r_1 z_2 + r_2 z_1 - \dfrac{\partial r_1}{\partial \tau} \\
+      & \quad \dfrac{\partial z_3}{\partial t} = - z_3 + 2 r_1 r_2 - \dfrac{\partial z_1}{\partial \tau}
+    \end{aligned}
+    \]
+    %
+    Notez qu'à l'ordre $0$ la solution est donnée par $(r_0, z_0) = (0, 0)$ (notre point fixe).
+    Ainsi, votre développement asymptotique doit être de la forme $q(t, \tau) = \epsilon q_1(t, \tau) + \epsilon^2 q_2(t, \tau) + \epsilon^3 q_3(t, \tau) + \cdots$.
+
+    \part[2] La solution à l'ordre 1 est donnée par $r_1(t, \tau) = A(\tau)$.
+    Montrez qu'à l'ordre 2 on a $z_2(t, \tau) = A^2(\tau) \left(1 - e^{-t} \right)$.
+
+    \part[2] En vous basant sur ces résultats, justifiez que l'amplitude du lâcher tourbillonnaire est gouvernée par
+    %
+    \[
+    \dfrac{d A}{d\tau} = A - A^3.
+    \]
+    %
+    Tracez à la main à quoi ressemble l'évolution de $A(t)$.
+
+    \part[1] Par analogie avec les équations de Navier-Stokes, expliquez par quel mécanisme l'amplitude $A(\tau)$ du lâcher tourbillonnaire finit-elle par saturer.
+
+  \end{parts}
+
+\end{questions}
+
+\end{document}
